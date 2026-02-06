@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- Canonical URL -->
+  <link rel="canonical" href="https://varayo.com/cdn"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Varayo"/>
+  <meta property="og:title" content="CDN | Varayo"/>
+  <meta property="og:description" content="Content Delivery Network built on Varayo’s carrier-grade backbone."/>
+  <meta property="og:url" content="https://varayo.com/cdn"/>
+  <meta property="og:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@varayoinc"/>
+  <meta name="twitter:title" content="CDN | Varayo"/>
+  <meta name="twitter:description" content="Content Delivery Network built on Varayo’s carrier-grade backbone."/>
+  <meta name="twitter:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+<title>CDN | Varayo</title>
+
+  <meta name="description" content="Content Delivery Network built on Varayo’s carrier-grade backbone." />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon-96x96.png" sizes="32x32" />
+  <link rel="icon" href="/images/web-app-manifest-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <meta name="msapplication-TileImage" content="/images/web-app-manifest-512x512.png" />
+
+  <!-- Global Site Styles -->
+  <link rel="stylesheet" href="site-styles.css?v=about1" />
+
+  <!-- Page-only helpers (keeps global system consistent) -->
+  <style>
+    .about-wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .about-quote{
+      max-width: 900px;
+      margin: 24px auto 0;
+      padding: 18px 18px;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: rgba(255,255,255,0.03);
+      color: rgba(226,232,240,0.82);
+      font-weight: 800;
+      font-style: italic;
+      line-height: 1.65;
+      text-align: center;
+    }
+
+    .about-intro{
+      margin-top: 22px;
+      display: grid;
+      gap: 16px;
+      color: rgba(226,232,240,0.74);
+      font-weight: 750;
+      line-height: 1.75;
+      font-size: 1.05rem;
+    }
+
+    .stats-grid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 26px;
+    }
+    @media (max-width: 900px){
+      .stats-grid{ grid-template-columns: 1fr; }
+    }
+    .stat-card{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+      text-align: center;
+    }
+    .stat-number{
+      font-size: 2.35rem;
+      font-weight: 950;
+      letter-spacing: -0.03em;
+      color: rgba(34,211,238,0.92);
+      line-height: 1.1;
+    }
+    .stat-label{
+      margin-top: 8px;
+      color: rgba(226,232,240,0.72);
+      font-weight: 850;
+    }
+
+    .core-grid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+    @media (max-width: 980px){
+      .core-grid{ grid-template-columns: 1fr; }
+    }
+    .core-card{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .core-card:hover{
+      transform: translateY(-3px);
+      border-color: rgba(34,211,238,0.18);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    }
+    .core-icon{
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: rgba(59, 130, 246, 0.14);
+      border: 1px solid rgba(59, 130, 246, 0.22);
+      margin-bottom: 12px;
+    }
+    .core-icon i{
+      color: rgba(34,211,238,0.92);
+      font-size: 1.2rem;
+    }
+    .core-title{
+      font-weight: 950;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+      margin: 0 0 6px;
+    }
+    .core-desc{
+      color: rgba(226,232,240,0.70);
+      font-weight: 750;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .cta-card{
+      max-width: 920px;
+      margin: 26px auto 0;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: rgba(255,255,255,0.03);
+      padding: 22px;
+      text-align: center;
+    }
+    .cta-card p{
+      margin: 0 0 12px;
+      color: rgba(226,232,240,0.74);
+      font-weight: 800;
+      line-height: 1.7;
+      font-size: 1.08rem;
+    }
+    .cta-card p strong{ color: rgba(241,245,249,0.95); }
+    .cta-actions{
+      display:flex;
+      justify-content:center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Injected Header -->
+  <div id="header-placeholder"></div>
+
+  <main>
+<section class="hero hero-enterprise">
+<div class="container hero-stack">
+<div class="hero-copy hero-centered">
+<h1 hero_title_placeholder="">Content Delivery Network</h1>
+<p class="lead">
+            Accelerate your web and application performance with our global CDN infrastructure. Deliver content faster, reduce latency, enhance security, and lower bandwidth costs with intelligent edge caching and optimization.
+          </p>
+<div class="btn-row btn-row-center">
+<a class="btn btn-primary" href="contact">Get Started</a>
+<a class="btn btn-secondary" href="#features">Explore Features</a>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<section class="section">
+<div class="container">
+<h2 class="section-title">Global Edge Infrastructure</h2>
+<p class="section-subtitle">
+          Deliver content from the edge location closest to your users for the best performance.
+        </p>
+<div class="stats-grid">
+<div class="stat-item">
+<div class="stat-value">200+</div>
+<div class="stat-label">Edge Locations</div>
+</div>
+<div class="stat-item">
+<div class="stat-value">50ms</div>
+<div class="stat-label">Avg Latency</div>
+</div>
+<div class="stat-item">
+<div class="stat-value">99.99%</div>
+<div class="stat-label">Uptime SLA</div>
+</div>
+<div class="stat-item">
+<div class="stat-value">100+</div>
+<div class="stat-label">Tbps Capacity</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<section class="section" id="features">
+<div class="container">
+<h2 class="section-title">Advanced CDN Capabilities</h2>
+<div class="feature-grid">
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-gauge-high"></i>
+</div>
+<div>
+<h3 class="feature-title">Accelerated Content Delivery</h3>
+<p class="feature-desc">
+                Global network of edge servers cache static and dynamic content closer to users. Reduce page load times by up to 70% and improve user experience.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-shield-halved"></i>
+</div>
+<div>
+<h3 class="feature-title">DDoS Protection</h3>
+<p class="feature-desc">
+                Built-in defense against volumetric attacks, application layer attacks, and protocol exploits. Absorb terabits of malicious traffic automatically.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-video"></i>
+</div>
+<div>
+<h3 class="feature-title">Media Streaming Optimization</h3>
+<p class="feature-desc">
+                Optimized delivery for video and audio streaming. Adaptive bitrate streaming, HLS/DASH support, and low-latency live streaming capabilities.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-lock"></i>
+</div>
+<div>
+<h3 class="feature-title">SSL/TLS Encryption</h3>
+<p class="feature-desc">
+                Free SSL certificates, automated renewal, TLS 1.3 support, and HTTP/2 and HTTP/3 for secure, high-performance content delivery.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-brain"></i>
+</div>
+<div>
+<h3 class="feature-title">Intelligent Caching</h3>
+<p class="feature-desc">
+                Smart cache control with customizable TTL policies, instant purging, cache warming, and edge-side includes for dynamic content acceleration.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-compress"></i>
+</div>
+<div>
+<h3 class="feature-title">Automatic Compression</h3>
+<p class="feature-desc">
+                Gzip and Brotli compression for text, HTML, CSS, and JavaScript files. Reduce file sizes by up to 85% for faster transmission.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-image"></i>
+</div>
+<div>
+<h3 class="feature-title">Image Optimization</h3>
+<p class="feature-desc">
+                On-the-fly image resizing, format conversion (WebP, AVIF), quality optimization, and responsive image delivery based on device type.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-globe"></i>
+</div>
+<div>
+<h3 class="feature-title">Global Load Balancing</h3>
+<p class="feature-desc">
+                Intelligent traffic routing across multiple origins with automatic failover, health monitoring, and geo-steering for optimal performance.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<section class="section">
+<div class="container">
+<h2 class="section-title">Edge logic &amp; functions</h2>
+<p class="section-subtitle">
+          Execute code at the edge for ultra-low latency processing and customization.
+        </p>
+<div class="feature-grid">
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-code"></i>
+</div>
+<div>
+<h3 class="feature-title">Edge Functions</h3>
+<p class="feature-desc">
+                Deploy serverless functions at the edge using JavaScript, WebAssembly, or containers. Execute custom logic closer to users for faster response times.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-route"></i>
+</div>
+<div>
+<h3 class="feature-title">Request/Response Modification</h3>
+<p class="feature-desc">
+                Modify headers, rewrite URLs, perform A/B testing, implement authorization, and customize responses at the edge without touching origin servers.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-user-shield"></i>
+</div>
+<div>
+<h3 class="feature-title">Edge Authentication</h3>
+<p class="feature-desc">
+                Implement authentication and authorization at the edge. JWT validation, OAuth integration, and token-based access control for secure content delivery.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-mobile-screen"></i>
+</div>
+<div>
+<h3 class="feature-title">Device Detection &amp; Personalization</h3>
+<p class="feature-desc">
+                Detect device type, browser, location, and user attributes. Serve personalized content and optimize delivery based on client characteristics.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<section class="section">
+<div class="container">
+<h2 class="section-title">Enterprise Security</h2>
+<div class="feature-grid">
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-firewall"></i>
+</div>
+<div>
+<h3 class="feature-title">Web Application Firewall (WAF)</h3>
+<p class="feature-desc">
+                Protect against SQL injection, XSS, CSRF, and OWASP Top 10 vulnerabilities. Custom rules, rate limiting, and bot management included.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-robot"></i>
+</div>
+<div>
+<h3 class="feature-title">Bot Detection &amp; Mitigation</h3>
+<p class="feature-desc">
+                Identify and block malicious bots while allowing legitimate ones. Machine learning-based detection, CAPTCHA challenges, and behavioral analysis.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-gauge-simple"></i>
+</div>
+<div>
+<h3 class="feature-title">Rate Limiting</h3>
+<p class="feature-desc">
+                Control request rates to prevent abuse and protect origin infrastructure. Customizable rules based on IP, endpoint, headers, or user tokens.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-location-dot"></i>
+</div>
+<div>
+<h3 class="feature-title">Geo-Blocking &amp; Access Control</h3>
+<p class="feature-desc">
+                Restrict content access by country, region, or IP range. Whitelist/blacklist management and custom access policies for compliance.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<section class="section">
+<div class="container">
+<h2 class="section-title">Visibility &amp; insights</h2>
+<div class="feature-grid three-col">
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-chart-line"></i>
+</div>
+<div>
+<h3 class="feature-title">Performance Metrics</h3>
+<p class="feature-desc">
+                Real-time dashboards showing bandwidth usage, cache hit ratios, request volume, latency, and error rates across all edge locations.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-globe"></i>
+</div>
+<div>
+<h3 class="feature-title">Traffic Analytics</h3>
+<p class="feature-desc">
+                Detailed visitor insights including geographic distribution, device types, browsers, and traffic patterns. Export data for deeper analysis.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-bell"></i>
+</div>
+<div>
+<h3 class="feature-title">Alerts &amp; Monitoring</h3>
+<p class="feature-desc">
+                Customizable alerts for traffic spikes, errors, SSL certificate expiration, and performance degradation. Slack, email, and webhook integrations.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<section class="section">
+<div class="container">
+<h2 class="section-title">Built for Every Use Case</h2>
+<div class="feature-grid">
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-store"></i>
+</div>
+<div>
+<h3 class="feature-title">E-Commerce Acceleration</h3>
+<p class="feature-desc">
+                Fast product images, instant search, quick checkout experiences. Handle traffic spikes during sales events without performance degradation.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-newspaper"></i>
+</div>
+<div>
+<h3 class="feature-title">Media &amp; Publishing</h3>
+<p class="feature-desc">
+                Deliver news articles, videos, and images to global audiences instantly. Handle viral traffic surges and breaking news events seamlessly.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-gamepad"></i>
+</div>
+<div>
+<h3 class="feature-title">Gaming</h3>
+<p class="feature-desc">
+                Fast game downloads, updates, and patches. Low-latency API delivery for multiplayer games and real-time leaderboards.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-graduation-cap"></i>
+</div>
+<div>
+<h3 class="feature-title">Education &amp; E-Learning</h3>
+<p class="feature-desc">
+                Stream lectures, deliver course materials, and handle simultaneous video conferencing for distributed learners worldwide.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<section class="section">
+<div class="container">
+<h2 class="section-title">APIs &amp; automation</h2>
+<div class="feature-grid three-col">
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-code-branch"></i>
+</div>
+<div>
+<h3 class="feature-title">RESTful API</h3>
+<p class="feature-desc">
+                Complete programmatic control via REST API. Automate configuration, purging, analytics, and manage resources programmatically.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-brands fa-github"></i>
+</div>
+<div>
+<h3 class="feature-title">CI/CD Integration</h3>
+<p class="feature-desc">
+                GitHub Actions, GitLab CI, Jenkins plugins. Automate cache purging and deployments as part of your build pipeline.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-puzzle-piece"></i>
+</div>
+<div>
+<h3 class="feature-title">CMS &amp; Platform Plugins</h3>
+<p class="feature-desc">
+                Native integrations for WordPress, Drupal, Magento, Shopify, and major platforms. One-click setup and automatic optimization.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<section class="section">
+<div class="container">
+<h2 class="section-title">Simple, usage-based pricing</h2>
+<p class="section-subtitle">
+          Pay only for what you use. No hidden fees, no surprise charges.
+        </p>
+<div class="feature-grid">
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-dollar-sign"></i>
+</div>
+<div>
+<h3 class="feature-title">Bandwidth Pricing</h3>
+<p class="feature-desc">
+                Competitive per-GB pricing with volume discounts. Lower costs as your usage grows with tiered pricing structure.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-ban"></i>
+</div>
+<div>
+<h3 class="feature-title">No Commitments</h3>
+<p class="feature-desc">
+                No long-term contracts required. Scale up or down as needed. Cancel anytime without penalties or termination fees.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-chart-bar"></i>
+</div>
+<div>
+<h3 class="feature-title">Predictable Billing</h3>
+<p class="feature-desc">
+                Real-time usage tracking, detailed invoices, and billing alerts. Set spending limits and receive notifications before reaching thresholds.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-handshake"></i>
+</div>
+<div>
+<h3 class="feature-title">Enterprise Contracts</h3>
+<p class="feature-desc">
+                Volume commitments with significant discounts, dedicated account management, SLA guarantees, and priority support for large deployments.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<section class="section">
+<div class="container">
+<div style="text-align: center; max-width: 720px; margin: 0 auto;">
+<h2 class="section-title">Ready to Accelerate Your Content Delivery?</h2>
+<p class="section-subtitle">
+            Join thousands of businesses delivering content faster with Varayo CDN. Get started in minutes with our simple onboarding process.
+          </p>
+<div class="btn-row btn-row-center" style="justify-content: center; margin-top: 24px;">
+<a class="btn btn-primary" href="contact">Get Started</a>
+<a class="btn btn-secondary" href="tel:12132129100">
+<i class="fa-solid fa-phone"></i> 213-212-9100
+            </a>
+</div>
+</div>
+</div>
+</section>
+
+    <section class="cta-strip">
+      <div class="container cta-strip-inner">
+        <div class="cta-strip-copy">
+          <h3>Ready to get started?</h3>
+          <p>Talk with our team about the right design, timeline, and pricing for your needs.</p>
+        </div>
+        <div class="cta-strip-actions">
+          <a class="btn btn-primary" href="quote">Get a Quote</a>
+          <a class="btn btn-secondary" href="contact">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+
+</main>
+  <!-- Injected Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script>
+    function loadComponent(url, targetId, callback) {
+      fetch(url)
+        .then(r => { if (!r.ok) throw new Error('Not found: ' + url); return r.text(); })
+        .then(html => {
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = html;
+          if (typeof callback === 'function') callback();
+        })
+        .catch(err => {
+          console.error(err);
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = '<p style="color:red; text-align:center;">Component failed to load.</p>';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadComponent('header_menu.html', 'header-placeholder', function() {
+        if (typeof initMobileNav === 'function') initMobileNav();
+      });
+      loadComponent('footer_menu.html', 'footer-placeholder');
+    });
+  </script>
+
+</body>
+</html>

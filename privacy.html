@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- Canonical URL -->
+  <link rel="canonical" href="https://varayo.com/privacy"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Varayo"/>
+  <meta property="og:title" content="Privacy Policy – Varayo"/>
+  <meta property="og:description" content="Understand how Varayo collects, uses, and protects your personal data. Read our commitment to privacy, data security measures, and your rights."/>
+  <meta property="og:url" content="https://varayo.com/privacy"/>
+  <meta property="og:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@varayoinc"/>
+  <meta name="twitter:title" content="Privacy Policy – Varayo"/>
+  <meta name="twitter:description" content="Understand how Varayo collects, uses, and protects your personal data. Read our commitment to privacy, data security measures, and your rights."/>
+  <meta name="twitter:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+<title>Privacy Policy – Varayo</title>
+
+  <meta name="description" content="Understand how Varayo collects, uses, and protects your personal data. Read our commitment to privacy, data security measures, and your rights." />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon-96x96.png" sizes="32x32" />
+  <link rel="icon" href="/images/web-app-manifest-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <meta name="msapplication-TileImage" content="/images/web-app-manifest-512x512.png" />
+
+  <!-- Global Site Styles -->
+  <link rel="stylesheet" href="site-styles.css?v=privacy1" />
+
+  <!-- Page-only helpers (keeps global system consistent) -->
+  <style>
+    .policy-wrap{
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .policy-topnote{
+      margin: 16px auto 0;
+      max-width: 820px;
+      text-align: center;
+      color: rgba(226,232,240,0.72);
+      font-weight: 750;
+      font-style: italic;
+    }
+
+    /* Contact callout card (matches site card system) */
+    .policy-contact{
+      max-width: 920px;
+      margin: 26px auto 0;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+    }
+    .policy-contact-head{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .policy-contact-title{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      font-weight: 950;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+    .policy-contact-title i{
+      color: rgba(34,211,238,0.92);
+    }
+    .policy-contact-sub{
+      color: rgba(226,232,240,0.70);
+      font-weight: 750;
+      margin: 0 0 12px;
+      line-height: 1.65;
+    }
+    .policy-contact-actions{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .policy-contact-details{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 14px;
+      color: rgba(226,232,240,0.74);
+      font-weight: 750;
+    }
+    .policy-contact-details a{
+      color: rgba(34,211,238,0.92);
+      text-decoration: none;
+      font-weight: 900;
+    }
+    .policy-contact-details a:hover{ text-decoration: underline; }
+
+    /* Accordion rows */
+    .policy-rows{
+      margin-top: 22px;
+      display: grid;
+      gap: 12px;
+    }
+    details.policy-row{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: rgba(255,255,255,0.03);
+      overflow: hidden;
+    }
+    details.policy-row[open]{
+      border-color: rgba(34,211,238,0.18);
+      background: rgba(59,130,246,0.06);
+    }
+
+    summary.policy-q{
+      list-style: none;
+      cursor: pointer;
+      padding: 16px 16px;
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 12px;
+      font-weight: 950;
+      font-size: 1.02rem;
+      color: rgba(241,245,249,0.92);
+    }
+    summary.policy-q::-webkit-details-marker{ display:none; }
+
+    .policy-toggle{
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background: rgba(59,130,246,0.12);
+      border: 1px solid rgba(59,130,246,0.18);
+      color: rgba(34,211,238,0.92);
+      font-weight: 950;
+      font-size: 1.2rem;
+      line-height: 1;
+      flex: 0 0 auto;
+    }
+    details[open] .policy-toggle{
+      background: rgba(34,211,238,0.12);
+      border-color: rgba(34,211,238,0.22);
+      color: rgba(241,245,249,0.92);
+    }
+
+    .policy-a{
+      padding: 0 16px 16px;
+      color: rgba(226,232,240,0.74);
+      font-weight: 750;
+      line-height: 1.75;
+      font-size: 0.98rem;
+      border-top: 1px dashed rgba(148,163,184,0.18);
+    }
+    .policy-a h3{
+      margin-top: 14px;
+      margin-bottom: 8px;
+      color: rgba(241,245,249,0.92);
+      font-weight: 950;
+      font-size: 1.02rem;
+    }
+    .policy-a ul{
+      margin: 12px 0 0 18px;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+    }
+    .policy-a li{ margin: 0; }
+
+    /* Address block */
+    .policy-address{
+      margin-top: 12px;
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: rgba(255,255,255,0.03);
+      color: rgba(226,232,240,0.72);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Injected Header -->
+  <div id="header-placeholder"></div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero hero-enterprise">
+      <div class="container hero-stack">
+        <div class="hero-copy hero-centered">
+          <div class="hero-badge">
+            <i class="fa-solid fa-shield-halved"></i>
+            Legal / Privacy / Data Protection
+          </div>
+
+          <h1>
+            Privacy <span>Policy</span>
+          </h1>
+
+          <p class="lead">
+            We’re committed to protecting your privacy. This policy explains what we collect, how we use it,
+            and the choices you have regarding your personal information.
+          </p>
+
+          <div class="hero-proof hero-proof-centered">
+            <div class="proof-item">
+              <div class="proof-value">Secure</div>
+              <div class="proof-label">Responsible handling</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-value">Transparent</div>
+              <div class="proof-label">Clear disclosures</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-value">Your Rights</div>
+              <div class="proof-label">Access & control</div>
+            </div>
+          </div>
+
+          <div class="policy-topnote">Effective Date: December 17, 2025</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- CONTACT + CONTENT -->
+    <section class="section">
+      <div class="container">
+        <div class="policy-wrap">
+
+          <div class="policy-contact">
+            <div class="policy-contact-head">
+              <h2 class="policy-contact-title"><i class="fa-solid fa-user-shield"></i> Contact our Privacy Team</h2>
+            </div>
+            <p class="policy-contact-sub">
+              If you have questions about this policy or want to exercise your data rights, reach out and we’ll respond promptly.
+            </p>
+
+            <div class="policy-contact-actions">
+              <a class="btn btn-primary" href="/cdn-cgi/l/email-protection#c0b0b2a9b6a1a3b980b6a1b2a1b9afeea3afad">
+                Email Privacy Team
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a class="btn btn-secondary" href="tel:12132129100">
+                <i class="fa-solid fa-phone"></i>
+                Call 213-212-9100
+              </a>
+            </div>
+
+          </div>
+
+          <div class="policy-rows">
+
+            <details class="policy-row" open>
+              <summary class="policy-q">
+                Introduction and Scope
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <p>Varayo Inc (“we,” “us,” or “our”) operates as an Internet Service Provider (ISP) and content service provider, delivering broadband internet access, content delivery, and related services. We also process online payments, including credit card transactions, for our services.</p>
+                <p>We are committed to protecting your privacy and handling your personal information responsibly. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services, visit our website, or interact with us.</p>
+                <p>Please read this policy carefully. By using our services, you agree to the practices described here. If you do not agree, please do not use our services.</p>
+              </div>
+            </details>
+
+            <details class="policy-row">
+              <summary class="policy-q">
+                Information We Collect
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <p>We collect information in the following ways:</p>
+
+                <h3>Information You Provide Directly</h3>
+                <ul>
+                  <li>Account and billing information: Name, address, email, phone number, payment details (e.g., credit card information for online payments).</li>
+                  <li>Service registration details: Username, password, and preferences.</li>
+                  <li>Communications: Information from emails, support tickets, or surveys.</li>
+                </ul>
+
+                <h3>Information Collected Automatically as an ISP</h3>
+                <ul>
+                  <li>Network usage data: IP addresses, device identifiers, traffic volume, connection times, and performance metrics.</li>
+                  <li>Browsing and content access data: We may log domain names, websites visited, or content accessed through our network (but we do not inspect encrypted traffic content).</li>
+                  <li>Location data: Approximate location based on IP address or service address.</li>
+                </ul>
+
+                <h3>Information from Content Services</h3>
+                <ul>
+                  <li>Usage of streamed or hosted content: Viewing history, preferences, and interactions (if applicable to our content offerings).</li>
+                </ul>
+
+                <h3>Payment Information</h3>
+                <ul>
+                  <li>Credit card details are processed through compliant third-party payment processors. We do not store full credit card numbers on our systems; we use tokenization where possible to comply with PCI DSS standards.</li>
+                </ul>
+
+                <h3>Cookies and Tracking Technologies</h3>
+                <ul>
+                  <li>On our website: Cookies, web beacons, and similar technologies to improve user experience, analyze usage, and deliver targeted content.</li>
+                </ul>
+
+                <p style="margin-top: 14px;">We do not knowingly collect personal information from children under 13 without parental consent, in compliance with COPPA where applicable.</p>
+              </div>
+            </details>
+
+            <details class="policy-row">
+              <summary class="policy-q">
+                How We Use Your Information
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <p>We use your information to:</p>
+                <ul>
+                  <li>Provide and maintain services: Deliver internet access, content, billing, and customer support.</li>
+                  <li>Process payments: Securely handle transactions and prevent fraud.</li>
+                  <li>Improve services: Analyze network performance, troubleshoot issues, and enhance content offerings.</li>
+                  <li>Communicate: Send service updates, bills, promotions (with opt-out options), and respond to inquiries.</li>
+                  <li>Comply with laws: Respond to legal requests, enforce terms, or protect rights.</li>
+                  <li>Security and network management: Detect abuse, manage congestion, and ensure service integrity (reasonable network management practices only).</li>
+                </ul>
+                <p style="margin-top: 14px; font-weight: 900;">We do not sell your personal information or browsing history to third parties for marketing purposes without your explicit consent.</p>
+              </div>
+            </details>
+
+            <details class="policy-row">
+              <summary class="policy-q">
+                How We Share Your Information
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <p>We may share information with:</p>
+                <ul>
+                  <li><strong>Service Providers:</strong> Third-party vendors for hosting, payment processing (PCI DSS-compliant), analytics, and customer support. They are contractually obligated to protect your data.</li>
+                  <li><strong>Affiliates:</strong> Related companies for operational purposes.</li>
+                  <li><strong>Legal Requirements:</strong> Law enforcement, regulators, or courts if required (e.g., under CALEA for lawful intercepts).</li>
+                  <li><strong>Business Transfers:</strong> In mergers, acquisitions, or asset sales.</li>
+                  <li><strong>With Consent:</strong> For any other purpose with your permission.</li>
+                </ul>
+                <p style="margin-top: 14px;">As an ISP, we may disclose aggregated, anonymized data for industry reports or performance benchmarking.</p>
+              </div>
+            </details>
+
+            <details class="policy-row">
+              <summary class="policy-q">
+                Data Security & Retention
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <h3>Data Security</h3>
+                <p>We implement reasonable security measures, including encryption, firewalls, access controls, and compliance with PCI DSS for payment data. However, no system is 100% secure, and we cannot guarantee absolute protection.</p>
+                <p>In case of a data breach affecting your information, we will notify you and relevant authorities as required by law.</p>
+
+                <h3>Data Retention</h3>
+                <p>We retain information as long as needed for services, billing, legal compliance, or dispute resolution. Network logs are retained for reasonable periods for security and performance.</p>
+              </div>
+            </details>
+
+            <details class="policy-row">
+              <summary class="policy-q">
+                Your Choices and Rights
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <ul>
+                  <li><strong>Opt-Out:</strong> Unsubscribe from marketing emails via links provided.</li>
+                  <li><strong>Access and Correction:</strong> Request access to or correction of your personal information by contacting us.</li>
+                  <li><strong>Deletion:</strong> Request deletion of certain data, subject to legal retention requirements.</li>
+                  <li><strong>State-Specific Rights:</strong> If you are a resident of California (CCPA/CPRA) or other states with privacy laws, you may have additional rights like opting out of sales or limiting sensitive data use.</li>
+                </ul>
+                <p style="margin-top: 14px;">For ISP-related disclosures (per FCC transparency rules), we do not engage in paid prioritization, blocking lawful content, or throttling without disclosure.</p>
+              </div>
+            </details>
+
+            <details class="policy-row">
+              <summary class="policy-q">
+                International Transfers and Policy Changes
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <h3>International Transfers</h3>
+                <p>If you are outside the U.S., your data may be transferred to and processed in the U.S., where privacy laws may differ.</p>
+
+                <h3>Changes to This Policy</h3>
+                <p>We may update this policy periodically. Significant changes will be notified via email or website notice. Continued use of services constitutes acceptance.</p>
+              </div>
+            </details>
+
+            <details class="policy-row">
+              <summary class="policy-q">
+                Contact Us
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <p>For questions, requests, or concerns regarding this policy:</p>
+
+                <div class="policy-address">
+                  <strong>Varayo Privacy Team</strong><br/>
+                  c/o Varayo Inc.<br/>
+                  530 W 6th St Ste 301<br/>
+                  Los Angeles, CA 90014
+                </div>
+
+                <p style="margin-top: 14px;">Email: <a href="/cdn-cgi/l/email-protection#38484a514e595b41784e594a594157165b5755"><span class="__cf_email__" data-cfemail="60101209160103192016011201190f4e030f0d">[email&#160;protected]</span></a></p>
+                <p>Phone: <a href="tel:12132129100">213-212-9100</a></p>
+              </div>
+            </details>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-strip">
+      <div class="container cta-strip-inner">
+        <div class="cta-strip-copy">
+          <h3>Ready to get started?</h3>
+          <p>Talk with our team about the right design, timeline, and pricing for your needs.</p>
+        </div>
+        <div class="cta-strip-actions">
+          <a class="btn btn-primary" href="quote">Get a Quote</a>
+          <a class="btn btn-secondary" href="contact">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+
+</main>
+  <!-- Injected Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script>
+    function loadComponent(url, targetId, callback) {
+      fetch(url)
+        .then(r => { if (!r.ok) throw new Error('Not found: ' + url); return r.text(); })
+        .then(html => {
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = html;
+          if (typeof callback === 'function') callback();
+        })
+        .catch(err => {
+          console.error(err);
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = '<p style="color:red; text-align:center;">Component failed to load.</p>';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadComponent('header_menu.html', 'header-placeholder', function() {
+        if (typeof initMobileNav === 'function') initMobileNav();
+      });
+      loadComponent('footer_menu.html', 'footer-placeholder');
+    });
+  </script>
+
+</body>
+</html>

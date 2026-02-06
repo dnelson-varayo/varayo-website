@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- Canonical URL -->
+  <link rel="canonical" href="https://varayo.com/careers"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Varayo"/>
+  <meta property="og:title" content="Careers – Varayo"/>
+  <meta property="og:description" content="Build the networks that businesses rely on. Join an engineering-led team focused on uptime, clarity, and customer outcomes."/>
+  <meta property="og:url" content="https://varayo.com/careers"/>
+  <meta property="og:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@varayoinc"/>
+  <meta name="twitter:title" content="Careers – Varayo"/>
+  <meta name="twitter:description" content="Build the networks that businesses rely on. Join an engineering-led team focused on uptime, clarity, and customer outcomes."/>
+  <meta name="twitter:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+<title>Careers – Varayo</title>
+
+  <meta name="description" content="Build the networks that businesses rely on. Join an engineering-led team focused on uptime, clarity, and customer outcomes." />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Global Site Styles -->
+  <link rel="stylesheet" href="site-styles.css" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon-96x96.png" sizes="32x32" />
+  <link rel="icon" href="/images/web-app-manifest-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <meta name="msapplication-TileImage" content="/images/web-app-manifest-512x512.png" />
+
+  <!-- Page-only (scoped) interaction styles -->
+  <style>
+    .careers-toolbar{
+      display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between;
+      margin: 18px 0 10px;
+    }
+    .careers-filters{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+    .careers-chip{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 10px 14px; border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      color: rgba(241,245,249,0.88);
+      font-weight: 900;
+      cursor:pointer;
+      transition: transform .15s ease, background .2s ease, border-color .2s ease;
+      user-select:none;
+      text-decoration:none;
+      white-space:nowrap;
+    }
+    .careers-chip:hover{ transform: translateY(-1px); background: rgba(255,255,255,0.08); border-color: rgba(34,211,238,0.22); }
+    .careers-chip.active{
+      background: rgba(34,211,238,0.12);
+      border-color: rgba(34,211,238,0.28);
+      box-shadow: 0 0 0 1px rgba(34,211,238,0.22) inset;
+    }
+
+    .roles-grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+      margin-top: 14px;
+    }
+    .role-card{
+      grid-column: span 6;
+      border-radius: 16px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: rgba(255,255,255,0.03);
+      overflow:hidden;
+      transition: transform .18s ease, border-color .18s ease, background .18s ease, box-shadow .18s ease;
+    }
+    .role-card:hover{
+      transform: translateY(-2px);
+      border-color: rgba(34,211,238,0.22);
+      background: rgba(59,130,246,0.06);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    }
+    .role-head{
+      padding: 16px 16px 14px;
+      display:flex; align-items:flex-start; justify-content:space-between; gap: 14px;
+      cursor:pointer;
+    }
+    .role-title{ display:flex; align-items:flex-start; gap: 12px; }
+    .role-icon{
+      width: 44px; height: 44px; border-radius: 14px;
+      display:flex; align-items:center; justify-content:center;
+      background: rgba(59,130,246,0.14);
+      border: 1px solid rgba(59,130,246,0.22);
+      flex: 0 0 auto;
+    }
+    .role-icon i{ color: rgba(34,211,238,0.92); }
+    .role-head h3{
+      margin:0 0 4px;
+      font-weight: 950;
+      letter-spacing: -0.02em;
+      font-size: 1.05rem;
+      color: rgba(241,245,249,0.92);
+    }
+    .role-head p{
+      margin:0;
+      color: rgba(226,232,240,0.72);
+      font-weight: 750;
+      line-height: 1.6;
+    }
+    .role-badges{ display:flex; flex-wrap:wrap; justify-content:flex-end; gap:8px; align-items:flex-start; }
+    .badge{
+      display:inline-flex; align-items:center; gap:6px;
+      padding: 8px 10px; border-radius: 999px;
+      font-size: 12px; font-weight: 950;
+      color: rgba(241,245,249,0.80);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+      white-space:nowrap;
+    }
+    .role-body{
+      display:none;
+      padding: 0 16px 16px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .role-card.open .role-body{ display:block; }
+    .role-body ul{
+      margin: 12px 0 0;
+      padding-left: 18px;
+      color: rgba(226,232,240,0.74);
+      font-weight: 750;
+      line-height: 1.7;
+    }
+    .role-body li{ margin: 6px 0; }
+    .role-actions{
+      margin-top: 14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      align-items:center;
+    }
+
+    @media (max-width: 980px){
+      .role-card{ grid-column: span 12; }
+      .careers-toolbar{ align-items:flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Injected Header -->
+  <div id="header-placeholder"></div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero hero-enterprise">
+      <div class="container hero-stack">
+        <div class="hero-copy hero-centered">
+          <div class="hero-badge">
+            <i class="fa-solid fa-user-tie"></i>
+            Careers
+          </div>
+
+          <h1>
+            Join <span>Varayo</span>
+          </h1>
+
+          <p class="lead">
+            Build the networks that businesses rely on. We’re a small, engineering‑led team focused on reliability, clarity, and customer outcomes.
+          </p>
+
+          <div class="btn-row btn-row-center">
+            <a class="btn btn-primary" href="/cdn-cgi/l/email-protection#3b585a495e5e49487b4d5a495a42541558545604484e59515e584f06785a495e5e49481e090b72554a4e524942">
+              Send Email To Careers <i class="fa-solid fa-paper-plane"></i>
+            </a>
+            <a class="btn btn-secondary" href="contact">
+              Contact <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="hero-proof hero-proof-centered">
+            <div class="proof-item">
+              <div class="proof-value">Engineering</div>
+              <div class="proof-label">Led + hands‑on</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-value">Fast</div>
+              <div class="proof-label">High ownership</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-value">Reliable</div>
+              <div class="proof-label">Uptime culture</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- CULTURE -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">WHY VARAYO</div>
+          <h2 class="section-title">Work with a team that ships</h2>
+          <p class="lead">
+            We move fast, document decisions, and take pride in clean handoffs. If you like building dependable systems—and you enjoy helping customers succeed—this is a great place to do your best work.
+          </p>
+        </div>
+
+        <div class="card-grid" style="margin-top:26px;">
+          <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+            <div class="card-body">
+              <div class="card-title">Move fast, ship clean</div>
+              <div class="card-desc">Clear scope, crisp handoffs, and disciplined delivery.</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="card-body">
+              <div class="card-title">Reliability first</div>
+              <div class="card-desc">We build and operate like an enterprise network should—stable, measurable, and monitored.</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-people-group"></i></div>
+            <div class="card-body">
+              <div class="card-title">Small team, high impact</div>
+              <div class="card-desc">Everyone owns outcomes. Your work directly improves customer experience and network quality.</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-book"></i></div>
+            <div class="card-body">
+              <div class="card-title">Documented decisions</div>
+              <div class="card-desc">We write things down, keep context, and create repeatable processes.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="section-divider"></div>
+
+<!-- ROLES -->
+    <section class="section" id="roles">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Open roles</h2>
+<p class="section-subtitle">
+            Filter by team, expand roles for details, and email us to start the conversation.
+          </p>
+        </div>
+
+        <div class="careers-toolbar">
+          <div class="careers-filters" aria-label="Role filters">
+            <span class="careers-chip active" data-filter="all">All</span>
+            <span class="careers-chip" data-filter="engineering">Engineering</span>
+            <span class="careers-chip" data-filter="sales">Sales</span>
+            <span class="careers-chip" data-filter="ops">Operations</span>
+          </div>
+
+          <a class="careers-chip" href="/cdn-cgi/l/email-protection#6e0d0f1c0b0b1c1d2e180f1c0f1701400d0103511d1b0c040b0d1a532d0f1c0b0b1c1d4b5c5e27001f1b071c17">
+            Send Email To Careers <i class="fa-solid fa-paper-plane"></i>
+          </a>
+        </div>
+
+        <div class="roles-grid" id="rolesGrid">
+
+          <article class="role-card" data-team="engineering ops" data-role="Network Engineer">
+            <div class="role-head" role="button" tabindex="0" aria-expanded="false">
+              <div class="role-title">
+                <div class="role-icon"><i class="fa-solid fa-network-wired"></i></div>
+                <div>
+                  <h3 class="role-title">Network Engineer</h3>
+                  <p>Architecture, transport, turn‑up, and performance troubleshooting.</p>
+                </div>
+              </div>
+              <div class="role-badges">
+                <span class="badge"><i class="fa-solid fa-location-dot"></i> Remote / Hybrid</span>
+                <span class="badge"><i class="fa-solid fa-clock"></i> Full‑time</span>
+              </div>
+            </div>
+            <div class="role-body">
+              <ul>
+                <li>Experience with BGP, Ethernet, optical transport, or metro networks</li>
+                <li>Comfortable owning incidents end‑to‑end and writing clean RCAs</li>
+                <li>Strong documentation and customer communication</li>
+                <li>Work across engineering + field teams for turn‑ups</li>
+              </ul>
+              <div class="role-actions">
+                <a class="btn btn-primary" data-prefill="Network Engineer" href="/cdn-cgi/l/email-protection#751614071010070635031407140c1a5b161a184a0600171f10160148231407140c1a50474536140710100706504745503047504d45504c465047453b1001021a071e504745301b121c1b101007">
+                  Send Email To Careers <i class="fa-solid fa-paper-plane"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="role-card" data-team="engineering ops" data-role="Infrastructure / Systems">
+            <div class="role-head" role="button" tabindex="0" aria-expanded="false">
+              <div class="role-title">
+                <div class="role-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                <div>
+                  <h3 class="role-title">Infrastructure / Systems</h3>
+                  <p>Automation, monitoring, tooling, and scalable service delivery.</p>
+                </div>
+              </div>
+              <div class="role-badges">
+                <span class="badge"><i class="fa-solid fa-location-dot"></i> Remote / Hybrid</span>
+                <span class="badge"><i class="fa-solid fa-clock"></i> Full‑time</span>
+              </div>
+            </div>
+            <div class="role-body">
+              <ul>
+                <li>Monitoring/observability experience (metrics, alerts, SLOs)</li>
+                <li>Automation mindset (scripts, APIs, repeatable runbooks)</li>
+                <li>Security-first and operationally disciplined</li>
+                <li>Comfort with incident response and lifecycle ownership</li>
+              </ul>
+              <div class="role-actions">
+                <a class="btn btn-primary" data-prefill="Infrastructure / Systems" href="/cdn-cgi/l/email-protection#e88b899a8d8d9a9ba89e899a899187c68b8785d79b9d8a828d8b9cd5be899a899187cddad8ab899a8d8d9a9bcddad8cdaddacdd0d8cdd1dbcddad8a1868e9a899b9c9a9d8b9c9d9a8dcddad8cddaaecddad8bb919b9c8d859b">
+                  Send Email To Careers <i class="fa-solid fa-paper-plane"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="role-card" data-team="ops" data-role="Customer Success">
+            <div class="role-head" role="button" tabindex="0" aria-expanded="false">
+              <div class="role-title">
+                <div class="role-icon"><i class="fa-solid fa-handshake"></i></div>
+                <div>
+                  <h3>Customer Success</h3>
+                  <p>Onboarding, coordination, and ensuring customers get value fast.</p>
+                </div>
+              </div>
+              <div class="role-badges">
+                <span class="badge"><i class="fa-solid fa-location-dot"></i> Remote / Hybrid</span>
+                <span class="badge"><i class="fa-solid fa-clock"></i> Full‑time</span>
+              </div>
+            </div>
+            <div class="role-body">
+              <ul>
+                <li>Own onboarding and handoffs across teams</li>
+                <li>Strong written and verbal communication</li>
+                <li>Bias for action and structured problem solving</li>
+                <li>Coordinate turn‑ups, updates, and escalations</li>
+              </ul>
+              <div class="role-actions">
+                <a class="btn btn-primary" data-prefill="Customer Success" href="/cdn-cgi/l/email-protection#d1b2b0a3b4b4a3a291a7b0a3b0a8beffb2bebceea2a4b3bbb4b2a5ec87b0a3b0a8bef4e3e192b0a3b4b4a3a2f4e3e1f494e3f4e9e1f4e8e2f4e3e192a4a2a5bebcb4a3f4e3e182a4b2b2b4a2a2">
+                  Send Email To Careers <i class="fa-solid fa-paper-plane"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="role-card" data-team="sales" data-role="Sales Engineering">
+            <div class="role-head" role="button" tabindex="0" aria-expanded="false">
+              <div class="role-title">
+                <div class="role-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                <div>
+                  <h3>Sales Engineering</h3>
+                  <p>Technical discovery, solution design, and clear proposals.</p>
+                </div>
+              </div>
+              <div class="role-badges">
+                <span class="badge"><i class="fa-solid fa-location-dot"></i> Remote / Hybrid</span>
+                <span class="badge"><i class="fa-solid fa-clock"></i> Full‑time</span>
+              </div>
+            </div>
+            <div class="role-body">
+              <ul>
+                <li>Translate requirements into a clean architecture</li>
+                <li>Comfortable with SLAs, handoffs, and implementation detail</li>
+                <li>Build trust through clarity and speed</li>
+                <li>Work with engineering on feasibility and delivery plans</li>
+              </ul>
+              <div class="role-actions">
+                <a class="btn btn-primary" data-prefill="Sales Engineering" href="/cdn-cgi/l/email-protection#0c6f6d7e69697e7f4c7a6d7e6d7563226f6361337f796e66696f78315a6d7e6d7563293e3c4f6d7e69697e7f293e3c29493e29343c29353f293e3c5f6d60697f293e3c49626b656269697e65626b">
+                  Send Email To Careers <i class="fa-solid fa-paper-plane"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <p style="margin-top:16px; color: rgba(226,232,240,0.62); font-weight: 750; line-height: 1.6;">
+          Don’t see an exact match? Send an email with what you’re looking for and what you’ve built—we’ll respond quickly.
+        </p>
+      </div>
+    </section>
+
+    <section class="cta-strip">
+      <div class="container cta-strip-inner">
+        <div class="cta-strip-copy">
+          <h3>Ready to get started?</h3>
+          <p>Talk with our team about the right design, timeline, and pricing for your needs.</p>
+        </div>
+        <div class="cta-strip-actions">
+          <a class="btn btn-primary" href="quote">Get a Quote</a>
+          <a class="btn btn-secondary" href="contact">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+
+</main>
+  <!-- Injected Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script>
+    function loadComponent(url, targetId, callback) {
+      fetch(url)
+        .then(r => { if (!r.ok) throw new Error('Not found: ' + url); return r.text(); })
+        .then(html => {
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = html;
+          if (typeof callback === 'function') callback();
+        })
+        .catch(err => {
+          console.error(err);
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = '<p style="color:red; text-align:center;">Component failed to load.</p>';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadComponent('header_menu.html', 'header-placeholder', function() {
+        if (typeof initMobileNav === 'function') initMobileNav();
+      });
+      loadComponent('footer_menu.html', 'footer-placeholder');
+    });
+  </script>
+
+</body>
+</html>

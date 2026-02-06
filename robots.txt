@@ -1,0 +1,18 @@
+# Varayo Robots.txt
+# Updated: 2026-02-05
+
+User-agent: *
+Allow: /
+
+# Exclude utility pages
+Disallow: /quote-confirmation
+Disallow: /portal
+Disallow: /cdn-cgi/
+
+# Allow all bots to crawl CSS, JS, and images
+Allow: /site-styles.css
+Allow: /seo-meta.js
+Allow: /images/
+
+# Sitemap location
+Sitemap: https://varayo.com/sitemap.xml

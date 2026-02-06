@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/><!-- Canonical URL -->
+  <link rel="canonical" href="https://varayo.com/carrier"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Varayo"/>
+  <meta property="og:title" content="Carrier Solutions – Varayo"/>
+  <meta property="og:description" content=""/>
+  <meta property="og:url" content="https://varayo.com/carrier"/>
+  <meta property="og:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@varayoinc"/>
+  <meta name="twitter:title" content="Carrier Solutions – Varayo"/>
+  <meta name="twitter:description" content=""/>
+  <meta name="twitter:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+<title>Carrier Solutions – Varayo</title>
+<meta content="Carrier-grade network solutions including Dark Fiber, Wavelengths, Ethernet Transport, and IP Transit. Secure, low-latency, and scalable connectivity." name="description"/>
+<!-- Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<!-- Favicons -->
+<link href="/images/favicon-96x96.png" rel="icon" sizes="32x32"/>
+<link href="/images/web-app-manifest-192x192.png" rel="icon" sizes="192x192"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon"/>
+<meta content="/images/web-app-manifest-512x512.png" name="msapplication-TileImage"/>
+<!-- Global Site Styles -->
+<link href="site-styles.css?v=carrier1" rel="stylesheet"/>
+<!-- Page-only helpers (keeps global system consistent) -->
+<style>
+    .feature-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+      max-width: 980px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 980px){
+      .feature-grid{ grid-template-columns: 1fr; }
+    }
+    .feature-card{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+      display:grid;
+      grid-template-columns: 52px 1fr;
+      gap: 14px;
+      align-items: start;
+      min-height: 178px;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .feature-card:hover{
+      transform: translateY(-3px);
+      border-color: rgba(34,211,238,0.18);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    }
+    .feature-icon{
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: rgba(59,130,246,0.14);
+      border: 1px solid rgba(59,130,246,0.22);
+    }
+    .feature-icon i{
+      color: rgba(34,211,238,0.92);
+      font-size: 1.18rem;
+    }
+    .feature-title{
+      font-weight: 950;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+    }
+    .feature-desc{
+      margin-top: 6px;
+      color: rgba(226,232,240,0.70);
+      font-weight: 750;
+      line-height: 1.65;
+    }
+    .feature-meta{
+      margin-top: 10px;
+      display:flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap: 6px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.16);
+      background: rgba(255,255,255,0.03);
+      color: rgba(226,232,240,0.72);
+      font-weight: 850;
+      font-size: 0.82rem;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+    .pill i{
+      color: rgba(34,211,238,0.92);
+      font-size: 0.85rem;
+    }
+    a.feature-link{
+      text-decoration: none;
+      color: inherit;
+      display:block;
+      border-radius: 14px;
+    }
+    a.feature-link:focus-visible{
+      outline: 3px solid rgba(34,211,238,0.35);
+      outline-offset: 4px;
+    }
+
+    .ideal-card{
+      max-width: 980px;
+      margin: 22px auto 0;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: rgba(255,255,255,0.03);
+      padding: 20px;
+    }
+    .ideal-card h3{
+      margin: 0 0 10px;
+      font-weight: 950;
+      font-size: 1.12rem;
+      letter-spacing: -0.02em;
+      display:flex;
+      align-items:center;
+      gap: 10px;
+    }
+    .ideal-card h3 i{ color: rgba(34,211,238,0.92); }
+    .ideal-card ul{
+      margin: 0;
+      padding-left: 18px;
+      color: rgba(226,232,240,0.74);
+      font-weight: 750;
+      line-height: 1.75;
+      display:grid;
+      gap: 8px;
+    }
+
+    .cta-band{
+      max-width: 980px;
+      margin: 28px auto 0;
+      display:flex;
+      justify-content:center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .cta-note{
+      max-width: 980px;
+      margin: 18px auto 0;
+      text-align: center;
+      color: rgba(226,232,240,0.70);
+      font-weight: 750;
+      line-height: 1.7;
+    }
+    .cta-note a{
+      color: rgba(34,211,238,0.92);
+      text-decoration: none;
+      font-weight: 900;
+    }
+    .cta-note a:hover{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+<!-- Injected Header -->
+<div id="header-placeholder"></div>
+<main>
+<!-- HERO -->
+<section class="hero hero-enterprise">
+<div class="container hero-stack">
+<div class="hero-copy hero-centered">
+<div class="hero-badge">
+<i class="fa-solid fa-tower-broadcast"></i>
+            Carrier / Transport / Wholesale Connectivity
+          </div>
+<h1>
+            Carrier <span>Solutions</span>
+</h1>
+<p class="lead">
+            Secure, scalable, and high-performance network access built on robust fiber infrastructure.
+            Deliver low latency, unlimited bandwidth potential, and redundant pathways for mission‑critical operations.
+          </p>
+<div class="btn-row btn-row-center">
+<a class="btn btn-primary" href="contact">
+              Request Wholesale Availability
+              <i class="fa-solid fa-arrow-right"></i>
+</a>
+<a class="btn btn-secondary" href="tel:12132129100">
+<i class="fa-solid fa-phone"></i>
+              Call 213-212-9100
+            </a>
+</div>
+<div class="hero-proof hero-proof-centered">
+<div class="proof-item">
+<div class="proof-value">Low Latency</div>
+<div class="proof-label">Metro + regional routes</div>
+</div>
+<div class="proof-item">
+<div class="proof-value">Redundant</div>
+<div class="proof-label">Diverse pathways</div>
+</div>
+<div class="proof-item">
+<div class="proof-value">Carrier‑Grade</div>
+<div class="proof-label">Scalable transport</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<!-- OVERVIEW -->
+<section class="section">
+<div class="container">
+<div class="section-head">
+<h2 class="section-title">Flexible access that supports growth</h2>
+<p class="section-subtitle">
+            In a connected world, carriers and enterprises need cost‑effective access without the overhead of building and maintaining infrastructure.
+            Varayo delivers private, dedicated, and shared transport services with enterprise reliability, multi‑layer redundancy, and
+            direct connectivity to internet exchanges and cloud providers.
+          </p>
+</div>
+<div class="cta-band">
+<a class="btn btn-primary" href="contact">
+            Talk to a Network Architect
+            <i class="fa-solid fa-arrow-right"></i>
+</a>
+<a class="btn btn-secondary" href="support">
+            Support Options
+            <i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<!-- KEY SOLUTIONS -->
+<section class="section">
+<div class="container">
+<div class="section-head">
+<h2 class="section-title">Key solutions</h2>
+<p class="section-subtitle">
+            Choose the right transport layer for your architecture — from fully unlit infrastructure to turnkey internet access.
+          </p>
+</div>
+<div class="feature-grid">
+<a class="feature-link" href="dark-fiber">
+<div class="feature-card">
+<div class="feature-icon"><i class="fa-solid fa-lightbulb"></i></div>
+<div>
+<div class="feature-title">Dark Fiber</div>
+<div class="feature-desc">
+                  Lease unlit dedicated strands for unlimited bandwidth, maximum security, and full optical control — ideal for private networks.
+                </div>
+<div class="feature-meta">
+<span class="pill"><i class="fa-solid fa-lock"></i> Private</span>
+<span class="pill"><i class="fa-solid fa-infinity"></i> Unlimited scale</span>
+<span class="pill"><i class="fa-solid fa-diagram-project"></i> Optical control</span>
+</div>
+</div>
+</div>
+</a>
+<a class="feature-link" href="wavelength">
+<div class="feature-card">
+<div class="feature-icon"><i class="fa-solid fa-wave-square"></i></div>
+<div>
+<div class="feature-title">Wavelengths (DWDM)</div>
+<div class="feature-desc">
+                  Dedicated wavelengths over shared fiber for consistent, high-speed connectivity with dark-fiber-like benefits — without full strand IRUs.
+                </div>
+<div class="feature-meta">
+<span class="pill"><i class="fa-solid fa-gauge-high"></i> Deterministic</span>
+<span class="pill"><i class="fa-solid fa-arrows-left-right"></i> Dedicated wave</span>
+<span class="pill"><i class="fa-solid fa-building"></i> DCI ready</span>
+</div>
+</div>
+</div>
+</a>
+<a class="feature-link" href="ethernet">
+<div class="feature-card">
+<div class="feature-icon"><i class="fa-solid fa-ethernet"></i></div>
+<div>
+<div class="feature-title">Ethernet Transport (EPL/EVPL)</div>
+<div class="feature-desc">
+                  Standards-based Layer 2 transport delivering secure, scalable bandwidth across metro and regional routes — cost-effective and simple.
+                </div>
+<div class="feature-meta">
+<span class="pill"><i class="fa-solid fa-network-wired"></i> Layer 2</span>
+<span class="pill"><i class="fa-solid fa-route"></i> Multi-site</span>
+<span class="pill"><i class="fa-solid fa-shield-halved"></i> Private link</span>
+</div>
+</div>
+</div>
+</a>
+<a class="feature-link" href="ip-transit">
+<div class="feature-card">
+<div class="feature-icon"><i class="fa-solid fa-globe"></i></div>
+<div>
+<div class="feature-title">IP Transit</div>
+<div class="feature-desc">
+                  Connect to the global internet via BGP with blended backbone providers and exchanges — optimized for efficient routing and low latency.
+                </div>
+<div class="feature-meta">
+<span class="pill"><i class="fa-solid fa-code-branch"></i> BGP</span>
+<span class="pill"><i class="fa-solid fa-shuffle"></i> Blended routes</span>
+<span class="pill"><i class="fa-solid fa-tower-broadcast"></i> Carrier-grade</span>
+</div>
+</div>
+</div>
+</a>
+<div class="feature-card">
+<div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+<div>
+<div class="feature-title">Dedicated Internet Access (DIA)</div>
+<div class="feature-desc">
+                Fully dedicated, full-duplex bandwidth that never varies — no sharing and no complex routing protocols required.
+              </div>
+<div class="feature-meta">
+<span class="pill"><i class="fa-solid fa-arrow-right-arrow-left"></i> Full duplex</span>
+<span class="pill"><i class="fa-solid fa-signal"></i> Guaranteed bandwidth</span>
+</div>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon"><i class="fa-solid fa-exchange-alt"></i></div>
+<div>
+<div class="feature-title">Internet Exchange Connectivity</div>
+<div class="feature-desc">
+                Direct access to major IXPs in key markets for improved routing, reduced latency, and lower transit costs.
+              </div>
+<div class="feature-meta">
+<span class="pill"><i class="fa-solid fa-location-dot"></i> Major hubs</span>
+<span class="pill"><i class="fa-solid fa-diagram-project"></i> Better peering</span>
+</div>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon"><i class="fa-solid fa-cloud"></i></div>
+<div>
+<div class="feature-title">Cloud Provider Connections</div>
+<div class="feature-desc">
+                Private, high-speed direct connections to leading cloud platforms — secure access without public internet exposure.
+              </div>
+<div class="feature-meta">
+<span class="pill"><i class="fa-solid fa-lock"></i> Private on-ramps</span>
+<span class="pill"><i class="fa-solid fa-gauge-high"></i> Low latency</span>
+</div>
+</div>
+</div>
+</div>
+<div class="ideal-card">
+<h3><i class="fa-solid fa-bullseye"></i> Ideal for</h3>
+<ul>
+<li>Carriers needing wholesale access and transport</li>
+<li>Enterprises requiring dedicated bandwidth for data centers or branches</li>
+<li>Cloud‑intensive operations and hybrid environments</li>
+<li>High‑traffic networks demanding low latency and redundancy</li>
+</ul>
+</div>
+<div class="cta-band">
+<a class="btn btn-primary" href="contact">Contact Sales <i class="fa-solid fa-arrow-right"></i></a>
+<a class="btn btn-secondary" href="dark-fiber">
+            Explore Dark Fiber
+            <i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+<div class="cta-note">
+          With 24/7 monitoring and expert support, Varayo helps you optimize connectivity while reducing cost and complexity.
+        </div>
+</div>
+</section>
+<section class="cta-strip">
+<div class="container cta-strip-inner">
+<div class="cta-strip-copy">
+<h3>Ready to get started?</h3>
+<p>Talk with our team about the right design, timeline, and pricing for your needs.</p>
+</div>
+<div class="cta-strip-actions">
+<a class="btn btn-primary" href="quote">Get a Quote</a>
+<a class="btn btn-secondary" href="contact">Contact Sales</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Injected Footer -->
+<div id="footer-placeholder"></div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script>
+    function loadComponent(url, targetId, callback) {
+      fetch(url)
+        .then(r => { if (!r.ok) throw new Error('Not found: ' + url); return r.text(); })
+        .then(html => {
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = html;
+          if (typeof callback === 'function') callback();
+        })
+        .catch(err => {
+          console.error(err);
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = '<p style="color:red; text-align:center;">Component failed to load.</p>';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadComponent('header_menu.html', 'header-placeholder', function() {
+        if (typeof initMobileNav === 'function') initMobileNav();
+      });
+      loadComponent('footer_menu.html', 'footer-placeholder');
+    });
+  </script>
+</body>
+</html>

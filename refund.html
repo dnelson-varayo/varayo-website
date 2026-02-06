@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- Canonical URL -->
+  <link rel="canonical" href="https://varayo.com/refund"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Varayo"/>
+  <meta property="og:title" content="Refund &amp; Cancellation Policy – Varayo"/>
+  <meta property="og:description" content="Review Varayo's Refund and Cancellation Policy. Find clear terms on service cancellation, early termination fees, and refund eligibility for all services."/>
+  <meta property="og:url" content="https://varayo.com/refund"/>
+  <meta property="og:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@varayoinc"/>
+  <meta name="twitter:title" content="Refund &amp; Cancellation Policy – Varayo"/>
+  <meta name="twitter:description" content="Review Varayo's Refund and Cancellation Policy. Find clear terms on service cancellation, early termination fees, and refund eligibility for all services."/>
+  <meta name="twitter:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+<title>Refund &amp; Cancellation Policy – Varayo</title>
+
+  <meta name="description" content="Review Varayo's Refund and Cancellation Policy. Find clear terms on service cancellation, early termination fees, and refund eligibility for all services." />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon-96x96.png" sizes="32x32" />
+  <link rel="icon" href="/images/web-app-manifest-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <meta name="msapplication-TileImage" content="/images/web-app-manifest-512x512.png" />
+
+  <!-- Global Site Styles -->
+  <link rel="stylesheet" href="site-styles.css?v=refund1" />
+
+  <!-- Page-only helpers (keeps global system consistent) -->
+  <style>
+    .policy-wrap{
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .policy-topnote{
+      margin: 16px auto 0;
+      max-width: 820px;
+      text-align: center;
+      color: rgba(226,232,240,0.72);
+      font-weight: 750;
+      font-style: italic;
+    }
+
+    /* Contact callout card */
+    .policy-contact{
+      max-width: 920px;
+      margin: 26px auto 0;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+    }
+    .policy-contact-title{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      font-weight: 950;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      margin: 0 0 10px;
+    }
+    .policy-contact-title i{ color: rgba(34,211,238,0.92); }
+    .policy-contact-sub{
+      color: rgba(226,232,240,0.70);
+      font-weight: 750;
+      margin: 0 0 12px;
+      line-height: 1.65;
+    }
+    .policy-contact-actions{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .policy-contact-details{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 14px;
+      color: rgba(226,232,240,0.74);
+      font-weight: 750;
+    }
+    .policy-contact-details a{
+      color: rgba(34,211,238,0.92);
+      text-decoration: none;
+      font-weight: 900;
+    }
+    .policy-contact-details a:hover{ text-decoration: underline; }
+
+    /* Accordions */
+    .policy-rows{
+      margin-top: 22px;
+      display: grid;
+      gap: 12px;
+    }
+    details.policy-row{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: rgba(255,255,255,0.03);
+      overflow: hidden;
+    }
+    details.policy-row[open]{
+      border-color: rgba(34,211,238,0.18);
+      background: rgba(59,130,246,0.06);
+    }
+
+    summary.policy-q{
+      list-style: none;
+      cursor: pointer;
+      padding: 16px 16px;
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 12px;
+      font-weight: 950;
+      font-size: 1.02rem;
+      color: rgba(241,245,249,0.92);
+    }
+    summary.policy-q::-webkit-details-marker{ display:none; }
+    summary.policy-q::marker{ display:none; }
+
+    .policy-toggle{
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background: rgba(59,130,246,0.12);
+      border: 1px solid rgba(59,130,246,0.18);
+      color: rgba(34,211,238,0.92);
+      font-weight: 950;
+      font-size: 1.2rem;
+      line-height: 1;
+      flex: 0 0 auto;
+    }
+    details[open] .policy-toggle{
+      background: rgba(34,211,238,0.12);
+      border-color: rgba(34,211,238,0.22);
+      color: rgba(241,245,249,0.92);
+    }
+
+    .policy-a{
+      padding: 0 16px 16px;
+      color: rgba(226,232,240,0.74);
+      font-weight: 750;
+      line-height: 1.75;
+      font-size: 0.98rem;
+      border-top: 1px dashed rgba(148,163,184,0.18);
+    }
+    .policy-a h3{
+      margin-top: 14px;
+      margin-bottom: 8px;
+      color: rgba(241,245,249,0.92);
+      font-weight: 950;
+      font-size: 1.02rem;
+    }
+    .policy-a ul{
+      margin: 12px 0 0 18px;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+    }
+    .policy-a li{ margin: 0; }
+
+    /* Fiber warning treatment */
+    details.policy-row.fiber-warning{
+      border-color: rgba(239,68,68,0.42);
+      background: rgba(239,68,68,0.06);
+    }
+    details.policy-row.fiber-warning[open]{
+      border-color: rgba(239,68,68,0.55);
+      background: rgba(239,68,68,0.09);
+    }
+    details.policy-row.fiber-warning summary.policy-q{
+      color: rgba(248,113,113,0.95);
+    }
+    details.policy-row.fiber-warning summary .policy-toggle{
+      background: rgba(239,68,68,0.14);
+      border-color: rgba(239,68,68,0.25);
+      color: rgba(248,113,113,0.95);
+    }
+    details.policy-row.fiber-warning[open] summary .policy-toggle{
+      background: rgba(239,68,68,0.18);
+      border-color: rgba(239,68,68,0.32);
+      color: rgba(241,245,249,0.95);
+    }
+    .highlight{
+      color: rgba(248,113,113,0.98);
+      font-weight: 950;
+    }
+
+    .policy-address{
+      margin-top: 12px;
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: rgba(255,255,255,0.03);
+      color: rgba(226,232,240,0.72);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Injected Header -->
+  <div id="header-placeholder"></div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero hero-enterprise">
+      <div class="container hero-stack">
+        <div class="hero-copy hero-centered">
+          <div class="hero-badge">
+            <i class="fa-solid fa-file-contract"></i>
+            Legal / Billing / Cancellation Terms
+          </div>
+
+          <h1>
+            Refund &amp; <span>Cancellation</span> Policy
+          </h1>
+
+          <p class="lead">
+            Clear, transparent terms on cancellations, refunds, and early termination. This policy applies to all Varayo services unless
+            superseded by a signed agreement or SLA.
+          </p>
+
+          <div class="hero-proof hero-proof-centered">
+            <div class="proof-item">
+              <div class="proof-value">Transparent</div>
+              <div class="proof-label">Clear service terms</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-value">Billing</div>
+              <div class="proof-label">Written confirmation</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-value">SLA</div>
+              <div class="proof-label">Credits vs refunds</div>
+            </div>
+          </div>
+
+          <div class="policy-topnote">Effective Date: December 17, 2025</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section class="section">
+      <div class="container">
+        <div class="policy-wrap">
+
+          <div class="policy-contact">
+            <h2 class="policy-contact-title"><i class="fa-solid fa-circle-question"></i> Need to discuss a cancellation?</h2>
+            <p class="policy-contact-sub">
+              All cancellation requests must be initiated through our billing department via email or phone.
+              Please review the terms below for your specific service.
+            </p>
+
+            <div class="policy-contact-actions">
+              <a class="btn btn-primary" href="/cdn-cgi/l/email-protection#c2a0abaeaeabaca582b4a3b0a3bbadeca1adaf">
+                Email Billing &amp; Support
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a class="btn btn-secondary" href="tel:12132129100">
+                <i class="fa-solid fa-phone"></i>
+                Call 213-212-9100
+              </a>
+            </div>
+
+          </div>
+
+          <div class="policy-rows">
+
+            <details class="policy-row" open>
+              <summary class="policy-q">
+                General Provisions
+                <span class="policy-toggle">−</span>
+              </summary>
+              <div class="policy-a">
+                <p>All services provided by Varayo Inc. ("Varayo," "we," "us," or "our") are subject to the following refund and cancellation policies. By subscribing to or utilizing our services, you agree to these terms.</p>
+                <p>Unless explicitly stated otherwise in a separate Service Level Agreement (SLA) or custom contract, all fees are generally non-refundable.</p>
+                <ul>
+                  <li><strong>Non-Refundable Fees:</strong> Setup fees, installation charges, one-time equipment purchases, domain registration fees, and prepaid annual service fees are non-refundable.</li>
+                  <li><strong>Prorated Refunds (if applicable):</strong> Monthly service fees are generally not eligible for prorated refunds upon cancellation, except where required by state or federal law.</li>
+                  <li><strong>SLA Credits:</strong> If an outage occurs that violates the uptime guarantees outlined in your specific Service Level Agreement (SLA), you may be eligible for service credits, which are not cash refunds.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="policy-row fiber-warning">
+              <summary class="policy-q">
+                Fiber Internet Services (Early Termination Fees Apply)
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <p>Fiber internet services require a contractual commitment (typically 12, 24, or 36 months) to secure preferential pricing, installation subsidies, and dedicated resources.</p>
+
+                <h3>No Money-Back Guarantee</h3>
+                <p>Due to the significant upfront investment in design, permitting, construction, and installation of dedicated fiber circuits, <span class="highlight">no refunds are available once the service agreement is signed</span>.</p>
+
+                <h3>Billing and Cancellation</h3>
+                <p>Billing begins upon completion and activation of the circuit (service ready for use). Once billing has commenced, the service <span class="highlight">cannot be canceled without penalty</span> for the remainder of the contract term.</p>
+
+                <h3>Early Termination Fee (ETF)</h3>
+                <p>If you terminate service before the end of the contract term, an <span class="highlight">Early Termination Fee (ETF)</span> will apply. The ETF typically covers the remaining months of the contract (prorated or as specified in your agreement) plus recovery of any waived or subsidized installation, construction, activation, or equipment costs.</p>
+                <p>Service continues until the end of the current billing cycle following formal cancellation notice, and you remain responsible for all charges during that period. Month-to-month options are not available for fiber internet services.</p>
+              </div>
+            </details>
+
+            <details class="policy-row">
+              <summary class="policy-q">
+                Cancellation Process
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <p>To cancel any Varayo Inc. service, the following procedure must be followed:</p>
+                <ul>
+                  <li><strong>Notification Requirement:</strong> All cancellation requests must be submitted in writing (via email to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dcbeb5b0b0b5b2bb9caabdaebda5b3f2bfb3b1">[email&#160;protected]</a> or through a formal support ticket) by the authorized account holder.</li>
+                  <li><strong>Effective Date:</strong> Cancellation requests are processed at the end of the current billing cycle. Services remain active until the end of the paid cycle.</li>
+                  <li><strong>Terminated Accounts:</strong> If the service is under a term commitment, an early termination fee will be assessed and must be paid before the account can be fully closed.</li>
+                  <li><strong>Final Bill:</strong> You will receive a final bill that may include any outstanding usage fees, termination charges, or equipment return fees.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="policy-row">
+              <summary class="policy-q">
+                VoIP Services
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <p>VoIP services are provided on a <strong>month-to-month basis</strong> with no long-term contract required.</p>
+
+                <h3>30-Day Satisfaction Guarantee</h3>
+                <p>New VoIP activations qualify for a 30-day money-back guarantee. If dissatisfied within the first 30 days after activation, contact us to cancel and receive a refund or credit for standard monthly service fees paid (excluding taxes, surcharges, one-time setup fees, or equipment purchases).</p>
+
+                <h3>Cancellation After 30 Days</h3>
+                <p>Provide written notice (email acceptable). Service continues until the end of the current billing cycle; no prorated refunds for partial months.</p>
+                <p>Prepaid credits or unused balances may be refunded upon request, minus any outstanding fees.</p>
+              </div>
+            </details>
+
+            <details class="policy-row">
+              <summary class="policy-q">
+                Equipment Purchases and Returns
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <p>New equipment purchases (VoIP Phones, Routers, Switches, etc.) include a <strong>30-day return window</strong> from the delivery date.</p>
+                <ul>
+                  <li>Return unused items in original packaging and condition (including all accessories, manuals, and packaging) for a full refund, minus shipping costs.</li>
+                  <li>A <strong>restocking fee (up to 15-20%)</strong> may apply to opened or used items at our discretion.</li>
+                  <li>Refurbished or custom-configured equipment is final sale and non-returnable/non-refundable.</li>
+                  <li>Defective equipment under warranty follows the manufacturer’s policy (repair or replacement, not refund).</li>
+                  <li>Shipping costs for returns are the customer’s responsibility unless the item is defective or shipped in error.</li>
+                  <li>Software, licenses, and digital products are non-refundable.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="policy-row">
+              <summary class="policy-q">
+                Exceptions and Special Circumstances
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <p>Refunds may be considered only under the following specific circumstances:</p>
+                <ul>
+                  <li><strong>Billing Errors:</strong> If you were erroneously double-charged or billed incorrectly, a refund for the excess amount will be processed immediately upon verification by our billing team.</li>
+                  <li><strong>Service Outages (SLA):</strong> If a service outage exceeds the guaranteed uptime specified in your Service Level Agreement (SLA), you may be eligible for a service credit or refund as defined in that SLA. Eligibility is subject to verification of the outage metrics.</li>
+                  <li><strong>Hardware Failure:</strong> If Varayo-rented or Varayo-provided equipment fails and we are unable to replace it within a reasonable timeframe, a credit may be applied for the period the service was unusable.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="policy-row">
+              <summary class="policy-q">
+                Payment &amp; Security Details
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <p>Varayo Inc. accepts payments via ACH, Credit Card, and wire transfer. All credit card transactions are processed securely through PCI DSS compliant third-party processors. Varayo Inc. does not store full credit card information on its servers.</p>
+                <p>Automatic recurring billing is the default method for most services. Customers are responsible for keeping payment information current to avoid service interruption due to failed payments.</p>
+              </div>
+            </details>
+
+            <details class="policy-row">
+              <summary class="policy-q">
+                Policy Acknowledgement and Contact Information
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <h3>Additional Notes</h3>
+                <ul>
+                  <li>All cancellations require written confirmation. Contact our billing/support team to initiate.</li>
+                  <li>Overdue accounts or violations of the Acceptable Use Policy may void any refund eligibility.</li>
+                  <li>Varayo Inc. reserves the right to update this policy. The latest version is available on our website.</li>
+                </ul>
+
+                <h3 style="margin-top:16px;">Corporate Contact Information</h3>
+                <div class="policy-address">
+                  <strong>Varayo Inc.</strong><br/>
+                  530 W 6th St Ste 301<br/>
+                  Los Angeles, CA 90014
+                </div>
+
+                <p style="margin-top: 14px;">Email: <a href="/cdn-cgi/l/email-protection#bcded5d0d0d5d2dbfccaddceddc5d392dfd3d1"><span class="__cf_email__" data-cfemail="2143484d4d484f466157405340584e0f424e4c">[email&#160;protected]</span></a></p>
+                <p>Phone: <a href="tel:12132129100">213-212-9100</a></p>
+              </div>
+            </details>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-strip">
+      <div class="container cta-strip-inner">
+        <div class="cta-strip-copy">
+          <h3>Ready to get started?</h3>
+          <p>Talk with our team about the right design, timeline, and pricing for your needs.</p>
+        </div>
+        <div class="cta-strip-actions">
+          <a class="btn btn-primary" href="quote">Get a Quote</a>
+          <a class="btn btn-secondary" href="contact">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+
+</main>
+  <!-- Injected Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script>
+    function loadComponent(url, targetId, callback) {
+      fetch(url)
+        .then(r => { if (!r.ok) throw new Error('Not found: ' + url); return r.text(); })
+        .then(html => {
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = html;
+          if (typeof callback === 'function') callback();
+        })
+        .catch(err => {
+          console.error(err);
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = '<p style="color:red; text-align:center;">Component failed to load.</p>';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadComponent('header_menu.html', 'header-placeholder', function() {
+        if (typeof initMobileNav === 'function') initMobileNav();
+      });
+      loadComponent('footer_menu.html', 'footer-placeholder');
+    });
+  </script>
+
+</body>
+</html>

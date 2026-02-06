@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- Canonical URL -->
+  <link rel="canonical" href="https://varayo.com/cloud-ops"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Varayo"/>
+  <meta property="og:title" content="Cloud Operations – Varayo"/>
+  <meta property="og:description" content="Day-2 cloud operations: patching, monitoring, availability, and cost controls."/>
+  <meta property="og:url" content="https://varayo.com/cloud-ops"/>
+  <meta property="og:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@varayoinc"/>
+  <meta name="twitter:title" content="Cloud Operations – Varayo"/>
+  <meta name="twitter:description" content="Day-2 cloud operations: patching, monitoring, availability, and cost controls."/>
+  <meta name="twitter:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+<title>Cloud Operations – Varayo</title>
+
+  <meta name="description" content="Day-2 cloud operations: patching, monitoring, availability, and cost controls." />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon-96x96.png" sizes="32x32" />
+  <link rel="icon" href="/images/web-app-manifest-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <meta name="msapplication-TileImage" content="/images/web-app-manifest-512x512.png" />
+
+  <!-- Global Site Styles -->
+  <link rel="stylesheet" href="site-styles.css?v=round29fixed" />
+
+  <!-- Page-only helpers (keeps global system consistent) -->
+  <style>
+    .feature-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+      max-width: 920px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 900px){
+      .feature-grid{ grid-template-columns: 1fr; }
+    }
+    .feature-card{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+      display:grid;
+      grid-template-columns: 52px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+    .feature-icon{
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: rgba(59, 130, 246, 0.14);
+      border: 1px solid rgba(59, 130, 246, 0.22);
+    }
+    .feature-icon i{
+      color: rgba(34,211,238,0.92);
+      font-size: 1.18rem;
+    }
+    .feature-title{
+      font-weight: 950;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+    }
+    .feature-desc{
+      margin-top: 6px;
+      color: rgba(226,232,240,0.70);
+      font-weight: 750;
+      line-height: 1.65;
+    }
+    .cta-band{
+      max-width: 920px;
+      margin: 28px auto 0;
+      display:flex;
+      justify-content:center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Injected Header -->
+  <div id="header-placeholder"></div>
+
+  <main>
+
+<section class="hero hero-enterprise">
+  <div class="container hero-stack">
+    <div class="hero-copy hero-centered">
+      <div class="hero-badge"><i class="fa-solid fa-gears"></i> Cloud Operations</div>
+      <h1>Day‑2 cloud operations <span>without surprises</span></h1>
+      <p class="lead">Patching, availability, monitoring, and operational discipline for cloud and hybrid environments.</p>
+      <div class="btn-row btn-row-center">
+        <a class="btn btn-primary" href="contact">Discuss Ops Coverage</a>
+        <a class="btn btn-secondary" href="managed-services">Back to Managed Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Operations scope</div>
+      <h2 class="section-title">What we handle</h2>
+      <p class="lead">Ongoing operational responsibilities that keep environments stable, secure, and cost-effective.</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+        <div>
+          <div class="feature-title">Availability monitoring</div>
+          <div class="feature-desc">Continuous health checks, alerting, and incident response procedures. We detect issues before they impact users and follow escalation paths to resolve them.</div>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div>
+          <div class="feature-title">Patching & updates</div>
+          <div class="feature-desc">Routine security updates with scheduled maintenance windows. We test patches in staging before production deployment and maintain rollback procedures.</div>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-lock"></i></div>
+        <div>
+          <div class="feature-title">Security posture</div>
+          <div class="feature-desc">Baseline hardening, change controls, and regular security assessments. We enforce least privilege access and maintain audit logs.</div>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <div>
+          <div class="feature-title">Cost optimization</div>
+          <div class="feature-desc">Right-sizing resources, eliminating waste, and providing visibility into spending. We identify idle resources and recommend architectural changes that reduce costs.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-divider">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Operating model</div>
+      <h2 class="section-title">How cloud operations works</h2>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-calendar-check"></i></div>
+        <div>
+          <div class="feature-title">Maintenance windows</div>
+          <div class="feature-desc">Pre-scheduled windows for updates and changes. Coordinated with your team to minimize disruption during low-traffic periods.</div>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-file-lines"></i></div>
+        <div>
+          <div class="feature-title">Runbooks</div>
+          <div class="feature-desc">Documented procedures for routine tasks and incident response. Clear ownership and escalation paths for different scenarios.</div>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+        <div>
+          <div class="feature-title">Performance monitoring</div>
+          <div class="feature-desc">Tracking resource utilization, response times, and error rates. Historical data helps identify trends and capacity planning needs.</div>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-comments"></i></div>
+        <div>
+          <div class="feature-title">Regular reviews</div>
+          <div class="feature-desc">Monthly operational reviews covering incidents, changes, and optimization opportunities. Transparent reporting on SLA performance.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-band">
+      <a class="btn btn-primary" href="contact">Start operations coverage <i class="fa-solid fa-arrow-right"></i></a>
+      <a class="btn btn-secondary" href="disaster-recovery">Disaster Recovery</a>
+    </div>
+  </div>
+</section>
+
+    <section class="cta-strip">
+      <div class="container cta-strip-inner">
+        <div class="cta-strip-copy">
+          <h3>Ready to get started?</h3>
+          <p>Talk with our team about the right design, timeline, and pricing for your needs.</p>
+        </div>
+        <div class="cta-strip-actions">
+          <a class="btn btn-primary" href="quote">Get a Quote</a>
+          <a class="btn btn-secondary" href="contact">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+
+</main>
+  <!-- Injected Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script>
+    function loadComponent(url, targetId, callback) {
+      fetch(url)
+        .then(r => { if (!r.ok) throw new Error('Not found: ' + url); return r.text(); })
+        .then(html => {
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = html;
+          if (typeof callback === 'function') callback();
+        })
+        .catch(err => {
+          console.error(err);
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = '<p style="color:red; text-align:center;">Component failed to load.</p>';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadComponent('header_menu.html', 'header-placeholder', function() {
+        if (typeof initMobileNav === 'function') initMobileNav();
+      });
+      loadComponent('footer_menu.html', 'footer-placeholder');
+    });
+  </script>
+
+</body>
+</html>

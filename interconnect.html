@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/><!-- Canonical URL -->
+  <link rel="canonical" href="https://varayo.com/interconnect"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Varayo"/>
+  <meta property="og:title" content="Interconnect – Varayo"/>
+  <meta property="og:description" content=""/>
+  <meta property="og:url" content="https://varayo.com/interconnect"/>
+  <meta property="og:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@varayoinc"/>
+  <meta name="twitter:title" content="Interconnect – Varayo"/>
+  <meta name="twitter:description" content=""/>
+  <meta name="twitter:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+<title>Interconnect – Varayo</title>
+<meta content="Direct interconnect solutions for data centers, cloud providers, and carriers. Cross‑connects, IX connectivity, and private links engineered for low latency and security." name="description"/>
+<!-- Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<!-- Favicons -->
+<link href="/images/favicon-96x96.png" rel="icon" sizes="32x32"/>
+<link href="/images/web-app-manifest-192x192.png" rel="icon" sizes="192x192"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon"/>
+<meta content="/images/web-app-manifest-512x512.png" name="msapplication-TileImage"/>
+<!-- Global Site Styles -->
+<link href="site-styles.css?v=interconnect1" rel="stylesheet"/>
+<!-- Page-only helpers (keeps global system consistent) -->
+<style>
+    .two-col{
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 14px;
+      max-width: 980px;
+      margin: 22px auto 0;
+      align-items: start;
+    }
+    @media (max-width: 980px){
+      .two-col{ grid-template-columns: 1fr; }
+    }
+
+    .panel{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: rgba(255,255,255,0.03);
+      padding: 20px;
+    }
+
+    .panel h3{
+      margin: 0 0 10px;
+      font-weight: 950;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      display:flex;
+      align-items:center;
+      gap: 10px;
+    }
+    .panel h3 i{ color: rgba(34,211,238,0.92); }
+
+    .panel p{
+      margin: 0;
+      color: rgba(226,232,240,0.74);
+      font-weight: 750;
+      line-height: 1.75;
+    }
+
+    .panel ul{
+      margin: 14px 0 0 18px;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+      color: rgba(226,232,240,0.74);
+      font-weight: 750;
+      line-height: 1.75;
+    }
+
+    .feature-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+      max-width: 980px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 980px){
+      .feature-grid{ grid-template-columns: 1fr; }
+    }
+    .feature-card{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+      display:grid;
+      grid-template-columns: 52px 1fr;
+      gap: 14px;
+      align-items: start;
+      min-height: 176px;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .feature-card:hover{
+      transform: translateY(-3px);
+      border-color: rgba(34,211,238,0.18);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    }
+    .feature-icon{
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: rgba(59,130,246,0.14);
+      border: 1px solid rgba(59,130,246,0.22);
+    }
+    .feature-icon i{
+      color: rgba(34,211,238,0.92);
+      font-size: 1.18rem;
+    }
+    .feature-title{
+      font-weight: 950;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+    }
+    .feature-desc{
+      margin-top: 6px;
+      color: rgba(226,232,240,0.70);
+      font-weight: 750;
+      line-height: 1.65;
+    }
+    .pill-row{
+      margin-top: 10px;
+      display:flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap: 6px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.16);
+      background: rgba(255,255,255,0.03);
+      color: rgba(226,232,240,0.72);
+      font-weight: 850;
+      font-size: 0.82rem;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+    .pill i{
+      color: rgba(34,211,238,0.92);
+      font-size: 0.85rem;
+    }
+
+    .cta-band{
+      max-width: 980px;
+      margin: 28px auto 0;
+      display:flex;
+      justify-content:center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+<!-- Injected Header -->
+<div id="header-placeholder"></div>
+<main>
+<!-- HERO -->
+<section class="hero hero-enterprise">
+<div class="container hero-stack">
+<div class="hero-copy hero-centered">
+<div class="hero-badge">
+<i class="fa-solid fa-plug-circle-bolt"></i>
+            Interconnect / Cross‑Connect / IX
+          </div>
+<h1>
+            Direct <span>Interconnect</span>
+</h1>
+<p class="lead">
+            Private, low‑latency connectivity between networks. Build direct cross‑connects, exchange peering,
+            and cloud on‑ramps that bypass the public internet for performance, security, and control.
+          </p>
+<div class="btn-row btn-row-center">
+<a class="btn btn-primary" href="contact">
+              Request Interconnect Pricing
+              <i class="fa-solid fa-arrow-right"></i>
+</a>
+<a class="btn btn-secondary" href="colocation">
+              Colocation &amp; Cross‑Connects
+              <i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+<div class="hero-proof hero-proof-centered">
+<div class="proof-item">
+<div class="proof-value">Private</div>
+<div class="proof-label">Secure connectivity</div>
+</div>
+<div class="proof-item">
+<div class="proof-value">Low Latency</div>
+<div class="proof-label">Direct paths</div>
+</div>
+<div class="proof-item">
+<div class="proof-value">Scalable</div>
+<div class="proof-label">1G–400G</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<!-- OVERVIEW -->
+<section class="section">
+<div class="container">
+<div class="section-head">
+<h2 class="section-title">Connect where it matters</h2>
+<p class="section-subtitle">
+            Interconnect is how modern networks stay fast and cost‑effective. By connecting directly to partners,
+            exchanges, carriers, and cloud providers, you reduce transit costs, improve routing, and gain control over performance.
+          </p>
+</div>
+<div class="two-col">
+<div class="panel">
+<h3><i class="fa-solid fa-diagram-project"></i> Common interconnect types</h3>
+<p>
+              Varayo delivers a range of interconnect options — from in‑facility cross‑connects to metro Ethernet and wavelength links
+              between data centers, exchanges, and cloud on‑ramps.
+            </p>
+<ul>
+<li><strong>Cross‑Connects:</strong> Copper or fiber connections inside a facility.</li>
+<li><strong>Meet‑Me Room (MMR):</strong> Dedicated connections between carriers and networks.</li>
+<li><strong>Internet Exchange (IX):</strong> Direct peering for better routing and lower latency.</li>
+<li><strong>Cloud On‑Ramps:</strong> Private connections into major cloud platforms.</li>
+</ul>
+</div>
+<div class="panel">
+<h3><i class="fa-solid fa-bullseye"></i> Ideal for</h3>
+<ul>
+<li>Data center operators and tenants</li>
+<li>Carriers / ISPs / MSOs</li>
+<li>High‑traffic SaaS platforms</li>
+<li>Hybrid cloud architectures</li>
+</ul>
+</div>
+</div>
+<div class="cta-band">
+<a class="btn btn-primary" href="contact">
+            Plan an Interconnect Build
+            <i class="fa-solid fa-arrow-right"></i>
+</a>
+<a class="btn btn-secondary" href="ip-transit">
+            IP Transit
+            <i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<!-- FEATURES -->
+<section class="section">
+<div class="container">
+<div class="section-head">
+<h2 class="section-title">Why interconnect with Varayo</h2>
+<p class="section-subtitle">
+            The fastest networks are built with direct relationships and clean physical paths — with operational support that stays responsive.
+          </p>
+</div>
+<div class="feature-grid">
+<div class="feature-card">
+<div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+<div>
+<div class="feature-title">Lower Latency &amp; Better Routing</div>
+<div class="feature-desc">
+                Skip the long path across the public internet. Direct peering and private links reduce hops, improve stability, and deliver faster performance.
+              </div>
+<div class="pill-row">
+<span class="pill"><i class="fa-solid fa-route"></i> Fewer hops</span>
+<span class="pill"><i class="fa-solid fa-gauge-high"></i> Faster</span>
+</div>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon"><i class="fa-solid fa-lock"></i></div>
+<div>
+<div class="feature-title">Private, Secure Connectivity</div>
+<div class="feature-desc">
+                Keep critical traffic off the public internet. Private interconnect improves security posture and reduces exposure to DDoS and route instability.
+              </div>
+<div class="pill-row">
+<span class="pill"><i class="fa-solid fa-shield-halved"></i> Protected</span>
+<span class="pill"><i class="fa-solid fa-eye"></i> Visible</span>
+</div>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon"><i class="fa-solid fa-handshake"></i></div>
+<div>
+<div class="feature-title">Partner &amp; Carrier Access</div>
+<div class="feature-desc">
+                Establish direct connections to your ecosystem — cloud providers, carriers, CDNs, and strategic partners — through curated interconnect pathways.
+              </div>
+<div class="pill-row">
+<span class="pill"><i class="fa-solid fa-plug"></i> Direct links</span>
+<span class="pill"><i class="fa-solid fa-building"></i> Facility access</span>
+</div>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon"><i class="fa-solid fa-life-ring"></i></div>
+<div>
+<div class="feature-title">24/7/365 Support &amp; SLAs</div>
+<div class="feature-desc">
+                Proactive monitoring and expert response for cross‑connects and transport links — with clear escalation and documentation.
+              </div>
+<div class="pill-row">
+<span class="pill"><i class="fa-solid fa-headset"></i> Always on</span>
+<span class="pill"><i class="fa-solid fa-ticket"></i> SLA-backed</span>
+</div>
+</div>
+</div>
+</div>
+<div class="cta-band">
+<a class="btn btn-primary" href="contact">Contact Sales <i class="fa-solid fa-arrow-right"></i></a>
+<a class="btn btn-secondary" href="carrier">
+            Carrier Solutions
+            <i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Injected Footer -->
+<div id="footer-placeholder"></div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script>
+    function loadComponent(url, targetId, callback) {
+      fetch(url)
+        .then(r => { if (!r.ok) throw new Error('Not found: ' + url); return r.text(); })
+        .then(html => {
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = html;
+          if (typeof callback === 'function') callback();
+        })
+        .catch(err => {
+          console.error(err);
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = '<p style="color:red; text-align:center;">Component failed to load.</p>';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadComponent('header_menu.html', 'header-placeholder', function() {
+        if (typeof initMobileNav === 'function') initMobileNav();
+      });
+      loadComponent('footer_menu.html', 'footer-placeholder');
+    });
+  </script>
+</body>
+</html>

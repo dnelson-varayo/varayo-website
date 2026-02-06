@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- Canonical URL -->
+  <link rel="canonical" href="https://varayo.com/microsoft-teams-calling"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Varayo"/>
+  <meta property="og:title" content="Microsoft Teams Voice Integration – Varayo"/>
+  <meta property="og:description" content="Microsoft Teams calling via Direct Routing and Operator Connect. Choose simple self-service or advanced integration with your existing phone system. Carrier-grade quality."/>
+  <meta property="og:url" content="https://varayo.com/microsoft-teams-calling"/>
+  <meta property="og:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@varayoinc"/>
+  <meta name="twitter:title" content="Microsoft Teams Voice Integration – Varayo"/>
+  <meta name="twitter:description" content="Microsoft Teams calling via Direct Routing and Operator Connect. Choose simple self-service or advanced integration with your existing phone system. Carrier-grade quality."/>
+  <meta name="twitter:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+<title>Microsoft Teams Voice Integration – Varayo</title>
+
+  <meta name="description" content="Microsoft Teams calling via Direct Routing and Operator Connect. Choose simple self-service or advanced integration with your existing phone system. Carrier-grade quality." />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon-96x96.png" sizes="32x32" />
+  <link rel="icon" href="/images/web-app-manifest-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <meta name="msapplication-TileImage" content="/images/web-app-manifest-512x512.png" />
+
+  <!-- Global Site Styles -->
+  <link rel="stylesheet" href="site-styles.css?v=teamsvoice2" />
+
+  <!-- Page-only helpers -->
+  <style>
+    .two-col{
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 26px;
+      align-items: start;
+      max-width: 920px;
+      margin: 26px auto 0;
+    }
+    @media (max-width: 900px){
+      .two-col{ grid-template-columns: 1fr; }
+    }
+    .panel-card{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+    }
+    .panel-title{
+      font-weight: 950;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+      margin: 0 0 10px;
+    }
+    .panel-text{
+      color: rgba(226,232,240,0.72);
+      font-weight: 750;
+      margin: 0;
+    }
+    .checklist{
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+    .checklist li{
+      display: grid;
+      grid-template-columns: 20px 1fr;
+      gap: 10px;
+      align-items: start;
+      color: rgba(226,232,240,0.78);
+      font-weight: 750;
+    }
+    .checklist i{
+      color: rgba(34,211,238,0.92);
+      margin-top: 3px;
+    }
+    .feature-grid{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+      max-width: 920px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 900px){
+      .feature-grid{ grid-template-columns: 1fr; }
+    }
+    .feature-card{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+      display:grid;
+      grid-template-columns: 52px 1fr;
+      gap: 14px;
+      align-items: start;
+      min-height: 182px;
+    }
+    .feature-icon{
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: rgba(59, 130, 246, 0.14);
+      border: 1px solid rgba(59, 130, 246, 0.22);
+    }
+    .feature-icon i{
+      color: rgba(34,211,238,0.92);
+      font-size: 1.18rem;
+    }
+    .feature-title{
+      font-weight: 950;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+    }
+    .feature-desc{
+      margin-top: 6px;
+      color: rgba(226,232,240,0.70);
+      font-weight: 750;
+    }
+    .cta-band{
+      max-width: 920px;
+      margin: 28px auto 0;
+      display:flex;
+      justify-content:center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .panel-cta{
+      margin-top: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Injected Header -->
+  <div id="header-placeholder"></div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero hero-enterprise">
+      <div class="container hero-stack">
+        <div class="hero-copy hero-centered">
+          <div class="hero-badge">
+            <i class="fa-brands fa-microsoft"></i>
+            Microsoft Teams Phone / Direct Routing & Operator Connect
+          </div>
+
+          <h1>
+            Microsoft Teams Voice,<br/>
+            <span>Powered by Varayo</span>
+          </h1>
+
+          <p class="lead">
+            Unify collaboration and external calling into one seamless application. Varayo connects your Microsoft Teams environment
+            directly to the PSTN—choose Direct Routing for advanced integration or Operator Connect for simplicity. Both engineered for quality, security, and scale.
+          </p>
+
+          <div class="btn-row btn-row-center">
+            <a class="btn btn-primary" href="contact">
+              Schedule a Teams Voice Consultation
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a class="btn btn-secondary" href="tel:12132129100">
+              <i class="fa-solid fa-phone"></i>
+              Call 213-212-9100
+            </a>
+          </div>
+
+          <div class="hero-proof hero-proof-centered">
+            <div class="proof-item">
+              <div class="proof-value">2 Options</div>
+              <div class="proof-label">Direct Routing & Operator Connect</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-value">Port Numbers</div>
+              <div class="proof-label">Keep what you have</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-value">Global</div>
+              <div class="proof-label">Local + international</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- TWO WAYS TO CONNECT TEAMS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Two Ways to Connect Microsoft Teams</h2>
+<p class="section-subtitle">
+            Choose the integration model that matches your technical requirements and organizational structure. Both options deliver carrier-grade call quality and work with your existing Microsoft 365 environment.
+          </p>
+        </div>
+
+        <div class="two-col" style="grid-template-columns: 1fr 1fr;">
+          <div class="panel-card">
+            <h3 class="panel-title">
+              <i class="fa-solid fa-network-wired" style="color: rgba(34,211,238,0.92); margin-right: 8px;"></i>
+              Direct Routing
+            </h3>
+            <p class="panel-text">
+              For organizations needing integration with existing phone systems, complex call routing, or hybrid VoIP + Teams deployments.
+            </p>
+            <ul class="checklist">
+              <li><i class="fa-solid fa-check"></i><span>Integrate with existing PBX or Cloud PBX</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Advanced call routing and custom workflows</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Hybrid deployments (Teams + desk phones)</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Custom integrations and API access</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Full control over call routing policies</span></li>
+            </ul>
+            <div class="panel-cta">
+              <a class="btn btn-secondary" href="contact">
+                Learn About Direct Routing
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="panel-card">
+            <h3 class="panel-title">
+              <i class="fa-solid fa-bolt" style="color: rgba(34,211,238,0.92); margin-right: 8px;"></i>
+              Operator Connect
+            </h3>
+            <p class="panel-text">
+              For Teams-first organizations wanting the simplest path to enterprise calling. Setup in minutes, manage everything in Teams Admin Center.
+            </p>
+            <ul class="checklist">
+              <li><i class="fa-solid fa-check"></i><span>Setup in minutes through Teams Admin Portal</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Self-service number ordering and assignment</span></li>
+              <li><i class="fa-solid fa-check"></i><span>No additional infrastructure required</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Perfect for cloud-first companies</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Lower complexity, faster deployment</span></li>
+            </ul>
+            <div class="panel-cta">
+              <a class="btn btn-primary" href="contact">
+                Get Started with Operator Connect
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- WHAT YOU GET WITH VARAYO -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">What You Get with Varayo Teams Voice</h2>
+<p class="section-subtitle">
+            Regardless of which integration model you choose, you get the same carrier-grade quality, global coverage, and dedicated support that sets Varayo apart.
+          </p>
+        </div>
+
+        <div class="two-col">
+          <div class="panel-card">
+            <h3 class="panel-title">Included with Both Options</h3>
+            <ul class="checklist">
+              <li><i class="fa-solid fa-check"></i><span>Competitive, consumption-based calling rates</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Global calling coverage (US, Canada, international)</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Port all your existing phone numbers</span></li>
+              <li><i class="fa-solid fa-check"></i><span>HD voice quality with carrier-grade SBCs</span></li>
+              <li><i class="fa-solid fa-check"></i><span>24/7 US-based support and monitoring</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Unified management alongside other Varayo services</span></li>
+            </ul>
+          </div>
+
+          <div class="panel-card">
+            <h3 class="panel-title">Ideal for</h3>
+            <p class="panel-text">
+              <strong>Direct Routing:</strong> Multi-site businesses, hybrid workforces, companies migrating from legacy PBX, organizations needing complex routing.
+            </p>
+            <p class="panel-text" style="margin-top: 12px;">
+              <strong>Operator Connect:</strong> Cloud-first startups, fully remote teams, professional services firms, organizations standardized on Microsoft 365.
+            </p>
+            <div class="panel-cta">
+              <a class="btn btn-secondary" href="phone-service">
+                Explore All Voice Services
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- BENEFITS -->
+    <section class="section" id="integration-benefits">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Why Choose Varayo for Teams Voice?</h2>
+<p class="section-subtitle">
+            Designed to reduce operational complexity, improve call quality, and provide a guided migration experience—backed by
+            real engineering and voice architecture support.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+            <div>
+              <div class="feature-title">Simplified Migration</div>
+              <div class="feature-desc">
+                We handle setup end-to-end—SIP trunking, number porting, and Teams configuration—without technical headaches for your IT team.
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-globe"></i></div>
+            <div>
+              <div class="feature-title">Global & Local Calling</div>
+              <div class="feature-desc">
+                Competitive rates in the US, Canada, and international markets with reliable HD voice quality wherever you operate.
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-cubes"></i></div>
+            <div>
+              <div class="feature-title">Centralized Management</div>
+              <div class="feature-desc">
+                Manage Teams Voice, Cloud PBX, and Contact Center from one platform—apply consistent call flows and security policies across your org.
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-sitemap"></i></div>
+            <div>
+              <div class="feature-title">Dedicated Architectural Support</div>
+              <div class="feature-desc">
+                We help optimize Teams licensing and voice architecture—reducing costs compared to Microsoft Calling Plans and avoiding unnecessary spend.
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-gauge-high"></i></div>
+            <div>
+              <div class="feature-title">Rapid Deployment</div>
+              <div class="feature-desc">
+                Operator Connect customers can be live in hours. Direct Routing deployments complete in days, not weeks—with zero disruption to your business.
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div>
+              <div class="feature-title">Enterprise Security & Compliance</div>
+              <div class="feature-desc">
+                Microsoft-certified infrastructure, end-to-end encryption, fraud monitoring, and compliance support for HIPAA, PCI-DSS, and more.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-band">
+          <a class="btn btn-primary" href="contact">
+            Get a Teams Migration Plan
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a class="btn btn-secondary" href="support">
+            View Support Options
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-strip">
+      <div class="container cta-strip-inner">
+        <div class="cta-strip-copy">
+          <h3>Ready to get started?</h3>
+          <p>Talk with our team about the right design, timeline, and pricing for your needs.</p>
+        </div>
+        <div class="cta-strip-actions">
+          <a class="btn btn-primary" href="quote">Get a Quote</a>
+          <a class="btn btn-secondary" href="contact">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+
+</main>
+  <!-- Injected Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script>
+    function loadComponent(url, targetId, callback) {
+      fetch(url)
+        .then(r => { if (!r.ok) throw new Error('Not found: ' + url); return r.text(); })
+        .then(html => {
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = html;
+          if (typeof callback === 'function') callback();
+        })
+        .catch(err => {
+          console.error(err);
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = '<p style="color:red; text-align:center;">Component failed to load.</p>';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadComponent('header_menu.html', 'header-placeholder', function() {
+        if (typeof initMobileNav === 'function') initMobileNav();
+      });
+      loadComponent('footer_menu.html', 'footer-placeholder');
+    });
+  </script>
+
+</body>
+</html>

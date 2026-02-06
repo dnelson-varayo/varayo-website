@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- Canonical URL -->
+  <link rel="canonical" href="https://varayo.com/locations"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Varayo"/>
+  <meta property="og:title" content="Locations & Coverage — Varayo"/>
+  <meta property="og:description" content="Varayo on-net locations across the United States. Explore service availability by market."/>
+  <meta property="og:url" content="https://varayo.com/locations"/>
+  <meta property="og:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@varayoinc"/>
+  <meta name="twitter:title" content="Locations & Coverage — Varayo"/>
+  <meta name="twitter:description" content="Varayo on-net locations across the United States. Explore service availability by market."/>
+  <meta name="twitter:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+<title>Locations & Coverage — Varayo</title>
+
+  <meta name="description" content="Varayo on-net locations across the United States. Explore service availability by market." />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon-96x96.png" sizes="32x32" />
+  <link rel="icon" href="/images/web-app-manifest-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <meta name="msapplication-TileImage" content="/images/web-app-manifest-512x512.png" />
+
+  <!-- Global Site Styles -->
+  <link rel="stylesheet" href="site-styles.css?v=locations1" />
+
+  <style>
+    .city-selector {
+      margin-bottom: 32px;
+    }
+
+    .city-selector label {
+      display: block;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .city-selector select {
+      width: 100%;
+      max-width: 500px;
+      padding: 14px 18px;
+      background: rgba(11, 16, 38, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.16);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    .city-selector select:focus {
+      outline: none;
+      border-color: var(--accent);
+      background: rgba(11, 16, 38, 0.95);
+    }
+
+    .city-info-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 32px;
+      display: none;
+    }
+
+    .city-info-card.active {
+      display: block;
+      animation: fadeIn 0.3s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .city-info-header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+
+    .map-panel {
+      margin-top: 24px;
+    }
+
+    .us-map {
+      position: relative;
+      margin-top: 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.80));
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+
+    .us-map-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .map-dots {
+      position: absolute;
+      inset: 0;
+    }
+
+    .map-dot {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 2px solid rgba(34,211,238,0.95);
+      background: rgba(59,130,246,0.7);
+      box-shadow: 0 0 0 4px rgba(34,211,238,0.2), 0 4px 12px rgba(34,211,238,0.3);
+      cursor: pointer;
+      transform: translate(-50%, -50%);
+      transition: all 0.2s ease;
+      z-index: 10;
+    }
+
+    .map-dot:hover {
+      transform: translate(-50%, -50%) scale(1.3);
+      background: rgba(34,211,238,0.95);
+      box-shadow: 0 0 0 6px rgba(34,211,238,0.3), 0 6px 20px rgba(34,211,238,0.5);
+    }
+
+    .city-close {
+      margin-left: auto;
+      background: transparent;
+      border: 1px solid rgba(148,163,184,0.28);
+      color: rgba(226,232,240,0.82);
+      border-radius: 10px;
+      padding: 6px 10px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .city-close:hover {
+      border-color: rgba(34,211,238,0.55);
+      color: #fff;
+    }
+
+    .city-info-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .city-info-header h2 {
+      font-size: 2.2rem;
+      font-weight: 900;
+      margin: 0 0 8px 0;
+      letter-spacing: -0.02em;
+    }
+
+    .city-info-header .state-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .datacenter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .datacenter-badge {
+      padding: 10px 16px;
+      background: rgba(34, 211, 238, 0.08);
+      border: 1px solid rgba(34, 211, 238, 0.2);
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-align: center;
+      color: var(--accent-2);
+    }
+
+    .datacenter-badge.primary {
+      background: rgba(59, 130, 246, 0.12);
+      border-color: rgba(59, 130, 246, 0.3);
+      color: var(--accent);
+    }
+
+    .info-section {
+      margin-top: 24px;
+    }
+
+    .info-section h3 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin: 0 0 12px 0;
+      color: var(--text);
+    }
+
+    .info-section p {
+      color: var(--muted);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .all-cities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .city-pill {
+      padding: 12px 16px;
+      background: rgba(11, 16, 38, 0.6);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--muted);
+      text-align: center;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    .city-pill:hover {
+      border-color: var(--accent);
+      background: rgba(59, 130, 246, 0.08);
+      color: var(--text);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Injected Header -->
+  <div id="header-placeholder"></div>
+
+  <main>
+    <section class="hero hero-enterprise">
+      <div class="container hero-stack">
+        <div class="hero-copy hero-centered">
+          <div class="hero-badge"><i class="fa-solid fa-map-pin"></i> Locations</div>
+          <h1>National On-Net Coverage</h1>
+          <p class="lead">Varayo maintains on-net presence in major US markets through multiple carrier-grade data center options. Select a city to view available services.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width: 1100px;">
+
+        <div class="city-selector">
+          <label for="citySelect">
+            <i class="fa-solid fa-location-dot"></i> Select a City to View Details
+          </label>
+          <select id="citySelect">
+            <option value="">Choose a location...</option>
+            <option value="Ashburn, VA">Ashburn, VA</option>
+            <option value="Atlanta, GA">Atlanta, GA</option>
+            <option value="Austin, TX">Austin, TX</option>
+            <option value="Baltimore, MD">Baltimore, MD</option>
+            <option value="Boston, MA">Boston, MA</option>
+            <option value="Charlotte, NC">Charlotte, NC</option>
+            <option value="Chicago, IL">Chicago, IL</option>
+            <option value="Cincinnati, OH">Cincinnati, OH</option>
+            <option value="Cleveland, OH">Cleveland, OH</option>
+            <option value="Columbus, OH">Columbus, OH</option>
+            <option value="Dallas, TX">Dallas, TX</option>
+            <option value="Denver, CO">Denver, CO</option>
+            <option value="Detroit, MI">Detroit, MI</option>
+            <option value="Grand Rapids, MI">Grand Rapids, MI</option>
+            <option value="Houston, TX">Houston, TX</option>
+            <option value="Indianapolis, IN">Indianapolis, IN</option>
+            <option value="Jacksonville, FL">Jacksonville, FL</option>
+            <option value="Kansas City, MO">Kansas City, MO</option>
+            <option value="Las Vegas, NV">Las Vegas, NV</option>
+            <option value="Los Angeles, CA">Los Angeles, CA</option>
+            <option value="Miami, FL">Miami, FL</option>
+            <option value="Milwaukee, WI">Milwaukee, WI</option>
+            <option value="Minneapolis, MN">Minneapolis, MN</option>
+            <option value="Nashville, TN">Nashville, TN</option>
+            <option value="New Jersey">New Jersey</option>
+            <option value="New York, NY">New York, NY</option>
+            <option value="Orlando, FL">Orlando, FL</option>
+            <option value="Philadelphia, PA">Philadelphia, PA</option>
+            <option value="Phoenix, AZ">Phoenix, AZ</option>
+            <option value="Pittsburgh, PA">Pittsburgh, PA</option>
+            <option value="Portland, OR">Portland, OR</option>
+            <option value="Raleigh, NC">Raleigh, NC</option>
+            <option value="Reno, NV">Reno, NV</option>
+            <option value="Richmond, VA">Richmond, VA</option>
+            <option value="Sacramento, CA">Sacramento, CA</option>
+            <option value="Salt Lake City, UT">Salt Lake City, UT</option>
+            <option value="San Diego, CA">San Diego, CA</option>
+            <option value="San Francisco, CA">San Francisco, CA</option>
+            <option value="San Jose, CA">San Jose, CA</option>
+            <option value="Seattle, WA">Seattle, WA</option>
+            <option value="St. Louis, MO">St. Louis, MO</option>
+            <option value="Tampa, FL">Tampa, FL</option>
+            <option value="Washington, DC">Washington, DC</option>
+          </select>
+        </div>
+
+        <div class="map-panel">
+          <div class="map-head">
+            <h2 class="section-title" style="margin-bottom: 10px;">On‑Net Markets Map</h2>
+            <p style="margin:0; color: var(--muted); font-weight: 650;">Click a dot to view services available in that market. Use the dropdown for the full list.</p>
+          </div>
+
+          <div class="us-map" id="usMap">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" class="us-map-svg" aria-hidden="true"></svg>
+            <div class="map-dots" id="mapDots"></div>
+          </div>
+        </div>
+
+        <div id="cityInfoContainer"></div>
+        <!-- Map + dropdown provide city discovery -->
+      </div>
+    </section>
+
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+
+<script>
+    (function(){
+      const cityData = {"Atlanta, GA":4,"Ashburn, VA":3,"Austin, TX":3,"Baltimore, MD":1,"Boston, MA":4,"Charlotte, NC":2,"Chicago, IL":5,"Cincinnati, OH":1,"Cleveland, OH":3,"Columbus, OH":3,"Dallas, TX":4,"Denver, CO":4,"Detroit, MI":2,"Grand Rapids, MI":1,"Houston, TX":2,"Indianapolis, IN":2,"Jacksonville, FL":1,"Kansas City, MO":1,"Las Vegas, NV":3,"Los Angeles, CA":4,"Miami, FL":4,"Milwaukee, WI":1,"Minneapolis, MN":3,"Nashville, TN":2,"New Jersey":1,"New York, NY":4,"Orlando, FL":2,"Philadelphia, PA":3,"Phoenix, AZ":2,"Pittsburgh, PA":1,"Portland, OR":2,"Raleigh, NC":2,"Reno, NV":1,"Richmond, VA":1,"Sacramento, CA":2,"Salt Lake City, UT":2,"San Diego, CA":2,"San Francisco, CA":4,"San Jose, CA":1,"Seattle, WA":3,"St. Louis, MO":1,"Tampa, FL":2,"Washington, DC":3};
+
+      // Geographic coordinates (lon, lat) used with the same projection as the SVG
+      const CITY_LATLON = {
+        "Seattle, WA": [-122.3321, 47.6062],
+        "Portland, OR": [-122.6765, 45.5231],
+        "San Francisco, CA": [-122.4194, 37.7749],
+        "San Jose, CA": [-121.8863, 37.3382],
+        "Sacramento, CA": [-121.4944, 38.5816],
+        "Los Angeles, CA": [-118.2437, 34.0522],
+        "San Diego, CA": [-117.1611, 32.7157],
+        "Las Vegas, NV": [-115.1398, 36.1699],
+        "Reno, NV": [-119.8138, 39.5296],
+        "Phoenix, AZ": [-112.0740, 33.4484],
+        "Salt Lake City, UT": [-111.8910, 40.7608],
+        "Denver, CO": [-104.9903, 39.7392],
+        "Kansas City, MO": [-94.5786, 39.0997],
+        "St. Louis, MO": [-90.1994, 38.6270],
+        "Dallas, TX": [-96.7970, 32.7767],
+        "Houston, TX": [-95.3698, 29.7604],
+        "Austin, TX": [-97.7431, 30.2672],
+        "Nashville, TN": [-86.7816, 36.1627],
+        "Atlanta, GA": [-84.3880, 33.7490],
+        "Jacksonville, FL": [-81.6557, 30.3322],
+        "Tampa, FL": [-82.4572, 27.9506],
+        "Orlando, FL": [-81.3792, 28.5383],
+        "Miami, FL": [-80.1918, 25.7617],
+        "Charlotte, NC": [-80.8431, 35.2271],
+        "Raleigh, NC": [-78.6382, 35.7796],
+        "Washington, DC": [-77.0369, 38.9072],
+        "Baltimore, MD": [-76.6122, 39.2904],
+        "Richmond, VA": [-77.4360, 37.5407],
+        "Ashburn, VA": [-77.4874, 39.0438],
+        "Philadelphia, PA": [-75.1652, 39.9526],
+        "New York, NY": [-74.0060, 40.7128],
+        "New Jersey": [-74.1724, 40.7357],
+        "Boston, MA": [-71.0589, 42.3601],
+        "Pittsburgh, PA": [-79.9959, 40.4406],
+        "Cleveland, OH": [-81.6944, 41.4993],
+        "Columbus, OH": [-82.9988, 39.9612],
+        "Cincinnati, OH": [-84.5120, 39.1031],
+        "Detroit, MI": [-83.0458, 42.3314],
+        "Chicago, IL": [-87.6298, 41.8781],
+        "Milwaukee, WI": [-87.9065, 43.0389],
+        "Minneapolis, MN": [-93.2650, 44.9778],
+        "Indianapolis, IN": [-86.1581, 39.7684],
+        "Grand Rapids, MI": [-85.6681, 42.9634]
+      };
+
+      const citySelect = document.getElementById('citySelect');
+      const cityInfoContainer = document.getElementById('cityInfoContainer');
+
+      let usProjection = null;
+
+      async function renderStatesMap(){
+  if (typeof d3 === 'undefined' || typeof topojson === 'undefined') {
+    console.warn('Map libraries not loaded (d3/topojson).');
+    return;
+  }
+  const svgEl = document.querySelector('#usMap svg.us-map-svg');
+  if (!svgEl) return;
+
+  // Clear any placeholder content
+  svgEl.innerHTML = '';
+  svgEl.setAttribute('viewBox', '0 0 960 600');
+  svgEl.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+
+  // Add styling inside the SVG so it is self-contained
+  const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+  const style = document.createElementNS('http://www.w3.org/2000/svg', 'style');
+  style.textContent = `
+    .state-fill{
+      fill: rgba(148, 163, 184, 0.06);
+      stroke: none;
+    }
+    .state-boundary{
+      fill: none;
+      stroke: rgba(148, 163, 184, 0.32);
+      stroke-width: 1.4;
+      vector-effect: non-scaling-stroke;
+    }
+  `;
+  defs.appendChild(style);
+  svgEl.appendChild(defs);
+
+  const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+  g.setAttribute('id', 'states');
+  svgEl.appendChild(g);
+
+  try{
+    // TopoJSON with US state geometries (public, lightweight)
+    const us = await fetch('https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json').then(r => r.json());
+    const states = topojson.feature(us, us.objects.states);
+
+    // Match the coordinate system your dots already use (960x600)
+    usProjection = d3.geoAlbersUsa().fitSize([960, 600], states);
+    const projection = usProjection;
+    const path = d3.geoPath(projection);
+
+    // State fills
+    d3.select(g)
+      .selectAll('path.state-fill')
+      .data(states.features)
+      .join('path')
+      .attr('class', 'state-fill')
+      .attr('d', path);
+
+    // State boundaries (mesh so borders are crisp and not double-stroked)
+    const borders = topojson.mesh(us, us.objects.states, (a, b) => a !== b);
+    d3.select(g)
+      .append('path')
+      .datum(borders)
+      .attr('class', 'state-boundary')
+      .attr('d', path);
+  }catch(err){
+    console.error('Failed to render US states map:', err);
+  }
+}
+
+function renderMapDots(){
+        const dotsHost = document.getElementById('mapDots');
+        if (!dotsHost) return;
+        dotsHost.innerHTML = '';
+
+        Object.keys(cityData).forEach(cityName => {
+          const ll = CITY_LATLON[cityName];
+          if (!ll || !usProjection) return;
+
+          const projected = usProjection(ll);
+          if (!projected) return; // e.g. outside projection
+          const xPercent = (projected[0] / 960) * 100;
+          const yPercent = (projected[1] / 600) * 100;
+
+          const btn = document.createElement('button');
+          btn.className = 'map-dot';
+          btn.type = 'button';
+          btn.style.left = xPercent.toFixed(2) + '%';
+          btn.style.top  = yPercent.toFixed(2) + '%';
+          btn.title = cityName;
+          btn.setAttribute('aria-label', cityName);
+          btn.addEventListener('click', () => {
+            citySelect.value = cityName;
+            showCityInfo(cityName);
+          });
+
+          dotsHost.appendChild(btn);
+        });
+      }
+
+      function getServicesForCity(cityName, optionCount) {
+        const core = [
+          'Dedicated Fiber Internet',
+          'Ethernet',
+          'IP Transit',
+          'Interconnect',
+          'Wavelength',
+          'Dark Fiber',
+          'SD‑WAN'
+        ];
+        const datacenterPlus = [
+          'Colocation',
+          'Bare Metal',
+          'Cloud Hosting',
+          'Disaster Recovery'
+        ];
+        return optionCount > 1 ? core.concat(datacenterPlus) : core;
+      }
+
+      function showCityInfo(cityName) {
+        if (!cityName || !cityData[cityName]) {
+          cityInfoContainer.innerHTML = '';
+          return;
+        }
+
+        const optionCount = cityData[cityName];
+        const services = getServicesForCity(optionCount);
+
+        cityInfoContainer.innerHTML = `
+          <div class="address-form" style="margin-top: 10px;">
+            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap: 16px; flex-wrap: wrap;">
+              <div>
+                <div class="kicker" style="margin-bottom: 8px;">${cityName}</div>
+                <div style="font-weight: 900; font-size: 1.6rem; letter-spacing: -0.02em;">Market Details</div>
+                <div style="color: var(--muted); margin-top: 6px;">${optionCount > 1 ? 'Multiple data center options available in this market.' : 'Single data center option available in this market.'}</div>
+              </div>
+              <a href="quote" class="submit-btn" style="text-decoration:none; height: fit-content;">
+                Request a Quote
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <div style="margin-top: 18px;">
+              <div style="font-weight: 800; margin-bottom: 10px;"><i class="fa-solid fa-building"></i> Data Center Options</div>
+              <div class="datacenter-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+                <div class="datacenter-badge primary">${optionCount > 1 ? `${optionCount} Options` : '1 Option'}</div>
+                <div class="datacenter-badge">${optionCount > 1 ? 'Multiple facility paths' : 'On‑net access'}</div>
+              </div>
+            </div>
+
+            <div style="margin-top: 22px;">
+              <div style="font-weight: 800; margin-bottom: 10px;"><i class="fa-solid fa-list-check"></i> Services Available</div>
+              <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px;">
+                ${services.map(s => `<div style="padding: 10px 14px; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.18); border-radius: 10px; font-weight: 700; color: var(--text);"><i class="fa-solid fa-check" style="color: var(--accent-2); margin-right: 8px;"></i>${s}</div>`).join('')}
+              </div>
+              <div style="margin-top: 12px; color: var(--muted); font-size: 0.95rem;">
+                We’ll confirm exact on‑net / near‑net status and timelines during quoting.
+              </div>
+            </div>
+          </div>
+        `;
+
+        cityInfoContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+
+      // Initialize map + dots
+      renderStatesMap().then(renderMapDots);
+
+      // Dropdown change handler
+      citySelect.addEventListener('change', function() {
+        showCityInfo(this.value);
+      });
+    })();
+    </script>
+
+    <section class="cta-strip">
+      <div class="container cta-strip-inner">
+        <div class="cta-strip-copy">
+          <h3>Ready to get started?</h3>
+          <p>Talk with our team about the right design, timeline, and pricing for your needs.</p>
+        </div>
+        <div class="cta-strip-actions">
+          <a class="btn btn-primary" href="quote">Get a Quote</a>
+          <a class="btn btn-secondary" href="contact">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Injected Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script>
+    function loadComponent(url, targetId, callback) {
+      fetch(url)
+        .then(r => { if (!r.ok) throw new Error('Not found: ' + url); return r.text(); })
+        .then(html => {
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = html;
+          if (typeof callback === 'function') callback();
+        })
+        .catch(err => {
+          console.error(err);
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = '<p style="color:red; text-align:center;">Component failed to load.</p>';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadComponent('header_menu.html', 'header-placeholder', function() {
+        if (typeof initMobileNav === 'function') initMobileNav();
+      });
+      loadComponent('footer_menu.html', 'footer-placeholder');
+    });
+  </script>
+
+</body>
+</html>

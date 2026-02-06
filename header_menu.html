@@ -1,0 +1,822 @@
+<!-- New Compact Sticky Header with Mega Menu -->
+<style>
+/* ============================================================
+   NEW COMPACT STICKY HEADER - Zayo/AT&T Style
+============================================================ */
+
+/* Remove old header styles that conflict */
+.utility-bar { display: none; }
+
+/* New Header Container */
+/* IMPORTANT: don't escape the dot. Escaping breaks the selector and sticky won't apply. */
+.new-header {
+  position: relative;
+  top: 0;
+  z-index: 9999;
+  background: rgb(5, 8, 20);
+  backdrop-filter: none;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  /* Desktop/tablet: keep header ALWAYS visible.
+     NOTE: `position: sticky` can fail if any ancestor uses overflow/transform.
+     Use `position: fixed` for reliability across pages/browsers. */
+  .new-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Mobile: keep logo a bit smaller to preserve vertical space */
+  .new-logo img { height: 38px; }
+  .new-header-inner { height: 56px; }
+}
+
+.new-header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Slightly taller header to accommodate a larger logo on desktop/tablet */
+  height: 64px;
+}
+
+/* Logo */
+.new-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  transition: opacity 0.2s;
+}
+
+.new-logo:hover {
+  opacity: 0.8;
+}
+
+.new-logo img {
+  /* Desktop/tablet logo size */
+  height: 45px;
+  width: auto;
+}
+
+/* Main Navigation */
+.new-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  justify-content: center;
+}
+
+.new-nav-item {
+  position: relative;
+}
+
+.new-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.new-nav-link:hover {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--accent);
+}
+
+.new-nav-link i {
+  font-size: 0.75rem;
+  transition: transform 0.2s;
+}
+
+.new-nav-item:hover .new-nav-link i {
+  transform: rotate(180deg);
+}
+
+/* Mega Menu */
+.mega-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 52%;
+  transform: translateX(-50%);
+  background: rgb(11, 16, 38);
+  backdrop-filter: none;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  padding: 24px;
+  display: none;
+  /* Wider mega menu so categories don't stack excessively */
+  min-width: 900px;
+  max-width: 1200px;
+}
+
+/* Add invisible bridge between nav link and mega menu to prevent disappearing */
+.new-nav-item::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 20px;
+  display: none;
+}
+
+.new-nav-item:hover::after {
+  display: block;
+}
+
+.new-nav-item:hover .mega-menu {
+  display: block;
+  animation: megaMenuFadeIn 0.2s ease-out;
+}
+
+@keyframes megaMenuFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.mega-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.mega-menu-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.mega-menu-column {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mega-menu-heading {
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  /* Make category headings bright like top-level nav */
+  color: rgba(241, 245, 249, 0.92);
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.mega-menu-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.mega-menu-link:hover {
+  background: rgba(59, 130, 246, 0.08);
+  color: var(--text);
+  transform: translateX(4px);
+}
+
+.mega-menu-link i {
+  font-size: 0.85rem;
+  color: var(--accent);
+  width: 16px;
+}
+
+/* Header Actions */
+.new-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.new-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.new-btn-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.new-btn-primary:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.new-btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.new-btn-secondary:hover {
+  background: rgba(148, 163, 184, 0.1);
+  border-color: var(--accent);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* Mobile Styles */
+@media (max-width: 980px) {
+  /* Tablet/mobile header: slightly shorter than desktop, but still fits the logo */
+  .new-header-inner {
+    height: 60px;
+  }
+
+  .new-logo img {
+    height: 42px;
+  }
+  
+  .new-nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgb(5, 8, 20);
+    backdrop-filter: none;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+    gap: 0;
+    max-height: calc(100vh - 66px);
+    overflow-y: auto;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+    display: none;
+  }
+  
+  .new-nav.active {
+    display: flex;
+  }
+  
+  .new-nav-item {
+    width: 100%;
+  }
+  
+  .new-nav-link {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .mega-menu {
+    position: static;
+    transform: none;
+    min-width: auto;
+    margin-top: 8px;
+    padding: 16px;
+    background: rgba(15, 23, 42, 0.6);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Accordion indicator rotation */
+  .new-nav-item .new-nav-link i {
+    transition: transform 0.2s ease;
+  }
+  
+  .new-nav-item.accordion-open .new-nav-link i {
+    transform: rotate(180deg);
+  }
+  
+  .mega-menu-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .new-header-actions {
+    gap: 8px;
+  }
+  
+  .new-btn {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+  
+  .mobile-menu-toggle {
+    display: block;
+  }
+}
+
+/* Phones: override tablet sizing */
+@media (max-width: 767px) {
+  .new-header-inner { height: 56px; }
+  .new-logo img { height: 38px; }
+  .new-nav { top: 56px; max-height: calc(100vh - 56px); }
+}
+</style>
+
+<header class="new-header">
+  <div class="new-header-inner">
+    <!-- Logo -->
+    <a href="index" class="new-logo">
+      <img src="varayo-light-logo.png" alt="Varayo" />
+    </a>
+    
+    <!-- Main Navigation -->
+    <nav class="new-nav" id="mainNav">
+      <!-- Products & Services -->
+      <div class="new-nav-item">
+        <a href="#" class="new-nav-link">
+          Products & Services
+          <i class="fa-solid fa-chevron-down"></i>
+        </a>
+        <div class="mega-menu">
+          <div class="mega-menu-grid mega-menu-grid-4">
+            <!-- Network Connectivity -->
+            <div class="mega-menu-column">
+              <div class="mega-menu-heading">Network Connectivity</div>
+              <a href="network-services" class="mega-menu-link">
+                <i class="fa-solid fa-network-wired"></i>
+                Network Services (Overview)
+              </a>
+              <a href="fiber-internet" class="mega-menu-link">
+                <i class="fa-solid fa-signal"></i>
+                Fiber Internet
+              </a>
+              <a href="ethernet" class="mega-menu-link">
+                <i class="fa-solid fa-ethernet"></i>
+                Ethernet
+              </a>
+              <a href="l2vpn-evpn" class="mega-menu-link">
+                <i class="fa-solid fa-diagram-project"></i>
+                L2VPN / EVPN
+              </a>
+              <a href="sd-wan" class="mega-menu-link">
+                <i class="fa-solid fa-sitemap"></i>
+                SD-WAN
+              </a>
+              <a href="ip-transit" class="mega-menu-link">
+                <i class="fa-solid fa-route"></i>
+                IP Transit
+              </a>
+              <a href="interconnect" class="mega-menu-link">
+                <i class="fa-solid fa-right-left"></i>
+                Interconnect
+              </a>
+              <a href="backhaul" class="mega-menu-link">
+                <i class="fa-solid fa-truck-fast"></i>
+                Backhaul
+              </a>
+              <a href="transport" class="mega-menu-link">
+                <i class="fa-solid fa-arrows-left-right-to-line"></i>
+                Transport
+              </a>
+              <a href="wavelength" class="mega-menu-link">
+                <i class="fa-solid fa-wave-square"></i>
+                Wavelength
+              </a>
+              <a href="dark-fiber" class="mega-menu-link">
+                <i class="fa-solid fa-circle-nodes"></i>
+                Dark Fiber
+              </a>
+            </div>
+
+            <!-- Managed & Secure -->
+            <div class="mega-menu-column">
+              <div class="mega-menu-heading">Managed & Secure</div>
+              <a href="managed-services" class="mega-menu-link">
+                <i class="fa-solid fa-gear"></i>
+                Managed Services
+              </a>
+              <a href="managed-network-operations" class="mega-menu-link">
+                <i class="fa-solid fa-tower-broadcast"></i>
+                Managed Network Ops
+              </a>
+              <a href="secure-access-sase" class="mega-menu-link">
+                <i class="fa-solid fa-shield-halved"></i>
+                Secure Access (SASE)
+              </a>
+              <div class="mega-menu-heading" style="margin-top: 12px;">Security</div>
+              <a href="ddos-protection" class="mega-menu-link">
+                <i class="fa-solid fa-shield"></i>
+                DDoS Protection
+              </a>
+              <a href="managed-firewall" class="mega-menu-link">
+                <i class="fa-solid fa-fire"></i>
+                Managed Firewall
+              </a>
+              <a href="security-services" class="mega-menu-link">
+                <i class="fa-solid fa-user-shield"></i>
+                Security Services
+              </a>
+              <a href="security-compliance" class="mega-menu-link">
+                <i class="fa-solid fa-clipboard-check"></i>
+                Security & Compliance
+              </a>
+            </div>
+
+            <!-- Cloud & Hosting -->
+            <div class="mega-menu-column">
+              <div class="mega-menu-heading">Cloud & Hosting</div>
+              <a href="cloud-services" class="mega-menu-link">
+                <i class="fa-solid fa-cloud"></i>
+                Cloud Services (Overview)
+              </a>
+              <a href="cloud-hosting" class="mega-menu-link">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                Cloud Hosting
+              </a>
+              <a href="public-cloud" class="mega-menu-link">
+                <i class="fa-solid fa-cloud-sun"></i>
+                Public Cloud
+              </a>
+              <a href="private-cloud" class="mega-menu-link">
+                <i class="fa-solid fa-cloud-meatball"></i>
+                Private Cloud
+              </a>
+              <a href="cloud-migration" class="mega-menu-link">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                Cloud Migration
+              </a>
+              <a href="cloud-ops" class="mega-menu-link">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                Cloud Ops
+              </a>
+              <a href="colocation" class="mega-menu-link">
+                <i class="fa-solid fa-server"></i>
+                Colocation
+              </a>
+              <a href="bare-metal" class="mega-menu-link">
+                <i class="fa-solid fa-microchip"></i>
+                Bare Metal
+              </a>
+              <a href="disaster-recovery" class="mega-menu-link">
+                <i class="fa-solid fa-life-ring"></i>
+                Disaster Recovery
+              </a>
+            </div>
+
+            <!-- Voice, Apps & Edge -->
+            <div class="mega-menu-column">
+              <div class="mega-menu-heading">Voice & Collaboration</div>
+              <a href="phone-service" class="mega-menu-link">
+                <i class="fa-solid fa-phone"></i>
+                Phone Service
+              </a>
+              <a href="sip-trunking" class="mega-menu-link">
+                <i class="fa-solid fa-phone-volume"></i>
+                SIP Trunking
+              </a>
+              <a href="pbx-ucaas" class="mega-menu-link">
+                <i class="fa-solid fa-headset"></i>
+                PBX / UCaaS
+              </a>
+              <a href="microsoft-teams-calling" class="mega-menu-link">
+                <i class="fa-brands fa-microsoft"></i>
+                Microsoft Teams Calling
+              </a>
+              <a href="contact-center" class="mega-menu-link">
+                <i class="fa-solid fa-headset"></i>
+                Contact Center
+              </a>
+              <div class="mega-menu-heading" style="margin-top: 12px;">Edge & Apps</div>
+              <a href="cdn" class="mega-menu-link">
+                <i class="fa-solid fa-globe"></i>
+                CDN (Overview)
+              </a>
+              <a href="cdn-acceleration" class="mega-menu-link">
+                <i class="fa-solid fa-bolt"></i>
+                CDN Acceleration
+              </a>
+              <a href="cdn-streaming" class="mega-menu-link">
+                <i class="fa-solid fa-play"></i>
+                CDN Streaming
+              </a>
+              <a href="domain-registration" class="mega-menu-link">
+                <i class="fa-solid fa-globe"></i>
+                Domain Registration
+              </a>
+              <a href="email" class="mega-menu-link">
+                <i class="fa-solid fa-envelope"></i>
+                Business Email
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      
+      <!-- Resources -->
+      <div class="new-nav-item">
+        <a href="#" class="new-nav-link">
+          Resources
+          <i class="fa-solid fa-chevron-down"></i>
+        </a>
+        <div class="mega-menu">
+          <div class="mega-menu-grid">
+            <div class="mega-menu-column">
+              <div class="mega-menu-heading">Support</div>
+              <a href="support" class="mega-menu-link">
+                <i class="fa-solid fa-life-ring"></i>
+                Support Center
+              </a>
+              <a href="network-status" class="mega-menu-link">
+                <i class="fa-solid fa-circle-check"></i>
+                Network Status
+              </a>
+              <a href="https://portal.varayo.com" class="mega-menu-link" target="_blank" rel="noopener">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                Customer Portal
+              </a>
+            </div>
+            
+            <div class="mega-menu-column">
+              <div class="mega-menu-heading">Learn</div>
+              <a href="faq" class="mega-menu-link">
+                <i class="fa-solid fa-circle-question"></i>
+                FAQ
+              </a>
+              <a href="case-studies" class="mega-menu-link">
+                <i class="fa-solid fa-book"></i>
+                Case Studies
+              </a>
+              <a href="use-cases" class="mega-menu-link">
+                <i class="fa-solid fa-lightbulb"></i>
+                Use Cases
+              </a>
+              <a href="know-it-all" class="mega-menu-link">
+                <i class="fa-solid fa-brain"></i>
+                Know‑It‑All
+              </a>
+              <a href="pricing-philosophy" class="mega-menu-link">
+                <i class="fa-solid fa-tag"></i>
+                Pricing Philosophy
+              </a>
+            </div>
+            
+            <div class="mega-menu-column">
+              <div class="mega-menu-heading">Coverage</div>
+              <a href="coverage" class="mega-menu-link">
+                <i class="fa-solid fa-map-location-dot"></i>
+                Check Coverage
+              </a>
+              <a href="locations" class="mega-menu-link">
+                <i class="fa-solid fa-map-pin"></i>
+                Locations
+              </a>
+              <a href="footprint" class="mega-menu-link">
+                <i class="fa-solid fa-earth-americas"></i>
+                Network Footprint
+              </a>
+              <a href="network-map" class="mega-menu-link">
+                <i class="fa-solid fa-map"></i>
+                Network Map
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Company -->
+      <div class="new-nav-item">
+        <a href="#" class="new-nav-link">
+          Company
+          <i class="fa-solid fa-chevron-down"></i>
+        </a>
+        <div class="mega-menu">
+          <div class="mega-menu-grid">
+            <div class="mega-menu-column">
+              <div class="mega-menu-heading">About</div>
+              <a href="about" class="mega-menu-link">
+                <i class="fa-solid fa-building"></i>
+                About Varayo
+              </a>
+              <a href="why-varayo" class="mega-menu-link">
+                <i class="fa-solid fa-star"></i>
+                Why Varayo
+              </a>
+              <a href="careers" class="mega-menu-link">
+                <i class="fa-solid fa-users"></i>
+                Careers
+              </a>
+              <div class="mega-menu-heading" style="margin-top: 12px;">Solutions</div>
+              <a href="solutions" class="mega-menu-link">
+                <i class="fa-solid fa-layer-group"></i>
+                Solutions (Overview)
+              </a>
+              <a href="business" class="mega-menu-link">
+                <i class="fa-solid fa-briefcase"></i>
+                Business Solutions
+              </a>
+              <a href="carrier" class="mega-menu-link">
+                <i class="fa-solid fa-satellite-dish"></i>
+                Carrier Solutions
+              </a>
+              <a href="it-consulting-vcio" class="mega-menu-link">
+                <i class="fa-solid fa-user-tie"></i>
+                IT Consulting / vCIO
+              </a>
+            </div>
+            
+            <div class="mega-menu-column">
+              <div class="mega-menu-heading">Policies</div>
+              <a href="sla" class="mega-menu-link">
+                <i class="fa-solid fa-file-contract"></i>
+                SLA
+              </a>
+              <a href="privacy" class="mega-menu-link">
+                <i class="fa-solid fa-lock"></i>
+                Privacy Policy
+              </a>
+              <a href="tos" class="mega-menu-link">
+                <i class="fa-solid fa-scroll"></i>
+                Terms of Service
+              </a>
+              <a href="policies" class="mega-menu-link">
+                <i class="fa-solid fa-folder-open"></i>
+                Policies & Service Commitments
+              </a>
+              <a href="aup" class="mega-menu-link">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                Acceptable Use Policy
+              </a>
+              <a href="refund" class="mega-menu-link">
+                <i class="fa-solid fa-rotate-left"></i>
+                Refund Policy
+              </a>
+              <a href="sla-by-service" class="mega-menu-link">
+                <i class="fa-solid fa-table-list"></i>
+                SLA by Service
+              </a>
+            </div>
+            
+            <div class="mega-menu-column">
+              <div class="mega-menu-heading">Contact</div>
+              <a href="contact" class="mega-menu-link">
+                <i class="fa-solid fa-envelope"></i>
+                Contact Us
+              </a>
+              <a href="quote" class="mega-menu-link">
+                <i class="fa-solid fa-file-invoice"></i>
+                Request Quote
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Header Actions -->
+    <div class="new-header-actions">
+      <a href="quote" class="new-btn new-btn-primary">
+        Get a Quote
+      </a>
+      <a href="https://portal.varayo.com" class="new-btn new-btn-secondary" target="_blank" rel="noopener">
+        Login
+      </a>
+    </div>
+    
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<script>
+(function() {
+  // Mobile menu toggle
+  const mobileToggle = document.getElementById('mobileMenuToggle');
+  const mainNav = document.getElementById('mainNav');
+  
+  if (mobileToggle && mainNav) {
+    mobileToggle.addEventListener('click', function() {
+      mainNav.classList.toggle('active');
+      const icon = this.querySelector('i');
+      if (mainNav.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+  }
+  
+  // Close mobile menu when clicking a link
+  const navLinks = document.querySelectorAll('.new-nav-link, .mega-menu-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      if (window.innerWidth <= 980 && !this.classList.contains('new-nav-link')) {
+        mainNav.classList.remove('active');
+        const icon = mobileToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+  });
+  
+  // Mobile mega menu toggle - ACCORDION STYLE
+  const navItems = document.querySelectorAll('.new-nav-item');
+  navItems.forEach(item => {
+    const link = item.querySelector('.new-nav-link');
+    const megaMenu = item.querySelector('.mega-menu');
+    
+    if (link && megaMenu) {
+      link.addEventListener('click', function(e) {
+        if (window.innerWidth <= 980) {
+          e.preventDefault();
+          
+          const isOpen = item.classList.contains('accordion-open');
+          
+          // Close all other mega menus (accordion behavior)
+          navItems.forEach(otherItem => {
+            if (otherItem !== item) {
+              otherItem.classList.remove('accordion-open');
+              const otherMega = otherItem.querySelector('.mega-menu');
+              if (otherMega) {
+                otherMega.style.display = 'none';
+              }
+            }
+          });
+          
+          // Toggle this mega menu
+          if (isOpen) {
+            item.classList.remove('accordion-open');
+            megaMenu.style.display = 'none';
+          } else {
+            item.classList.add('accordion-open');
+            megaMenu.style.display = 'block';
+          }
+        }
+      });
+    }
+  });
+
+  // Desktop/tablet: fixed header needs page offset so content doesn't slide underneath.
+  // This also makes the "sticky" behavior reliable even if a page uses overflow/transform.
+  const header = document.querySelector('.new-header');
+  const fixedMQ = window.matchMedia('(min-width: 768px)');
+  
+  function applyHeaderOffset() {
+    if (!header) return;
+    if (fixedMQ.matches) {
+      const headerHeight = header.offsetHeight;
+      document.body.style.paddingTop = headerHeight + 'px';
+      document.documentElement.style.scrollPaddingTop = headerHeight + 'px';
+    } else {
+      document.body.style.paddingTop = '';
+      document.documentElement.style.scrollPaddingTop = '';
+    }
+  }
+
+  // Run now + on resize/orientation changes
+  applyHeaderOffset();
+  window.addEventListener('resize', applyHeaderOffset, { passive: true });
+  window.addEventListener('orientationchange', applyHeaderOffset, { passive: true });
+  
+  // Re-run after fonts load to catch any height changes
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(applyHeaderOffset);
+  }
+})();
+</script>

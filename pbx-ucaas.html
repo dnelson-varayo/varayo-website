@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- Canonical URL -->
+  <link rel="canonical" href="https://varayo.com/pbx-ucaas"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Varayo"/>
+  <meta property="og:title" content="UCaaS & Cloud PBX - Unified Communications Platform | Varayo"/>
+  <meta property="og:description" content="Cloud-based unified communications with voice, video, messaging, and collaboration tools. SLA-backed uptime with 24/7 support."/>
+  <meta property="og:url" content="https://varayo.com/pbx-ucaas"/>
+  <meta property="og:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@varayoinc"/>
+  <meta name="twitter:title" content="UCaaS & Cloud PBX - Unified Communications Platform | Varayo"/>
+  <meta name="twitter:description" content="Cloud-based unified communications with voice, video, messaging, and collaboration tools. SLA-backed uptime with 24/7 support."/>
+  <meta name="twitter:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+<title>PBX & UCaaS | Varayo</title>
+
+  <meta name="description" content="Hosted PBX and UCaaS calling built for reliability and managed deployment." />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon-96x96.png" sizes="32x32" />
+  <link rel="icon" href="/images/web-app-manifest-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <meta name="msapplication-TileImage" content="/images/web-app-manifest-512x512.png" />
+
+  <!-- Global Site Styles -->
+  <link rel="stylesheet" href="site-styles.css?v=about1" />
+
+  <!-- Page-only helpers (keeps global system consistent) -->
+  <style>
+    .about-wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .about-quote{
+      max-width: 900px;
+      margin: 24px auto 0;
+      padding: 18px 18px;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: rgba(255,255,255,0.03);
+      color: rgba(226,232,240,0.82);
+      font-weight: 800;
+      font-style: italic;
+      line-height: 1.65;
+      text-align: center;
+    }
+
+    .about-intro{
+      margin-top: 22px;
+      display: grid;
+      gap: 16px;
+      color: rgba(226,232,240,0.74);
+      font-weight: 750;
+      line-height: 1.75;
+      font-size: 1.05rem;
+    }
+
+    .stats-grid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 26px;
+    }
+    @media (max-width: 900px){
+      .stats-grid{ grid-template-columns: 1fr; }
+    }
+    .stat-card{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+      text-align: center;
+    }
+    .stat-number{
+      font-size: 2.35rem;
+      font-weight: 950;
+      letter-spacing: -0.03em;
+      color: rgba(34,211,238,0.92);
+      line-height: 1.1;
+    }
+    .stat-label{
+      margin-top: 8px;
+      color: rgba(226,232,240,0.72);
+      font-weight: 850;
+    }
+
+    .core-grid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+    @media (max-width: 980px){
+      .core-grid{ grid-template-columns: 1fr; }
+    }
+    .core-card{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .core-card:hover{
+      transform: translateY(-3px);
+      border-color: rgba(34,211,238,0.18);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    }
+    .core-icon{
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: rgba(59, 130, 246, 0.14);
+      border: 1px solid rgba(59, 130, 246, 0.22);
+      margin-bottom: 12px;
+    }
+    .core-icon i{
+      color: rgba(34,211,238,0.92);
+      font-size: 1.2rem;
+    }
+    .core-title{
+      font-weight: 950;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+      margin: 0 0 6px;
+    }
+    .core-desc{
+      color: rgba(226,232,240,0.70);
+      font-weight: 750;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .cta-card{
+      max-width: 920px;
+      margin: 26px auto 0;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: rgba(255,255,255,0.03);
+      padding: 22px;
+      text-align: center;
+    }
+    .cta-card p{
+      margin: 0 0 12px;
+      color: rgba(226,232,240,0.74);
+      font-weight: 800;
+      line-height: 1.7;
+      font-size: 1.08rem;
+    }
+    .cta-card p strong{ color: rgba(241,245,249,0.95); }
+    .cta-actions{
+      display:flex;
+      justify-content:center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Injected Header -->
+  <div id="header-placeholder"></div>
+
+  <main>
+<section class="hero hero-enterprise">
+<div class="container hero-stack">
+<div class="hero-copy hero-centered">
+<h1 hero_title_placeholder="">Cloud PBX &amp; Unified Communications</h1>
+<p class="lead">
+            Replace your legacy phone system with a modern cloud platform. Get enterprise voice, HD video conferencing, team messaging, file sharing, and presence—all integrated into one powerful UCaaS solution.
+          </p>
+<div class="btn-row btn-row-center">
+<a class="btn btn-primary" href="contact">Get Started</a>
+<a class="btn btn-secondary" href="#features">View Features</a>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<section class="section">
+<div class="container">
+<h2 class="section-title">Work From Any Device, Anywhere</h2>
+<p class="section-subtitle">
+          Seamlessly switch between devices while maintaining full access to all features and conversation history.
+        </p>
+<div class="device-grid">
+<div class="device-item">
+<div class="device-icon"><i class="fa-solid fa-phone"></i></div>
+<div class="device-label">Desk Phones</div>
+</div>
+<div class="device-item">
+<div class="device-icon"><i class="fa-solid fa-desktop"></i></div>
+<div class="device-label">Desktop Apps</div>
+</div>
+<div class="device-item">
+<div class="device-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+<div class="device-label">Mobile Apps</div>
+</div>
+<div class="device-item">
+<div class="device-icon"><i class="fa-solid fa-globe"></i></div>
+<div class="device-label">Web Browser</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<section class="section" id="features">
+<div class="container">
+<h2 class="section-title">Complete Business Communications</h2>
+<div class="feature-grid">
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-phone-volume"></i>
+</div>
+<div>
+<h3 class="feature-title">Enterprise Voice</h3>
+<p class="feature-desc">
+                HD voice quality, unlimited extensions, auto-attendant, call routing, voicemail to email, call recording, and advanced call management features.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-video"></i>
+</div>
+<div>
+<h3 class="feature-title">HD Video Conferencing</h3>
+<p class="feature-desc">
+                Up to 500 participants, screen sharing, virtual backgrounds, breakout rooms, meeting recording, and calendar integration.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-comments"></i>
+</div>
+<div>
+<h3 class="feature-title">Team Messaging</h3>
+<p class="feature-desc">
+                Persistent chat, group channels, direct messaging, file sharing, threaded conversations, and emoji reactions for seamless team collaboration.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-fax"></i>
+</div>
+<div>
+<h3 class="feature-title">Cloud Fax</h3>
+<p class="feature-desc">
+                Send and receive faxes digitally via email or web portal. No fax machine required. HIPAA-compliant for healthcare organizations.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-message"></i>
+</div>
+<div>
+<h3 class="feature-title">Business SMS</h3>
+<p class="feature-desc">
+                Two-way text messaging from your business number. Bulk SMS, automated messages, message templates, and full conversation history.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-users-viewfinder"></i>
+</div>
+<div>
+<h3 class="feature-title">Presence &amp; Status</h3>
+<p class="feature-desc">
+                See real-time availability of colleagues. Available, busy, in a meeting, on a call, or custom status messages with calendar sync.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-diagram-project"></i>
+</div>
+<div>
+<h3 class="feature-title">Call Groups &amp; Queues</h3>
+<p class="feature-desc">
+                Department-based routing, ring groups, call queuing with hold music, overflow handling, and intelligent call distribution.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-chart-line"></i>
+</div>
+<div>
+<h3 class="feature-title">Analytics &amp; Reporting</h3>
+<p class="feature-desc">
+                Call logs, usage reports, quality metrics, user activity tracking, and customizable dashboards. Export data for deeper analysis.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<section class="section">
+<div class="container">
+<h2 class="section-title">Powerful call control</h2>
+<div class="feature-grid">
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-phone-slash"></i>
+</div>
+<div>
+<h3 class="feature-title">Call Screening &amp; Blocking</h3>
+<p class="feature-desc">
+                Block unwanted calls, spam filtering, caller ID display, custom blocklists, and whitelist management to reduce interruptions.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-arrow-right-arrow-left"></i>
+</div>
+<div>
+<h3 class="feature-title">Call Transfer &amp; Forwarding</h3>
+<p class="feature-desc">
+                Blind transfer, warm transfer, simultaneous ring, sequential forwarding, find-me/follow-me, and mobile twinning capabilities.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-microphone-lines"></i>
+</div>
+<div>
+<h3 class="feature-title">Voicemail Transcription</h3>
+<p class="feature-desc">
+                Automatic speech-to-text transcription of voicemails delivered to email and mobile app. Never miss an important message.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-people-group"></i>
+</div>
+<div>
+<h3 class="feature-title">Conference Bridge</h3>
+<p class="feature-desc">
+                Dedicated conference numbers, PIN protection, moderator controls, participant management, and recording capabilities.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-clock"></i>
+</div>
+<div>
+<h3 class="feature-title">Business Hours Routing</h3>
+<p class="feature-desc">
+                Automatic call routing based on time of day, day of week, and holidays. Custom greetings and routing for after-hours calls.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-music"></i>
+</div>
+<div>
+<h3 class="feature-title">Music on Hold &amp; Announcements</h3>
+<p class="feature-desc">
+                Custom hold music, marketing messages, informational announcements, and queue position updates for professional call handling.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<section class="section">
+<div class="container">
+<h2 class="section-title">Connect your tools</h2>
+<p class="section-subtitle">
+          Connect your business tools and workflows with pre-built integrations.
+        </p>
+<div class="feature-grid three-col">
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-address-book"></i>
+</div>
+<div>
+<h3 class="feature-title">CRM Integration</h3>
+<p class="feature-desc">
+                Salesforce, HubSpot, Microsoft Dynamics, Zoho CRM. Screen pops, click-to-dial, call logging, and contact sync.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-brands fa-microsoft"></i>
+</div>
+<div>
+<h3 class="feature-title">Microsoft 365</h3>
+<p class="feature-desc">
+                Outlook calendar sync, Teams integration, OneDrive file sharing, and Azure Active Directory authentication.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-brands fa-google"></i>
+</div>
+<div>
+<h3 class="feature-title">Google Workspace</h3>
+<p class="feature-desc">
+                Gmail integration, Google Calendar sync, Google Drive file sharing, and single sign-on with Google accounts.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<section class="section">
+<div class="container">
+<h2 class="section-title">Built for scale and security</h2>
+<div class="feature-grid">
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-user-shield"></i>
+</div>
+<div>
+<h3 class="feature-title">Admin Control &amp; Management</h3>
+<p class="feature-desc">
+                Centralized web portal for managing users, devices, call flows, and settings. Role-based access control and delegated administration.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-shield-halved"></i>
+</div>
+<div>
+<h3 class="feature-title">Security &amp; Encryption</h3>
+<p class="feature-desc">
+                End-to-end encryption for calls and messages, SOC 2 Type II certified, multi-factor authentication, and enterprise SSO support.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-arrows-up-down"></i>
+</div>
+<div>
+<h3 class="feature-title">Unlimited Scalability</h3>
+<p class="feature-desc">
+                Add or remove users instantly through the portal. Scale from 5 to 5,000+ users with no hardware upgrades or service disruptions.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-headset"></i>
+</div>
+<div>
+<h3 class="feature-title">24/7 Support</h3>
+<p class="feature-desc">
+                US-based support team available around the clock via phone, chat, and email. Dedicated account manager for enterprise customers.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<section class="section">
+<div class="container">
+<h2 class="section-title">Desk phones and accessories</h2>
+<p class="section-subtitle">
+          Choose from a wide selection of IP phones or use softphone apps on existing devices.
+        </p>
+<div class="feature-grid three-col">
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-phone"></i>
+</div>
+<div>
+<h3 class="feature-title">Entry-Level IP Phones</h3>
+<p class="feature-desc">
+                Basic business phones with essential features. Perfect for common areas, lobbies, and general office use.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-star"></i>
+</div>
+<div>
+<h3 class="feature-title">Executive IP Phones</h3>
+<p class="feature-desc">
+                Premium phones with color touchscreens, HD audio, built-in WiFi, Bluetooth, and programmable line keys.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-building"></i>
+</div>
+<div>
+<h3 class="feature-title">Conference Phones</h3>
+<p class="feature-desc">
+                Speakerphones designed for huddle rooms and conference rooms with 360-degree microphone coverage.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<section class="section">
+<div class="container">
+<h2 class="section-title">Cutover and onboarding</h2>
+<p class="section-subtitle">
+          Our migration specialists handle the entire transition process, ensuring zero downtime.
+        </p>
+<div class="feature-grid">
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-hashtag"></i>
+</div>
+<div>
+<h3 class="feature-title">Number Portability</h3>
+<p class="feature-desc">
+                Keep all your existing phone numbers. We handle the porting process from any carrier with minimal disruption.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-graduation-cap"></i>
+</div>
+<div>
+<h3 class="feature-title">Training &amp; Onboarding</h3>
+<p class="feature-desc">
+                Administrator training, end-user training sessions, comprehensive documentation, and video tutorials for all features.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-headphones"></i>
+</div>
+<div>
+<h3 class="feature-title">Dedicated Implementation Team</h3>
+<p class="feature-desc">
+                Assigned project manager, technical specialists, and support staff to ensure smooth deployment and user adoption.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-phone-office"></i>
+</div>
+<div>
+<h3 class="feature-title">Hybrid Deployment Options</h3>
+<p class="feature-desc">
+                Gradual migration with parallel systems, phased rollout by department, or all-at-once cutover based on your preference.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<section class="section">
+<div class="container">
+<div style="text-align: center; max-width: 720px; margin: 0 auto;">
+<h2 class="section-title">Ready to Upgrade Your Business Communications?</h2>
+<p class="section-subtitle">
+            Join thousands of businesses using Varayo UCaaS for reliable, feature-rich cloud communications. Get a custom quote and see a live demo.
+          </p>
+<div class="btn-row btn-row-center" style="justify-content: center; margin-top: 24px;">
+<a class="btn btn-primary" href="contact">Contact Sales</a>
+<a class="btn btn-secondary" href="tel:12132129100">
+<i class="fa-solid fa-phone"></i> 213-212-9100
+            </a>
+</div>
+</div>
+</div>
+</section>
+
+    <section class="cta-strip">
+      <div class="container cta-strip-inner">
+        <div class="cta-strip-copy">
+          <h3>Ready to get started?</h3>
+          <p>Talk with our team about the right design, timeline, and pricing for your needs.</p>
+        </div>
+        <div class="cta-strip-actions">
+          <a class="btn btn-primary" href="quote">Get a Quote</a>
+          <a class="btn btn-secondary" href="contact">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-divider">
+        <div class="container">
+            <h2 style="font-size: 1.8rem; margin-bottom: 24px;">Related Services</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                
+                <a href="phone-service" style="text-decoration: none; color: inherit;">
+                    <div style="border: 1px solid var(--border); border-radius: 12px; padding: 20px; background: rgba(255,255,255,0.02); transition: all 0.2s;">
+                        <h3 style="margin: 0 0 8px 0; font-size: 1.1rem;">Phone Service</h3>
+                        <p style="margin: 0; color: var(--muted); font-size: 0.95rem;">Learn more →</p>
+                    </div>
+                </a>
+                <a href="sip-trunking" style="text-decoration: none; color: inherit;">
+                    <div style="border: 1px solid var(--border); border-radius: 12px; padding: 20px; background: rgba(255,255,255,0.02); transition: all 0.2s;">
+                        <h3 style="margin: 0 0 8px 0; font-size: 1.1rem;">SIP Trunking</h3>
+                        <p style="margin: 0; color: var(--muted); font-size: 0.95rem;">Learn more →</p>
+                    </div>
+                </a>
+                <a href="microsoft-teams-calling" style="text-decoration: none; color: inherit;">
+                    <div style="border: 1px solid var(--border); border-radius: 12px; padding: 20px; background: rgba(255,255,255,0.02); transition: all 0.2s;">
+                        <h3 style="margin: 0 0 8px 0; font-size: 1.1rem;">Microsoft Teams Calling</h3>
+                        <p style="margin: 0; color: var(--muted); font-size: 0.95rem;">Learn more →</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+  <!-- Injected Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script>
+    function loadComponent(url, targetId, callback) {
+      fetch(url)
+        .then(r => { if (!r.ok) throw new Error('Not found: ' + url); return r.text(); })
+        .then(html => {
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = html;
+          if (typeof callback === 'function') callback();
+        })
+        .catch(err => {
+          console.error(err);
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = '<p style="color:red; text-align:center;">Component failed to load.</p>';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadComponent('header_menu.html', 'header-placeholder', function() {
+        if (typeof initMobileNav === 'function') initMobileNav();
+      });
+      loadComponent('footer_menu.html', 'footer-placeholder');
+    });
+  </script>
+
+</body>
+</html>

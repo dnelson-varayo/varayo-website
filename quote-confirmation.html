@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/><!-- Canonical URL -->
+  <link rel="canonical" href="https://varayo.com/quote-confirmation"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Varayo"/>
+  <meta property="og:title" content="Request Received | Varayo"/>
+  <meta property="og:description" content=""/>
+  <meta property="og:url" content="https://varayo.com/quote-confirmation"/>
+  <meta property="og:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@varayoinc"/>
+  <meta name="twitter:title" content="Request Received | Varayo"/>
+  <meta name="twitter:description" content=""/>
+  <meta name="twitter:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+<title>Request Received | Varayo</title>
+<meta content="Confirmation for your Varayo quote request." name="description"/>
+<!-- Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<!-- Favicons -->
+<link href="/images/favicon-96x96.png" rel="icon" sizes="32x32"/>
+<link href="/images/web-app-manifest-192x192.png" rel="icon" sizes="192x192"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon"/>
+<meta content="/images/web-app-manifest-512x512.png" name="msapplication-TileImage"/>
+<!-- Global Site Styles -->
+<link href="site-styles.css?v=fiber1" rel="stylesheet"/>
+<!-- Page-only helpers (keeps global system consistent) -->
+</head>
+<body>
+<!-- Injected Header -->
+<div id="header-placeholder"></div>
+<main>
+<section class="hero hero-enterprise">
+<div class="container hero-stack">
+<div class="hero-copy hero-centered">
+<div class="hero-badge"><i class="fa-solid fa-circle-check"></i> Submitted</div>
+<h1>Request received</h1>
+<p class="lead">Thanks — we’ve received your request. A Varayo engineer will follow up shortly.</p>
+<div class="btn-row btn-row-center" style="margin-top:18px;">
+<a class="btn btn-primary" href="contact">Contact Sales <i class="fa-solid fa-arrow-right"></i></a>
+<a class="btn btn-secondary" href="solutions">Explore Solutions</a>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="feature-grid"><div class="feature-card"><div class="feature-icon"><i class="fa-solid fa-circle-check"></i></div><div><div class="feature-title">What happens next</div><div class="feature-desc">We’ll confirm requirements (locations, bandwidth, service type) and share timeline + pricing options.</div></div></div><div class="feature-card"><div class="feature-icon"><i class="fa-solid fa-circle-check"></i></div><div><div class="feature-title">Need faster turnaround?</div><div class="feature-desc">Call us and we’ll route you to the right engineer.</div></div></div></div>
+</div>
+</section>
+<section class="cta-strip">
+<div class="container cta-strip-inner">
+<div class="cta-strip-copy">
+<h3>Ready to get started?</h3>
+<p>Talk with our team about the right design, timeline, and pricing for your needs.</p>
+</div>
+<div class="cta-strip-actions">
+<a class="btn btn-primary" href="contact">Contact Sales</a>
+<a class="btn btn-secondary" href="coverage">Check Coverage</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Injected Footer -->
+<div id="footer-placeholder"></div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script>
+    function loadComponent(url, targetId, callback) {
+      fetch(url)
+        .then(r => { if (!r.ok) throw new Error('Not found: ' + url); return r.text(); })
+        .then(html => {
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = html;
+          if (typeof callback === 'function') callback();
+        })
+        .catch(err => {
+          console.error(err);
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = '<p style="color:red; text-align:center;">Component failed to load.</p>';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadComponent('header_menu.html', 'header-placeholder', function() {
+        if (typeof initMobileNav === 'function') initMobileNav();
+      });
+      loadComponent('footer_menu.html', 'footer-placeholder');
+    });
+  </script>
+</body>
+</html>

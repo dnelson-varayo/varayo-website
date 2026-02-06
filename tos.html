@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- Canonical URL -->
+  <link rel="canonical" href="https://varayo.com/tos"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Varayo"/>
+  <meta property="og:title" content="Terms of Service (TOS) – Varayo"/>
+  <meta property="og:description" content="Review Varayo’s Terms of Service (TOS). This legally binding document governs the use of all services, including billing, liability limits, and warranties."/>
+  <meta property="og:url" content="https://varayo.com/tos"/>
+  <meta property="og:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@varayoinc"/>
+  <meta name="twitter:title" content="Terms of Service (TOS) – Varayo"/>
+  <meta name="twitter:description" content="Review Varayo’s Terms of Service (TOS). This legally binding document governs the use of all services, including billing, liability limits, and warranties."/>
+  <meta name="twitter:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+<title>Terms of Service (TOS) – Varayo</title>
+
+  <meta name="description" content="Review Varayo’s Terms of Service (TOS). This legally binding document governs the use of all services, including billing, liability limits, and warranties." />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon-96x96.png" sizes="32x32" />
+  <link rel="icon" href="/images/web-app-manifest-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <meta name="msapplication-TileImage" content="/images/web-app-manifest-512x512.png" />
+
+  <!-- Global Site Styles -->
+  <link rel="stylesheet" href="site-styles.css?v=tos1" />
+
+  <!-- Page-only helpers (keeps global system consistent) -->
+  <style>
+    .policy-wrap{
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .policy-topnote{
+      margin: 16px auto 0;
+      max-width: 820px;
+      text-align: center;
+      color: rgba(226,232,240,0.72);
+      font-weight: 750;
+      font-style: italic;
+    }
+
+    /* Contact callout card */
+    .policy-contact{
+      max-width: 920px;
+      margin: 26px auto 0;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+    }
+    .policy-contact-title{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      font-weight: 950;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      margin: 0 0 10px;
+    }
+    .policy-contact-title i{ color: rgba(34,211,238,0.92); }
+    .policy-contact-sub{
+      color: rgba(226,232,240,0.70);
+      font-weight: 750;
+      margin: 0 0 12px;
+      line-height: 1.65;
+    }
+    .policy-contact-actions{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .policy-contact-details{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 14px;
+      color: rgba(226,232,240,0.74);
+      font-weight: 750;
+    }
+    .policy-contact-details a{
+      color: rgba(34,211,238,0.92);
+      text-decoration: none;
+      font-weight: 900;
+    }
+    .policy-contact-details a:hover{ text-decoration: underline; }
+
+    /* Accordions */
+    .policy-rows{
+      margin-top: 22px;
+      display: grid;
+      gap: 12px;
+    }
+    details.policy-row{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: rgba(255,255,255,0.03);
+      overflow: hidden;
+    }
+    details.policy-row[open]{
+      border-color: rgba(34,211,238,0.18);
+      background: rgba(59,130,246,0.06);
+    }
+
+    summary.policy-q{
+      list-style: none;
+      cursor: pointer;
+      padding: 16px 16px;
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 12px;
+      font-weight: 950;
+      font-size: 1.02rem;
+      color: rgba(241,245,249,0.92);
+    }
+    summary.policy-q::-webkit-details-marker{ display:none; }
+    summary.policy-q::marker{ display:none; }
+
+    .policy-toggle{
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background: rgba(59,130,246,0.12);
+      border: 1px solid rgba(59,130,246,0.18);
+      color: rgba(34,211,238,0.92);
+      font-weight: 950;
+      font-size: 1.2rem;
+      line-height: 1;
+      flex: 0 0 auto;
+    }
+    details[open] .policy-toggle{
+      background: rgba(34,211,238,0.12);
+      border-color: rgba(34,211,238,0.22);
+      color: rgba(241,245,249,0.92);
+    }
+
+    .policy-a{
+      padding: 0 16px 16px;
+      color: rgba(226,232,240,0.74);
+      font-weight: 750;
+      line-height: 1.75;
+      font-size: 0.98rem;
+      border-top: 1px dashed rgba(148,163,184,0.18);
+    }
+    .policy-a h3, .policy-a h4{
+      margin-top: 14px;
+      margin-bottom: 8px;
+      color: rgba(241,245,249,0.92);
+      font-weight: 950;
+      letter-spacing: -0.02em;
+    }
+    .policy-a h3{ font-size: 1.02rem; }
+    .policy-a h4{ font-size: 0.98rem; }
+    .policy-a ul, .policy-a ol{
+      margin: 12px 0 0 18px;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+    }
+    .policy-a li{ margin: 0; }
+    .policy-a a{ color: rgba(34,211,238,0.92); text-decoration: none; font-weight: 900; }
+    .policy-a a:hover{ text-decoration: underline; }
+
+    .policy-note{
+      margin-top: 18px;
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: rgba(255,255,255,0.03);
+      color: rgba(226,232,240,0.72);
+      font-weight: 750;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Injected Header -->
+  <div id="header-placeholder"></div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero hero-enterprise">
+      <div class="container hero-stack">
+        <div class="hero-copy hero-centered">
+          <div class="hero-badge">
+            <i class="fa-solid fa-file-contract"></i>
+            Legal / Billing / Service Terms
+          </div>
+
+          <h1>
+            Terms of <span>Service</span> (TOS)
+          </h1>
+
+          <p class="lead">
+            These Terms of Service govern the legal relationship between Varayo and the customer for all services purchased.
+            By using the services, you agree to these terms.
+          </p>
+
+          <div class="hero-proof hero-proof-centered">
+            <div class="proof-item">
+              <div class="proof-value">Binding</div>
+              <div class="proof-label">Contractual terms</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-value">Billing</div>
+              <div class="proof-label">Payment obligations</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-value">Liability</div>
+              <div class="proof-label">Limitations &amp; warranties</div>
+            </div>
+          </div>
+
+          <div class="policy-topnote">Updated: January 1, 2026</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section class="section">
+      <div class="container">
+        <div class="policy-wrap">
+
+          <div class="policy-contact">
+            <h2 class="policy-contact-title"><i class="fa-solid fa-circle-question"></i> Questions about these terms?</h2>
+            <p class="policy-contact-sub">
+              If you need a signed copy, have billing questions, or need clarification on any provision,
+              our team can help.
+            </p>
+
+            <div class="policy-contact-actions">
+              <a class="btn btn-primary" href="/cdn-cgi/l/email-protection#28444d4f4944685e495a495147064b4745">
+                Contact Our Legal Team
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a class="btn btn-secondary" href="tel:12132129100">
+                <i class="fa-solid fa-phone"></i>
+                Call 213-212-9100
+              </a>
+            </div>
+
+          </div>
+
+          <div class="policy-rows">
+
+            <details class="policy-row" open>
+              <summary class="policy-q">
+                1. Agreement and Term
+                <span class="policy-toggle">−</span>
+              </summary>
+              <div class="policy-a">
+                <p>This agreement becomes effective upon the customer's acceptance of an order or the commencement of service delivery, whichever occurs first. The term of service is defined in the individual Service Order Form (SOF).</p>
+
+                <h3>Governing Documents</h3>
+                <p>The service relationship is governed by the following documents, in order of precedence:</p>
+                <ol>
+                  <li>The signed Service Order Form (SOF)</li>
+                  <li>This Terms of Service (TOS) document</li>
+                  <li>The Acceptable Use Policy (AUP)</li>
+                  <li>The Service Level Agreement (SLA)</li>
+                </ol>
+
+                <div class="policy-note">
+                  <strong>Note:</strong> If you have a signed agreement that conflicts with this document, the signed agreement controls.
+                </div>
+              </div>
+            </details>
+
+            <details class="policy-row">
+              <summary class="policy-q">
+                2. Billing, Payment, and Taxes
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <p>All services are billed in advance on a monthly recurring basis. Invoices are due upon receipt.</p>
+                <ul>
+                  <li><strong>Late Payment:</strong> Payments not received within 30 days of the invoice date may be subject to a late fee and potential service suspension.</li>
+                  <li><strong>Taxes:</strong> Customer is responsible for all applicable local, state, federal, and international taxes, fees, and surcharges.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="policy-row">
+              <summary class="policy-q">
+                3. Termination and Suspension
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <p>Varayo may suspend or terminate service without notice for:</p>
+                <ul>
+                  <li>Breach of the Acceptable Use Policy (AUP).</li>
+                  <li>Failure to pay outstanding charges within the defined grace period.</li>
+                  <li>Any illegal or harmful use of the service.</li>
+                </ul>
+                <p>The customer may terminate service in accordance with the terms defined in the Service Order Form (SOF).</p>
+              </div>
+            </details>
+
+            <details class="policy-row">
+              <summary class="policy-q">
+                4. Warranties and Limitation of Liability
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <p><strong>VARAYO DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</strong> Services are provided "as-is."</p>
+                <p>Varayo's total liability for any claim arising out of this agreement shall not exceed the total amount paid by the customer for the service during the twelve (12) months preceding the event giving rise to the claim.</p>
+
+                <div class="policy-note">
+                  <strong>Service Credits:</strong> If your service includes an SLA, remedies may be limited to service credits rather than refunds.
+                </div>
+              </div>
+            </details>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-strip">
+      <div class="container cta-strip-inner">
+        <div class="cta-strip-copy">
+          <h3>Ready to get started?</h3>
+          <p>Talk with our team about the right design, timeline, and pricing for your needs.</p>
+        </div>
+        <div class="cta-strip-actions">
+          <a class="btn btn-primary" href="quote">Get a Quote</a>
+          <a class="btn btn-secondary" href="contact">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+
+</main>
+  <!-- Injected Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script>
+    function loadComponent(url, targetId, callback) {
+      fetch(url)
+        .then(r => { if (!r.ok) throw new Error('Not found: ' + url); return r.text(); })
+        .then(html => {
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = html;
+          if (typeof callback === 'function') callback();
+        })
+        .catch(err => {
+          console.error(err);
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = '<p style="color:red; text-align:center;">Component failed to load.</p>';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadComponent('header_menu.html', 'header-placeholder', function() {
+        if (typeof initMobileNav === 'function') initMobileNav();
+      });
+      loadComponent('footer_menu.html', 'footer-placeholder');
+    });
+  </script>
+
+</body>
+</html>

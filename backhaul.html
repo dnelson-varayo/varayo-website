@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- Canonical URL -->
+  <link rel="canonical" href="https://varayo.com/backhaul"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Varayo"/>
+  <meta property="og:title" content="Backhaul – Varayo"/>
+  <meta property="og:description" content="Dedicated backhaul connectivity for carriers, ISPs, and enterprises. Metro and regional transport engineered for low latency, redundancy, and scalable bandwidth."/>
+  <meta property="og:url" content="https://varayo.com/backhaul"/>
+  <meta property="og:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@varayoinc"/>
+  <meta name="twitter:title" content="Backhaul – Varayo"/>
+  <meta name="twitter:description" content="Dedicated backhaul connectivity for carriers, ISPs, and enterprises. Metro and regional transport engineered for low latency, redundancy, and scalable bandwidth."/>
+  <meta name="twitter:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+<title>Backhaul – Varayo</title>
+
+  <meta name="description" content="Dedicated backhaul connectivity for carriers, ISPs, and enterprises. Metro and regional transport engineered for low latency, redundancy, and scalable bandwidth." />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon-96x96.png" sizes="32x32" />
+  <link rel="icon" href="/images/web-app-manifest-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <meta name="msapplication-TileImage" content="/images/web-app-manifest-512x512.png" />
+
+  <!-- Global Site Styles -->
+  <link rel="stylesheet" href="site-styles.css?v=backhaul1" />
+
+  <!-- Page-only helpers (keeps global system consistent) -->
+  <style>
+    .feature-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+      max-width: 980px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 980px){
+      .feature-grid{ grid-template-columns: 1fr; }
+    }
+    .feature-card{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+      display:grid;
+      grid-template-columns: 52px 1fr;
+      gap: 14px;
+      align-items: start;
+      min-height: 176px;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .feature-card:hover{
+      transform: translateY(-3px);
+      border-color: rgba(34,211,238,0.18);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    }
+    .feature-icon{
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: rgba(59,130,246,0.14);
+      border: 1px solid rgba(59,130,246,0.22);
+    }
+    .feature-icon i{
+      color: rgba(34,211,238,0.92);
+      font-size: 1.18rem;
+    }
+    .feature-title{
+      font-weight: 950;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+    }
+    .feature-desc{
+      margin-top: 6px;
+      color: rgba(226,232,240,0.70);
+      font-weight: 750;
+      line-height: 1.65;
+    }
+    .pill-row{
+      margin-top: 10px;
+      display:flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap: 6px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.16);
+      background: rgba(255,255,255,0.03);
+      color: rgba(226,232,240,0.72);
+      font-weight: 850;
+      font-size: 0.82rem;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+    .pill i{
+      color: rgba(34,211,238,0.92);
+      font-size: 0.85rem;
+    }
+
+    .usecase{
+      max-width: 980px;
+      margin: 26px auto 0;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: rgba(255,255,255,0.03);
+      padding: 20px;
+    }
+    .usecase h3{
+      margin: 0 0 10px;
+      font-weight: 950;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      display:flex;
+      align-items:center;
+      gap: 10px;
+    }
+    .usecase h3 i{ color: rgba(34,211,238,0.92); }
+    .usecase ul{
+      margin: 0;
+      padding-left: 18px;
+      color: rgba(226,232,240,0.74);
+      font-weight: 750;
+      line-height: 1.75;
+      display:grid;
+      gap: 8px;
+    }
+
+    .cta-band{
+      max-width: 980px;
+      margin: 28px auto 0;
+      display:flex;
+      justify-content:center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .note-band{
+      max-width: 980px;
+      margin: 22px auto 0;
+      padding: 18px;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: rgba(255,255,255,0.03);
+      color: rgba(226,232,240,0.72);
+      font-weight: 750;
+      line-height: 1.7;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Injected Header -->
+  <div id="header-placeholder"></div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero hero-enterprise">
+      <div class="container hero-stack">
+        <div class="hero-copy hero-centered">
+          <div class="hero-badge">
+            <i class="fa-solid fa-route"></i>
+            Backhaul / Transport / High Capacity
+          </div>
+
+          <h1>
+            High‑Capacity <span>Backhaul</span>
+          </h1>
+
+          <p class="lead">
+            Dedicated metro and regional backhaul engineered for predictable performance.
+            Move traffic between towers, data centers, cloud on‑ramps, and core networks — with redundancy built in.
+          </p>
+
+          <div class="btn-row btn-row-center">
+            <a class="btn btn-primary" href="contact">
+              Request Backhaul Availability
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a class="btn btn-secondary" href="tel:12132129100">
+              <i class="fa-solid fa-phone"></i>
+              Call 213-212-9100
+            </a>
+          </div>
+
+          <div class="hero-proof hero-proof-centered">
+            <div class="proof-item">
+              <div class="proof-value">Low Latency</div>
+              <div class="proof-label">Optimized routes</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-value">Redundant</div>
+              <div class="proof-label">Diverse pathways</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-value">10G–400G</div>
+              <div class="proof-label">Scalable capacity</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- OVERVIEW -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Backhaul engineered for reliability</h2>
+<p class="section-subtitle">
+            Backhaul is the transport layer that keeps modern networks running. Varayo provides dedicated transport built on robust fiber infrastructure,
+            designed for carriers, ISPs, and enterprises that demand consistent throughput and clean, predictable latency.
+          </p>
+        </div>
+
+        <div class="note-band">
+          <strong>Backhaul options include:</strong> Wavelengths (DWDM), Private Line Ethernet (EPL/EVPL), Dark Fiber, and managed transport solutions
+          aligned to your architecture and growth plan.
+        </div>
+
+        <div class="cta-band">
+          <a class="btn btn-primary" href="contact">
+            Talk to a Transport Engineer
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a class="btn btn-secondary" href="carrier">
+            Carrier Solutions
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- FEATURES -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">What you get</h2>
+<p class="section-subtitle">
+            Transport designed to keep your backbone stable, scalable, and resilient — with the visibility and support to operate confidently.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-diagram-project"></i></div>
+            <div>
+              <div class="feature-title">Diverse Routing &amp; Path Engineering</div>
+              <div class="feature-desc">
+                We design circuits with diverse entrances and diverse routes where available — reducing correlated risk and improving resiliency.
+              </div>
+              <div class="pill-row">
+                <span class="pill"><i class="fa-solid fa-route"></i> Diverse paths</span>
+                <span class="pill"><i class="fa-solid fa-shield-halved"></i> Resilient</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-gauge-high"></i></div>
+            <div>
+              <div class="feature-title">Predictable Latency &amp; Performance</div>
+              <div class="feature-desc">
+                Dedicated transport with consistent throughput and clean routing — ideal for latency‑sensitive services and carrier‑grade aggregation.
+              </div>
+              <div class="pill-row">
+                <span class="pill"><i class="fa-solid fa-bolt"></i> Low latency</span>
+                <span class="pill"><i class="fa-solid fa-chart-line"></i> Stable</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-arrows-up-down"></i></div>
+            <div>
+              <div class="feature-title">Scalable Capacity</div>
+              <div class="feature-desc">
+                Upgrade bandwidth without redesigning the architecture — from 1G through 400G and beyond depending on service type and market.
+              </div>
+              <div class="pill-row">
+                <span class="pill"><i class="fa-solid fa-arrow-trend-up"></i> Easy upgrades</span>
+                <span class="pill"><i class="fa-solid fa-infinity"></i> Grow fast</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-life-ring"></i></div>
+            <div>
+              <div class="feature-title">24/7/365 NOC Support</div>
+              <div class="feature-desc">
+                Enterprise support with proactive monitoring and fast incident response — backed by documented SLAs and clear escalation.
+              </div>
+              <div class="pill-row">
+                <span class="pill"><i class="fa-solid fa-headset"></i> Always on</span>
+                <span class="pill"><i class="fa-solid fa-ticket"></i> SLA-backed</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="usecase">
+          <h3><i class="fa-solid fa-bullseye"></i> Ideal for</h3>
+          <ul>
+            <li>Wireless tower aggregation and small cell backhaul</li>
+            <li>Carrier and ISP backbone transport</li>
+            <li>Data center inter‑site connectivity</li>
+            <li>Cloud on‑ramps and large enterprise egress</li>
+          </ul>
+        </div>
+
+        <div class="cta-band">
+          <a class="btn btn-primary" href="contact">
+            Build a Backhaul Design
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a class="btn btn-secondary" href="wavelength">
+            Explore Wavelengths
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="cta-strip">
+      <div class="container cta-strip-inner">
+        <div class="cta-strip-copy">
+          <h3>Ready to get started?</h3>
+          <p>Talk with our team about the right design, timeline, and pricing for your needs.</p>
+        </div>
+        <div class="cta-strip-actions">
+          <a class="btn btn-primary" href="quote">Get a Quote</a>
+          <a class="btn btn-secondary" href="contact">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+
+</main>
+  <!-- Injected Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script>
+    function loadComponent(url, targetId, callback) {
+      fetch(url)
+        .then(r => { if (!r.ok) throw new Error('Not found: ' + url); return r.text(); })
+        .then(html => {
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = html;
+          if (typeof callback === 'function') callback();
+        })
+        .catch(err => {
+          console.error(err);
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = '<p style="color:red; text-align:center;">Component failed to load.</p>';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadComponent('header_menu.html', 'header-placeholder', function() {
+        if (typeof initMobileNav === 'function') initMobileNav();
+      });
+      loadComponent('footer_menu.html', 'footer-placeholder');
+    });
+  </script>
+
+</body>
+</html>

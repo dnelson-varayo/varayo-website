@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- Canonical URL -->
+  <link rel="canonical" href="https://varayo.com/faq"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Varayo"/>
+  <meta property="og:title" content="FAQ – Varayo"/>
+  <meta property="og:description" content="Find quick answers to Frequently Asked Questions about Varayo’s fiber internet, cloud hosting, carrier services, and support policies."/>
+  <meta property="og:url" content="https://varayo.com/faq"/>
+  <meta property="og:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@varayoinc"/>
+  <meta name="twitter:title" content="FAQ – Varayo"/>
+  <meta name="twitter:description" content="Find quick answers to Frequently Asked Questions about Varayo’s fiber internet, cloud hosting, carrier services, and support policies."/>
+  <meta name="twitter:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+<title>FAQ – Varayo</title>
+
+  <meta name="description" content="Find quick answers to Frequently Asked Questions about Varayo’s fiber internet, cloud hosting, carrier services, and support policies." />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon-96x96.png" sizes="32x32" />
+  <link rel="icon" href="/images/web-app-manifest-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <meta name="msapplication-TileImage" content="/images/web-app-manifest-512x512.png" />
+
+  <!-- Global Site Styles -->
+  <link rel="stylesheet" href="site-styles.css?v=faq1" />
+
+  <!-- Page-only helpers (keeps global system consistent) -->
+  <style>
+    .faq-wrap{
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .faq-intro{
+      margin-top: 18px;
+      color: rgba(226,232,240,0.72);
+      font-weight: 750;
+      font-size: 1.06rem;
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .faq-callout{
+      margin: 22px auto 0;
+      max-width: 920px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .faq-grid{
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .faq-category{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+    }
+
+    .faq-category h3{
+      margin: 0 0 10px 0;
+      font-weight: 950;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .faq-category h3 i{
+      color: rgba(34,211,238,0.92);
+    }
+    .faq-category p.category-desc{
+      margin: 0 0 14px 0;
+      color: rgba(226,232,240,0.68);
+      font-weight: 750;
+      font-size: 0.98rem;
+    }
+
+    details.faq-item{
+      border-radius: 12px;
+      border: 1px solid rgba(148,163,184,0.12);
+      background: rgba(255,255,255,0.03);
+      padding: 14px 14px;
+      margin-top: 10px;
+      overflow: hidden;
+    }
+
+    details.faq-item[open]{
+      border-color: rgba(34,211,238,0.18);
+      background: rgba(59,130,246,0.06);
+    }
+
+    summary.faq-q{
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-weight: 900;
+      font-size: 1.02rem;
+      color: rgba(241,245,249,0.92);
+    }
+
+    summary.faq-q::-webkit-details-marker{ display: none; }
+
+    .faq-toggle{
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(59,130,246,0.12);
+      border: 1px solid rgba(59,130,246,0.18);
+      flex: 0 0 auto;
+      color: rgba(34,211,238,0.92);
+      font-weight: 950;
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    details[open] .faq-toggle{
+      background: rgba(34,211,238,0.12);
+      border-color: rgba(34,211,238,0.22);
+    }
+
+    .faq-a{
+      margin-top: 12px;
+      color: rgba(226,232,240,0.74);
+      font-weight: 750;
+      line-height: 1.75;
+      font-size: 0.98rem;
+    }
+
+    .faq-a ul{
+      margin: 12px 0 0 18px;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+    }
+    .faq-a li{ margin: 0; }
+
+    .faq-cta{
+      margin-top: 20px;
+      text-align: center;
+      color: rgba(226,232,240,0.70);
+      font-weight: 750;
+    }
+
+    .faq-cta strong a{
+      color: rgba(34,211,238,0.92);
+      text-decoration: none;
+    }
+    .faq-cta strong a:hover{ text-decoration: underline; }
+
+    @media (max-width: 700px){
+      .faq-category{ padding: 16px; }
+      summary.faq-q{ font-size: 0.98rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Injected Header -->
+  <div id="header-placeholder"></div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero hero-enterprise">
+      <div class="container hero-stack">
+        <div class="hero-copy hero-centered">
+          <div class="hero-badge">
+            <i class="fa-solid fa-circle-question"></i>
+            Support & Service Information
+          </div>
+
+          <h1>
+            Frequently Asked <span>Questions</span>
+          </h1>
+
+          <p class="lead">
+            Quick answers about Varayo’s enterprise connectivity, voice solutions, carrier services, and support policies.
+            If you don’t see your question, we’ll help you directly.
+          </p>
+
+          <div class="faq-callout">
+            <a class="btn btn-primary" href="contact">
+              Ask a Question
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a class="btn btn-secondary" href="tel:12132129100">
+              <i class="fa-solid fa-phone"></i>
+              Call 213-212-9100
+            </a>
+            <a class="btn btn-secondary" href="/cdn-cgi/l/email-protection#1b72757d745b6d7a697a627435787476">
+              <i class="fa-solid fa-envelope"></i>
+              Email <span class="__cf_email__" data-cfemail="fb92959d94bb8d9a899a8294d5989496">[email&#160;protected]</span>
+            </a>
+          </div>
+
+          <div class="hero-proof hero-proof-centered">
+            <div class="proof-item">
+              <div class="proof-value">24/7</div>
+              <div class="proof-label">Support options</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-value">SLA</div>
+              <div class="proof-label">Enterprise reliability</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-value">LA</div>
+              <div class="proof-label">Local expertise</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- FAQ CONTENT -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Browse by category</h2>
+<p class="section-subtitle">
+            Expand any question below. If you need something specific, reach out — we’ll route you to the right engineer or specialist.
+          </p>
+        </div>
+
+        <div class="faq-wrap">
+          <div class="faq-grid">
+
+            <!-- General & Company -->
+            <div class="faq-category">
+              <h3 class="section-title"><i class="fa-solid fa-building"></i> General & Company</h3>
+              <p class="category-desc">Who we are, what we do, and how we work with customers.</p>
+
+              <details class="faq-item">
+                <summary class="faq-q">
+                  What is Varayo?
+                  <span class="faq-toggle">+</span>
+                </summary>
+                <div class="faq-a">
+                  Varayo is an AI-driven telecom management company based in Los Angeles, specializing in cloud-based solutions that automate and optimize the full telecom lifecycle — from procurement and deployment to expense management and security.
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-q">
+                  What does “Architectural Support” mean?
+                  <span class="faq-toggle">+</span>
+                </summary>
+                <div class="faq-a">
+                  Our approach is highly customized. We analyze your business needs and design a tailored technology solution (telecom, network, cloud) from the ground up rather than selling pre‑packaged plans. We act as your IT architects.
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-q">
+                  Where is Varayo located, and what areas do you serve?
+                  <span class="faq-toggle">+</span>
+                </summary>
+                <div class="faq-a">
+                  We’re headquartered in downtown Los Angeles. We serve businesses nationwide, with particular expertise in the LA region and support for remote/hybrid teams anywhere.
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-q">
+                  How does Varayo use AI in its services?
+                  <span class="faq-toggle">+</span>
+                </summary>
+                <div class="faq-a">
+                  Our AI automates routine tasks like contract analysis, bill auditing, cost optimization, threat detection in cybersecurity, and predictive insights for network performance — helping you save time and reduce expenses.
+                </div>
+              </details>
+            </div>
+
+            <!-- Unified Communications & VoIP -->
+            <div class="faq-category">
+              <h3 class="section-title"><i class="fa-solid fa-phone-volume"></i> Unified Communications & VoIP</h3>
+              <p class="category-desc">VoIP, Teams integration, fax support, and voice reliability.</p>
+
+              <details class="faq-item">
+                <summary class="faq-q">
+                  What is VoIP, and how does it differ from traditional phone service?
+                  <span class="faq-toggle">+</span>
+                </summary>
+                <div class="faq-a">
+                  VoIP (Voice over Internet Protocol) transmits calls over the internet instead of traditional copper lines.
+                  It offers lower costs, advanced features (like video, messaging, and integrations), and scalability without hardware upgrades.
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-q">
+                  Do I need to buy new desk phones?
+                  <span class="faq-toggle">+</span>
+                </summary>
+                <div class="faq-a">
+                  Not necessarily. Our system is fully softphone-compatible (desktop/mobile apps). If you prefer physical phones, we can often re‑provision existing SIP‑compatible devices — or provide new hardware options.
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-q">
+                  Can I keep my existing phone numbers when switching?
+                  <span class="faq-toggle">+</span>
+                </summary>
+                <div class="faq-a">
+                  Yes — we support seamless number porting in most cases, so your business numbers stay the same.
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-q">
+                  Do you support fax services with VoIP?
+                  <span class="faq-toggle">+</span>
+                </summary>
+                <div class="faq-a">
+                  Absolutely — faxing can be fully integrated. Options include:
+                  <ul>
+                    <li>eFax/digital fax via email, portal, or app (no hardware needed)</li>
+                    <li>Fax‑to‑email (incoming faxes arrive as PDFs)</li>
+                    <li>Legacy fax machines via ATA support with FoIP (Fax over IP)</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-q">
+                  What internet speed do I need for reliable VoIP?
+                  <span class="faq-toggle">+</span>
+                </summary>
+                <div class="faq-a">
+                  A stable connection with at least ~100 Kbps per concurrent call (up/down) is needed. We recommend business‑grade broadband and can assess your setup during onboarding.
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-q">
+                  What happens if my internet goes down?
+                  <span class="faq-toggle">+</span>
+                </summary>
+                <div class="faq-a">
+                  Calls can fail over to mobile devices or alternate numbers. We also offer redundancy options and proactive monitoring to minimize disruptions.
+                </div>
+              </details>
+            </div>
+
+            <!-- Network, Cloud & Cybersecurity -->
+            <div class="faq-category">
+              <h3><i class="fa-solid fa-network-wired"></i> Network, Cloud & Cybersecurity</h3>
+              <p class="category-desc">Connectivity availability, network services, cloud, and security operations.</p>
+
+              <details class="faq-item">
+                <summary class="faq-q">
+                  How can I check if Fiber Internet is available at my location?
+                  <span class="faq-toggle">+</span>
+                </summary>
+                <div class="faq-a">
+                  Contact us with your service address. We’ll perform a free serviceability check to confirm availability, construction needs, and typical installation timelines.
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-q">
+                  What network and connectivity services do you provide?
+                  <span class="faq-toggle">+</span>
+                </summary>
+                <div class="faq-a">
+                  High‑performance internet, SD‑WAN, private networks, and hybrid cloud connectivity — optimized for reliability and speed.
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-q">
+                  How does Varayo handle managed cybersecurity?
+                  <span class="faq-toggle">+</span>
+                </summary>
+                <div class="faq-a">
+                  24/7 monitoring, next‑generation firewalls, SASE, endpoint protection, and vulnerability scanning to reduce risk and respond fast.
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-q">
+                  Do you offer cloud migration and infrastructure services?
+                  <span class="faq-toggle">+</span>
+                </summary>
+                <div class="faq-a">
+                  Yes — planning, migration, hybrid setups, disaster recovery, and ongoing optimization for platforms like AWS, Azure, or private clouds.
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-q">
+                  What is your process for colocation?
+                  <span class="faq-toggle">+</span>
+                </summary>
+                <div class="faq-a">
+                  We provide secure cabinet space in certified data centers in the LA area. Our process includes power/cooling assessment, cross‑connect provisioning, remote hands support, and private connectivity back to your office.
+                </div>
+              </details>
+            </div>
+
+            <!-- Other Business Solutions -->
+            <div class="faq-category">
+              <h3><i class="fa-solid fa-briefcase"></i> Other Business Solutions</h3>
+              <p class="category-desc">Email, carrier services, and specialized connectivity needs.</p>
+
+              <details class="faq-item">
+                <summary class="faq-q">
+                  Do you provide hosted business email services?
+                  <span class="faq-toggle">+</span>
+                </summary>
+                <div class="faq-a">
+                  Yes — secure, scalable hosted email solutions including Microsoft 365 integration and archiving options tailored for compliance needs.
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-q">
+                  What are “Carrier Solutions,” and why would I need them?
+                  <span class="faq-toggle">+</span>
+                </summary>
+                <div class="faq-a">
+                  Carrier Solutions include high‑capacity services like MPLS, private line circuits, and wholesale fiber transport. These are used for multi‑site connectivity, cloud on‑ramps, and large‑scale network architectures. We manage procurement and integration for you.
+                </div>
+              </details>
+            </div>
+
+            <!-- TEM -->
+            <div class="faq-category">
+              <h3><i class="fa-solid fa-receipt"></i> Telecom Procurement & Expense Management</h3>
+              <p class="category-desc">Auditing, inventory, vendor negotiations, and cost reduction.</p>
+
+              <details class="faq-item">
+                <summary class="faq-q">
+                  What is Telecom Expense Management (TEM), and how can Varayo help?
+                  <span class="faq-toggle">+</span>
+                </summary>
+                <div class="faq-a">
+                  TEM includes auditing bills, optimizing contracts, managing inventory, and reducing costs across voice, data, mobile, and cloud services. Varayo identifies billing errors, negotiates better rates, and eliminates unused services.
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-q">
+                  How much can I save with procurement and expense services?
+                  <span class="faq-toggle">+</span>
+                </summary>
+                <div class="faq-a">
+                  Many clients see significant reductions through AI-driven audits, vendor negotiations, and removing unused lines/services.
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-q">
+                  Do you require long-term contracts?
+                  <span class="faq-toggle">+</span>
+                </summary>
+                <div class="faq-a">
+                  Not for most services, including VoIP. Contracts typically apply only when fiber delivery involves construction or significant installation expenses.
+                </div>
+              </details>
+            </div>
+
+            <!-- Billing / Support -->
+            <div class="faq-category">
+              <h3><i class="fa-solid fa-headset"></i> Billing, Support & Onboarding</h3>
+              <p class="category-desc">Support channels, onboarding, and billing expectations.</p>
+
+              <details class="faq-item">
+                <summary class="faq-q">
+                  How does billing work?
+                  <span class="faq-toggle">+</span>
+                </summary>
+                <div class="faq-a">
+                  Billing is predictable monthly pricing based on users/features. We provide detailed invoices and a portal for usage insights.
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-q">
+                  What kind of support do you offer?
+                  <span class="faq-toggle">+</span>
+                </summary>
+                <div class="faq-a">
+                  We offer LA-based experts with 24/7 availability via phone, email, or portal. Onboarding includes setup, training, and migration assistance for VoIP services. Standard installation fees may apply for fiber services.
+                </div>
+              </details>
+            </div>
+
+            <!-- MDU -->
+            <div class="faq-category">
+              <h3><i class="fa-solid fa-building-user"></i> Multi‑Dwelling Units (MDU) & Residential</h3>
+              <p class="category-desc">MDU bulk internet, resident options, and mixed-use support.</p>
+
+              <details class="faq-item">
+                <summary class="faq-q">
+                  Do you offer services for multi‑dwelling units (apartments/condos)?
+                  <span class="faq-toggle">+</span>
+                </summary>
+                <div class="faq-a">
+                  Yes — bulk internet, managed Wi‑Fi, VoIP, and connectivity solutions for MDUs, with flexible models for property owners and managers.
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-q">
+                  Can residents in MDUs use individual VoIP or fax services?
+                  <span class="faq-toggle">+</span>
+                </summary>
+                <div class="faq-a">
+                  Absolutely — our cloud solutions work seamlessly in multi‑unit buildings with shared or individual connections.
+                </div>
+              </details>
+            </div>
+
+          </div>
+
+          <div class="faq-cta">
+            Still have questions? <strong><a href="contact">Contact us</a></strong> for personalized answers.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="cta-strip">
+      <div class="container cta-strip-inner">
+        <div class="cta-strip-copy">
+          <h3>Ready to get started?</h3>
+          <p>Talk with our team about the right design, timeline, and pricing for your needs.</p>
+        </div>
+        <div class="cta-strip-actions">
+          <a class="btn btn-primary" href="quote">Get a Quote</a>
+          <a class="btn btn-secondary" href="contact">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+
+</main>
+  <!-- Injected Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script>
+    function loadComponent(url, targetId, callback) {
+      fetch(url)
+        .then(r => { if (!r.ok) throw new Error('Not found: ' + url); return r.text(); })
+        .then(html => {
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = html;
+          if (typeof callback === 'function') callback();
+        })
+        .catch(err => {
+          console.error(err);
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = '<p style="color:red; text-align:center;">Component failed to load.</p>';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadComponent('header_menu.html', 'header-placeholder', function() {
+        if (typeof initMobileNav === 'function') initMobileNav();
+      });
+      loadComponent('footer_menu.html', 'footer-placeholder');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- Canonical URL -->
+  <link rel="canonical" href="https://varayo.com/contact"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Varayo"/>
+  <meta property="og:title" content="Contact Varayo - Get a Quote for Network Services"/>
+  <meta property="og:description" content="Contact Varayo for enterprise network, cloud, and security solutions. Speak with our team about fiber internet, SD-WAN, colocation, and managed services."/>
+  <meta property="og:url" content="https://varayo.com/contact"/>
+  <meta property="og:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@varayoinc"/>
+  <meta name="twitter:title" content="Contact Varayo - Get a Quote for Network Services"/>
+  <meta name="twitter:description" content="Contact Varayo for enterprise network, cloud, and security solutions. Speak with our team about fiber internet, SD-WAN, colocation, and managed services."/>
+  <meta name="twitter:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+<title>Contact – Varayo</title>
+
+  <meta name="description" content="Get in touch with Varayo sales or support. Use our online form, call 213-212-9100, or email sales@varayo.com. We respond within 24 hours." />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon-96x96.png" sizes="32x32" />
+  <link rel="icon" href="/images/web-app-manifest-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <meta name="msapplication-TileImage" content="/images/web-app-manifest-512x512.png" />
+
+  <!-- Global Site Styles -->
+  <link rel="stylesheet" href="site-styles.css?v=contact1" />
+
+  <!-- Page-only helpers (keeps global system consistent) -->
+  <style>
+    .contact-grid{
+      max-width: 920px;
+      margin: 0 auto;
+      display:grid;
+      grid-template-columns: 1fr 1.05fr;
+      gap: 18px;
+      align-items: start;
+    }
+    @media (max-width: 980px){
+      .contact-grid{ grid-template-columns: 1fr; }
+    }
+
+    .contact-card{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+    }
+
+    .contact-title{
+      font-weight: 950;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      margin: 0 0 10px;
+      display:flex;
+      align-items:center;
+      gap: 10px;
+    }
+    .contact-title i{ color: rgba(34,211,238,0.92); }
+
+    .contact-text{
+      margin: 0 0 14px;
+      color: rgba(226,232,240,0.72);
+      font-weight: 750;
+      line-height: 1.65;
+    }
+
+    .contact-details{
+      display:grid;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .contact-detail{
+      display:grid;
+      grid-template-columns: 34px 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(148,163,184,0.12);
+      background: rgba(255,255,255,0.03);
+      color: rgba(226,232,240,0.74);
+      font-weight: 750;
+    }
+    .contact-detail i{
+      margin-top: 2px;
+      color: rgba(34,211,238,0.92);
+      font-size: 1.05rem;
+    }
+    .contact-detail a{
+      color: rgba(34,211,238,0.92);
+      text-decoration: none;
+      font-weight: 900;
+    }
+    .contact-detail a:hover{ text-decoration: underline; }
+
+    /* Form styling */
+    .form-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 640px){
+      .form-grid{ grid-template-columns: 1fr; }
+    }
+
+    .form-field{ margin-top: 12px; }
+    .form-field label{
+      display:block;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      color: rgba(226,232,240,0.72);
+      margin-bottom: 8px;
+    }
+    .form-field input,
+    .form-field textarea,
+    .form-field select{
+      width: 100%;
+      background: rgba(15,23,42,0.78);
+      border: 1px solid rgba(148,163,184,0.28);
+      color: rgba(241,245,249,0.94);
+      padding: 14px 14px;
+      border-radius: 12px;
+      outline: none;
+      font-weight: 750;
+      font-family: inherit;
+    }
+    .form-field textarea{
+      min-height: 160px;
+      resize: vertical;
+    }
+    .form-field input:focus,
+    .form-field textarea:focus,
+    .form-field select:focus{
+      border-color: rgba(34,211,238,0.35);
+      box-shadow: 0 0 0 3px rgba(34,211,238,0.10);
+    }
+
+    .form-actions{
+      margin-top: 16px;
+      display:flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .form-note{
+      text-align:center;
+      color: rgba(226,232,240,0.70);
+      font-weight: 750;
+      font-style: italic;
+      margin: 0;
+    }
+
+    /* Make the submit look like your primary button system */
+    .btn-submit{
+      width: 100%;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Injected Header -->
+  <div id="header-placeholder"></div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero hero-enterprise">
+      <div class="container hero-stack">
+        <div class="hero-copy hero-centered">
+          <div class="hero-badge">
+            <i class="fa-solid fa-message"></i>
+            Sales / Support / Partnerships
+          </div>
+
+          <h1>
+            Let’s <span>Connect</span>
+          </h1>
+
+          <p class="lead">
+            Ready to elevate your connectivity? Our architects are standing by to design a solution that fits your exact needs.
+            We typically respond within 24 hours.
+          </p>
+
+          <div class="btn-row btn-row-center">
+            <a class="btn btn-primary" href="tel:12132129100">
+              <i class="fa-solid fa-phone"></i>
+              Call 213-212-9100
+            </a>
+            <a class="btn btn-secondary" href="/cdn-cgi/l/email-protection#e99a88858c9aa99f889b889086c78a8684">
+              <i class="fa-solid fa-envelope"></i>
+              Email <span class="__cf_email__" data-cfemail="dfacbeb3baac9fa9beadbea6b0f1bcb0b2">[email&#160;protected]</span>
+            </a>
+          </div>
+
+          <div class="hero-proof hero-proof-centered">
+            <div class="proof-item">
+              <div class="proof-value">24 Hours</div>
+              <div class="proof-label">Typical response time</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-value">US‑Based</div>
+              <div class="proof-label">Real engineers</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-value">Local</div>
+              <div class="proof-label">Los Angeles HQ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- CONTACT CONTENT -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Send us a message</h2>
+<p class="section-subtitle">
+            Tell us what you’re looking for and we’ll route you to the right specialist. For urgent issues, call support.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- LEFT: Info -->
+          <div class="contact-card">
+            <h3 class="contact-title"><i class="fa-solid fa-building"></i> Contact Details</h3>
+            <p class="contact-text">
+              Whether you’re evaluating a new circuit, migrating voice, or consolidating carriers — we’ll help you design the best path forward.
+            </p>
+
+            <div class="contact-details">
+              <div class="contact-detail">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <strong>Address</strong><br/>
+                  530 W 6th St Ste 301<br/>
+                  Los Angeles, CA 90014
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                  <strong>Phone</strong><br/>
+                  <a href="tel:12132129100">213-212-9100</a>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <strong>Email</strong><br/>
+                  <a href="/cdn-cgi/l/email-protection#d4a7b5b8b1a794a2b5a6b5adbbfab7bbb9"><span class="__cf_email__" data-cfemail="ddaebcb1b8ae9dabbcafbca4b2f3beb2b0">[email&#160;protected]</span></a>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <i class="fa-solid fa-headset"></i>
+                <div>
+                  <strong>Support</strong><br/>
+                  Visit <a href="support">Support Options</a> for 24/7 plans and escalation.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Form -->
+          <div class="contact-card">
+            <h3 class="contact-title"><i class="fa-solid fa-paper-plane"></i> Contact Form</h3>
+            <p class="contact-text">
+              Fill out the form below and we’ll follow up quickly. If you’re requesting serviceability, include the site address.
+            </p>
+
+            <form action="https://formspree.io/f/xqeakepv" method="POST">
+              <div class="form-grid">
+                <div class="form-field" style="margin-top:0;">
+                  <label for="name">Name *</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+
+                <div class="form-field" style="margin-top:0;">
+                  <label for="company">Company</label>
+                  <input type="text" id="company" name="company" />
+                </div>
+              </div>
+
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="_replyto" required />
+                </div>
+
+                <div class="form-field">
+                  <label for="service">Service of Interest *</label>
+                  <select id="service" name="service" required>
+                    <option value="" disabled selected>Select a Service</option>
+                    <option value="Fiber Internet">Fiber Internet</option>
+                    <option value="MDU Internet">MDU Internet</option>
+                    <option value="Phone Service">Phone Service</option>
+                    <option value="Microsoft Teams Voice">Microsoft Teams Voice</option>
+                    <option value="Email Hosting">Email Hosting</option>
+                    <option value="Carrier Solutions">Carrier Solutions</option>
+                    <option value="Colocation">Colocation</option>
+                    <option value="Cloud Hosting">Cloud Hosting</option>
+                    <option value="General Inquiry">General Inquiry/Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" />
+              </div>
+
+              <div class="form-field">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+
+              <!-- Honeypot -->
+              <div style="position:absolute; left:-9999px;">
+                <input type="text" name="_gotcha" />
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn-submit">
+                  Send Message
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <p class="form-note">We’ll get back to you within 24 hours.</p>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-strip">
+      <div class="container cta-strip-inner">
+        <div class="cta-strip-copy">
+          <h3>Ready to get started?</h3>
+          <p>Talk with our team about the right design, timeline, and pricing for your needs.</p>
+        </div>
+        <div class="cta-strip-actions">
+          <a class="btn btn-primary" href="quote">Get a Quote</a>
+          <a class="btn btn-secondary" href="contact">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+
+</main>
+  <!-- Injected Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script>
+    function loadComponent(url, targetId, callback) {
+      fetch(url)
+        .then(r => { if (!r.ok) throw new Error('Not found: ' + url); return r.text(); })
+        .then(html => {
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = html;
+          if (typeof callback === 'function') callback();
+        })
+        .catch(err => {
+          console.error(err);
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = '<p style="color:red; text-align:center;">Component failed to load.</p>';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadComponent('header_menu.html', 'header-placeholder', function() {
+        if (typeof initMobileNav === 'function') initMobileNav();
+      });
+      loadComponent('footer_menu.html', 'footer-placeholder');
+    });
+  </script>
+
+</body>
+</html>

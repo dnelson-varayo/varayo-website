@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/><!-- Canonical URL -->
+  <link rel="canonical" href="https://varayo.com/coverage"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Varayo"/>
+  <meta property="og:title" content="Coverage — Varayo"/>
+  <meta property="og:description" content=""/>
+  <meta property="og:url" content="https://varayo.com/coverage"/>
+  <meta property="og:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@varayoinc"/>
+  <meta name="twitter:title" content="Coverage — Varayo"/>
+  <meta name="twitter:description" content=""/>
+  <meta name="twitter:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+<title>Coverage — Varayo</title>
+<meta content="Check on-net and near-net availability for Varayo services." name="description"/>
+<!-- Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<!-- Favicons -->
+<link href="/images/favicon-96x96.png" rel="icon" sizes="32x32"/>
+<link href="/images/web-app-manifest-192x192.png" rel="icon" sizes="192x192"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon"/>
+<meta content="/images/web-app-manifest-512x512.png" name="msapplication-TileImage"/>
+<!-- Global Site Styles -->
+<link href="site-styles.css?v=coverage2" rel="stylesheet"/>
+<style>
+    .coverage-section {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 32px;
+      margin-bottom: 40px;
+    }
+    
+    .coverage-section h2 {
+      font-size: 1.8rem;
+      font-weight: 900;
+      margin: 0 0 8px 0;
+      letter-spacing: -0.02em;
+    }
+    
+    .coverage-section p {
+      color: var(--muted);
+      margin: 0 0 24px 0;
+      font-size: 1.05rem;
+    }
+    
+    .address-form {
+      background: rgba(5, 8, 20, 0.6);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+      border-radius: 14px;
+      padding: 24px;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 12px 16px;
+      background: rgba(11, 16, 38, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.16);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 1rem;
+      transition: all 0.2s;
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--accent);
+      background: rgba(11, 16, 38, 0.95);
+    }
+    
+    .form-group small {
+      display: block;
+      color: rgba(226, 232, 240, 0.6);
+      font-size: 0.85rem;
+      margin-top: 6px;
+    }
+    
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    
+    @media (max-width: 768px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .submit-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .submit-btn:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+    }
+    
+    .metro-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+    
+    .metro-card {
+      background: rgba(11, 16, 38, 0.6);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+      border-radius: 14px;
+      padding: 24px;
+      transition: all 0.3s;
+    }
+    
+    .metro-card:hover {
+      border-color: rgba(59, 130, 246, 0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+    
+    .metro-card h3 {
+      font-size: 1.4rem;
+      font-weight: 900;
+      margin: 0 0 12px 0;
+      color: var(--text);
+    }
+    
+    .metro-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .metro-card li {
+      color: var(--muted);
+      font-size: 0.95rem;
+      padding: 6px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+    
+    .metro-card li:before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--accent-2);
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+<!-- Injected Header -->
+<div id="header-placeholder"></div>
+<main>
+<section class="hero hero-enterprise">
+<div class="container hero-stack">
+<div class="hero-copy hero-centered">
+<div class="hero-badge"><i class="fa-solid fa-map-location-dot"></i> Coverage</div>
+<h1>Service Availability</h1>
+<p class="lead">Check if your location is on-net or near-net. We'll confirm availability and provide build timelines where needed.</p>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container" style="max-width: 960px;">
+<!-- Check Address Section -->
+<div class="coverage-section">
+<div class="kicker" style="margin-bottom: 12px;">AVAILABILITY</div>
+<h2>Check an address</h2>
+<p>Enter a service address and we'll confirm on-net / near-net status with engineering.</p>
+<div class="address-form">
+<form id="coverageForm">
+<div class="form-group">
+<label for="address">Address</label>
+<input id="address" placeholder="123 Main St" required="" type="text"/>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label for="city">City</label>
+<input id="city" placeholder="e.g., Los Angeles" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="state">State</label>
+<input id="state" placeholder="CA" required="" type="text"/>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label for="zip">ZIP</label>
+<input id="zip" placeholder="90001" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="service">Service Needed (optional)</label>
+<select id="service">
+<option value="">Select service</option>
+<option value="fiber">Dedicated Fiber Internet</option>
+<option value="ethernet">Ethernet</option>
+<option value="wavelength">Wavelength</option>
+<option value="dark-fiber">Dark Fiber</option>
+<option value="colocation">Colocation</option>
+</select>
+</div>
+</div>
+<div class="form-group">
+<small>For multi-location checks, use the main <a href="contact" style="color: var(--accent);">Contact Sales</a>.</small>
+</div>
+<button class="submit-btn" type="submit">
+                Check availability
+                <i class="fa-solid fa-arrow-right"></i>
+</button>
+<div id="formMessage" style="margin-top: 16px; display: none; color: var(--accent-2); font-weight: 700;"></div>
+</form>
+</div>
+</div>
+<!-- Major Metros Section -->
+<!-- Markets Section -->
+<div class="coverage-section">
+<div class="kicker" style="margin-bottom: 12px;">MARKETS</div>
+<h2>On-net markets</h2>
+<p>Select a city to view what’s typically available in that market.</p>
+<div style="margin-bottom: 24px;">
+<label for="cityCoverageSelect" style="display: block; font-weight: 700; font-size: 0.9rem; color: var(--text); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em;">
+<i class="fa-solid fa-city"></i> Select a City
+            </label>
+<select id="cityCoverageSelect" style="width: 100%; max-width: 520px; padding: 14px 18px; background: rgba(11, 16, 38, 0.8); border: 1px solid rgba(148, 163, 184, 0.16); border-radius: 8px; color: var(--text); font-size: 1.1rem; font-weight: 600; cursor: pointer;">
+<option value="">Choose a market...</option>
+<option value="Ashburn, VA">Ashburn, VA</option>
+<option value="Atlanta, GA">Atlanta, GA</option>
+<option value="Austin, TX">Austin, TX</option>
+<option value="Baltimore, MD">Baltimore, MD</option>
+<option value="Boston, MA">Boston, MA</option>
+<option value="Charlotte, NC">Charlotte, NC</option>
+<option value="Chicago, IL">Chicago, IL</option>
+<option value="Cincinnati, OH">Cincinnati, OH</option>
+<option value="Cleveland, OH">Cleveland, OH</option>
+<option value="Columbus, OH">Columbus, OH</option>
+<option value="Dallas, TX">Dallas, TX</option>
+<option value="Denver, CO">Denver, CO</option>
+<option value="Detroit, MI">Detroit, MI</option>
+<option value="Grand Rapids, MI">Grand Rapids, MI</option>
+<option value="Houston, TX">Houston, TX</option>
+<option value="Indianapolis, IN">Indianapolis, IN</option>
+<option value="Jacksonville, FL">Jacksonville, FL</option>
+<option value="Kansas City, MO">Kansas City, MO</option>
+<option value="Las Vegas, NV">Las Vegas, NV</option>
+<option value="Los Angeles, CA">Los Angeles, CA</option>
+<option value="Miami, FL">Miami, FL</option>
+<option value="Milwaukee, WI">Milwaukee, WI</option>
+<option value="Minneapolis, MN">Minneapolis, MN</option>
+<option value="Nashville, TN">Nashville, TN</option>
+<option value="New Jersey">New Jersey</option>
+<option value="New York, NY">New York, NY</option>
+<option value="Orlando, FL">Orlando, FL</option>
+<option value="Philadelphia, PA">Philadelphia, PA</option>
+<option value="Phoenix, AZ">Phoenix, AZ</option>
+<option value="Pittsburgh, PA">Pittsburgh, PA</option>
+<option value="Portland, OR">Portland, OR</option>
+<option value="Raleigh, NC">Raleigh, NC</option>
+<option value="Reno, NV">Reno, NV</option>
+<option value="Richmond, VA">Richmond, VA</option>
+<option value="Sacramento, CA">Sacramento, CA</option>
+<option value="Salt Lake City, UT">Salt Lake City, UT</option>
+<option value="San Diego, CA">San Diego, CA</option>
+<option value="San Francisco, CA">San Francisco, CA</option>
+<option value="San Jose, CA">San Jose, CA</option>
+<option value="Seattle, WA">Seattle, WA</option>
+<option value="St. Louis, MO">St. Louis, MO</option>
+<option value="Tampa, FL">Tampa, FL</option>
+<option value="Washington, DC">Washington, DC</option>
+</select>
+</div>
+<div id="cityCoverageDetails" style="display:none;"></div>
+</div>
+<script>
+    (function(){
+      // Address form script
+      const form = document.getElementById('coverageForm');
+      const msg = document.getElementById('formMessage');
+
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+
+          if (msg) {
+            msg.style.display = 'block';
+            msg.innerHTML = '<i class="fa-solid fa-check-circle"></i> Request received — we\'ll confirm availability shortly.';
+          }
+
+          setTimeout(() => {
+            form.reset();
+            if (msg) {
+              setTimeout(() => { msg.style.display = 'none'; }, 3000);
+            }
+          }, 1000);
+        });
+      }
+
+      // Market selector
+      const cityData = {"Atlanta, GA": ["Cogent", "SWITCH", "Flexential", "Equinix"], "Ashburn, VA": ["Cogent", "Equinix", "Cologix"], "Austin, TX": ["Cogent", "SWITCH", "Flexential"], "Baltimore, MD": ["Cogent"], "Boston, MA": ["Cogent", "CoreSite", "Flexential", "Equinix"], "Charlotte, NC": ["Cogent", "Flexential"], "Chicago, IL": ["Cogent", "CoreSite", "Flexential", "Equinix", "Cologix"], "Cincinnati, OH": ["Flexential"], "Cleveland, OH": ["Cogent", "Flexential", "Cologix"], "Columbus, OH": ["Cogent", "Flexential", "Cologix"], "Dallas, TX": ["Cogent", "Flexential", "Equinix", "Cologix"], "Denver, CO": ["Cogent", "CoreSite", "Flexential", "Equinix"], "Detroit, MI": ["Cogent", "Flexential"], "Grand Rapids, MI": ["SWITCH"], "Houston, TX": ["Cogent", "Flexential"], "Indianapolis, IN": ["Cogent", "Flexential"], "Jacksonville, FL": ["Flexential"], "Kansas City, MO": ["Cogent"], "Las Vegas, NV": ["Cogent", "SWITCH", "Flexential"], "Los Angeles, CA": ["Cogent", "CoreSite", "Flexential", "Equinix"], "Miami, FL": ["Cogent", "CoreSite", "Flexential", "Equinix"], "Milwaukee, WI": ["Cogent"], "Minneapolis, MN": ["Cogent", "Flexential", "Cologix"], "Nashville, TN": ["Cogent", "Flexential"], "New Jersey": ["Cologix"], "New York, NY": ["Cogent", "CoreSite", "Flexential", "Equinix"], "Orlando, FL": ["Cogent", "Flexential"], "Philadelphia, PA": ["Cogent", "Flexential", "Equinix"], "Phoenix, AZ": ["Cogent", "Flexential"], "Pittsburgh, PA": ["Cogent"], "Portland, OR": ["Cogent", "Flexential"], "Raleigh, NC": ["Cogent", "Flexential"], "Reno, NV": ["SWITCH"], "Richmond, VA": ["Flexential"], "Sacramento, CA": ["Cogent", "Flexential"], "Salt Lake City, UT": ["Cogent", "Flexential"], "San Diego, CA": ["Cogent", "Flexential"], "San Francisco, CA": ["Cogent", "CoreSite", "Flexential", "Equinix"], "San Jose, CA": ["Cogent"], "Seattle, WA": ["Cogent", "Flexential", "Equinix"], "St. Louis, MO": ["Cogent"], "Tampa, FL": ["Cogent", "Flexential"], "Washington, DC": ["Cogent", "Flexential", "Equinix"]};
+      const select = document.getElementById('cityCoverageSelect');
+      const details = document.getElementById('cityCoverageDetails');
+
+      function getServicesForCity(optionCount) {
+        const core = [
+          'Dedicated Fiber Internet',
+          'Ethernet',
+          'IP Transit',
+          'Interconnect',
+          'Wavelength',
+          'Dark Fiber',
+          'SD‑WAN'
+        ];
+        const datacenterPlus = [
+          'Colocation',
+          'Bare Metal',
+          'Cloud Hosting',
+          'Disaster Recovery'
+        ];
+        return optionCount > 1 ? core.concat(datacenterPlus) : core;
+      }
+
+      function render(cityName) {
+        if (!cityName || !cityData[cityName]) {
+          details.style.display = 'none';
+          details.innerHTML = '';
+          return;
+        }
+
+        const optionCount = cityData[cityName].length;
+        const services = getServicesForCity(optionCount);
+
+        details.innerHTML = `
+          <div class="address-form" style="margin-top: 10px;">
+            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap: 16px; flex-wrap: wrap;">
+              <div>
+                <div class="kicker" style="margin-bottom: 8px;">${cityName}</div>
+                <div style="font-weight: 900; font-size: 1.6rem; letter-spacing: -0.02em;">Market Details</div>
+                <div style="color: var(--muted); margin-top: 6px;">${optionCount > 1 ? 'Multiple data center options available in this market.' : 'Single data center option available in this market.'}</div>
+              </div>
+              <a href="quote" class="submit-btn" style="text-decoration:none; height: fit-content;">
+                Request a Quote
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <div style="margin-top: 18px;">
+              <div style="font-weight: 800; margin-bottom: 10px;"><i class="fa-solid fa-building"></i> Data Center Options</div>
+              <div class="datacenter-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+                <div class="datacenter-badge primary">${optionCount > 1 ? `${optionCount} Options` : '1 Option'}</div>
+                <div class="datacenter-badge">${optionCount > 1 ? 'Multiple facility paths' : 'On‑net access'}</div>
+              </div>
+            </div>
+
+            <div style="margin-top: 22px;">
+              <div style="font-weight: 800; margin-bottom: 10px;"><i class="fa-solid fa-list-check"></i> Services Available</div>
+              <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px;">
+                ${services.map(s => `<div style="padding: 10px 14px; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.18); border-radius: 10px; font-weight: 700; color: var(--text);"><i class="fa-solid fa-check" style="color: var(--accent-2); margin-right: 8px;"></i>${s}</div>`).join('')}
+              </div>
+              <div style="margin-top: 12px; color: var(--muted); font-size: 0.95rem;">
+                We’ll confirm exact on‑net / near‑net status and timelines during quoting.
+              </div>
+            </div>
+          </div>
+        `;
+        details.style.display = 'block';
+        details.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+
+      if (select) {
+        select.addEventListener('change', function() {
+          render(this.value);
+        });
+      }
+    })();
+    </script>
+<section class="cta-strip">
+<div class="container cta-strip-inner">
+<div class="cta-strip-copy">
+<h3>Ready to get started?</h3>
+<p>Talk with our team about the right design, timeline, and pricing for your needs.</p>
+</div>
+<div class="cta-strip-actions">
+<a class="btn btn-primary" href="quote">Get a Quote</a>
+<a class="btn btn-secondary" href="contact">Contact Sales</a>
+</div>
+</div>
+</section>
+</div></section></main>
+<!-- Injected Footer -->
+<div id="footer-placeholder"></div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script>
+    function loadComponent(url, targetId, callback) {
+      fetch(url)
+        .then(r => { if (!r.ok) throw new Error('Not found: ' + url); return r.text(); })
+        .then(html => {
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = html;
+          if (typeof callback === 'function') callback();
+        })
+        .catch(err => {
+          console.error(err);
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = '<p style="color:red; text-align:center;">Component failed to load.</p>';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadComponent('header_menu.html', 'header-placeholder', function() {
+        if (typeof initMobileNav === 'function') initMobileNav();
+      });
+      loadComponent('footer_menu.html', 'footer-placeholder');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- Canonical URL -->
+  <link rel="canonical" href="https://varayo.com/portal"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Varayo"/>
+  <meta property="og:title" content="Customer Portal | Varayo"/>
+  <meta property="og:description" content="Customer portal access for Varayo customers."/>
+  <meta property="og:url" content="https://varayo.com/portal"/>
+  <meta property="og:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@varayoinc"/>
+  <meta name="twitter:title" content="Customer Portal | Varayo"/>
+  <meta name="twitter:description" content="Customer portal access for Varayo customers."/>
+  <meta name="twitter:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+<title>Customer Portal | Varayo</title>
+
+  <meta name="description" content="Customer portal access for Varayo customers." />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon-96x96.png" sizes="32x32" />
+  <link rel="icon" href="/images/web-app-manifest-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <meta name="msapplication-TileImage" content="/images/web-app-manifest-512x512.png" />
+
+  <!-- Global Site Styles -->
+  <link rel="stylesheet" href="site-styles.css?v=about1" />
+
+  <!-- Page-only helpers (keeps global system consistent) -->
+  <style>
+    .about-wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .about-quote{
+      max-width: 900px;
+      margin: 24px auto 0;
+      padding: 18px 18px;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: rgba(255,255,255,0.03);
+      color: rgba(226,232,240,0.82);
+      font-weight: 800;
+      font-style: italic;
+      line-height: 1.65;
+      text-align: center;
+    }
+
+    .about-intro{
+      margin-top: 22px;
+      display: grid;
+      gap: 16px;
+      color: rgba(226,232,240,0.74);
+      font-weight: 750;
+      line-height: 1.75;
+      font-size: 1.05rem;
+    }
+
+    .stats-grid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 26px;
+    }
+    @media (max-width: 900px){
+      .stats-grid{ grid-template-columns: 1fr; }
+    }
+    .stat-card{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+      text-align: center;
+    }
+    .stat-number{
+      font-size: 2.35rem;
+      font-weight: 950;
+      letter-spacing: -0.03em;
+      color: rgba(34,211,238,0.92);
+      line-height: 1.1;
+    }
+    .stat-label{
+      margin-top: 8px;
+      color: rgba(226,232,240,0.72);
+      font-weight: 850;
+    }
+
+    .core-grid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+    @media (max-width: 980px){
+      .core-grid{ grid-template-columns: 1fr; }
+    }
+    .core-card{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .core-card:hover{
+      transform: translateY(-3px);
+      border-color: rgba(34,211,238,0.18);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    }
+    .core-icon{
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: rgba(59, 130, 246, 0.14);
+      border: 1px solid rgba(59, 130, 246, 0.22);
+      margin-bottom: 12px;
+    }
+    .core-icon i{
+      color: rgba(34,211,238,0.92);
+      font-size: 1.2rem;
+    }
+    .core-title{
+      font-weight: 950;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+      margin: 0 0 6px;
+    }
+    .core-desc{
+      color: rgba(226,232,240,0.70);
+      font-weight: 750;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .cta-card{
+      max-width: 920px;
+      margin: 26px auto 0;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: rgba(255,255,255,0.03);
+      padding: 22px;
+      text-align: center;
+    }
+    .cta-card p{
+      margin: 0 0 12px;
+      color: rgba(226,232,240,0.74);
+      font-weight: 800;
+      line-height: 1.7;
+      font-size: 1.08rem;
+    }
+    .cta-card p strong{ color: rgba(241,245,249,0.95); }
+    .cta-actions{
+      display:flex;
+      justify-content:center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Injected Header -->
+  <div id="header-placeholder"></div>
+
+  <main>
+
+    <section class="hero hero-enterprise">
+      <div class="container hero-stack">
+        <div class="hero-copy hero-centered">
+          <div class="hero-badge">
+            <i class="fa-solid fa-right-to-bracket"></i>
+            Customer Portal
+          </div>
+          <h1>Customer Portal access</h1>
+          <p class="lead">
+            Log in to manage tickets, services, and account details. If you don’t have access yet, we’ll help you get set up.
+          </p>
+          <div class="btn-row btn-row-center" style="margin-top:18px;">
+            <a class="btn btn-primary" href="support">Open a Support Request <i class="fa-solid fa-arrow-right"></i></a>
+            <a class="btn btn-secondary" href="contact">Request Access</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="about-wrap">
+        <h2 class="section-title" style="text-align: center;">What's in the Portal</h2>
+        <p style="text-align: center; color: var(--muted); margin-bottom: 32px;">Manage your entire Varayo account from one central dashboard</p>
+
+        <div class="core-grid">
+          <div class="core-card">
+            <div class="core-icon">
+              <i class="fa-solid fa-ticket"></i>
+            </div>
+            <h3 class="core-title">Support Tickets</h3>
+            <p class="core-desc">Submit and track support requests, view ticket history, and communicate directly with our engineering team.</p>
+          </div>
+
+          <div class="core-card">
+            <div class="core-icon">
+              <i class="fa-solid fa-file-invoice-dollar"></i>
+            </div>
+            <h3 class="core-title">Billing & Invoices</h3>
+            <p class="core-desc">View current and past invoices, manage payment methods, and download billing statements.</p>
+          </div>
+
+          <div class="core-card">
+            <div class="core-icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3 class="core-title">Usage Analytics</h3>
+            <p class="core-desc">Monitor bandwidth utilization, traffic patterns, and service performance metrics in real-time.</p>
+          </div>
+
+          <div class="core-card">
+            <div class="core-icon">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <h3 class="core-title">Service Management</h3>
+            <p class="core-desc">View all active services, configurations, and service details from a single dashboard.</p>
+          </div>
+
+          <div class="core-card">
+            <div class="core-icon">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <h3 class="core-title">User Management</h3>
+            <p class="core-desc">Add team members, assign permissions, and control who has access to your account.</p>
+          </div>
+
+          <div class="core-card">
+            <div class="core-icon">
+              <i class="fa-solid fa-bell"></i>
+            </div>
+            <h3 class="core-title">Alerts & Notifications</h3>
+            <p class="core-desc">Set up custom alerts for service issues, maintenance windows, and billing notifications.</p>
+          </div>
+        </div>
+
+        <div class="cta-card">
+          <p><strong>Need portal access?</strong> Contact your account manager or reach out to our support team to get credentials.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-strip">
+      <div class="container cta-strip-inner">
+        <div class="cta-strip-copy">
+          <h3>Ready to get started?</h3>
+          <p>Talk with our team about the right design, timeline, and pricing for your needs.</p>
+        </div>
+        <div class="cta-strip-actions">
+          <a class="btn btn-primary" href="quote">Get a Quote</a>
+          <a class="btn btn-secondary" href="contact">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+
+</main>
+  <!-- Injected Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script>
+    function loadComponent(url, targetId, callback) {
+      fetch(url)
+        .then(r => { if (!r.ok) throw new Error('Not found: ' + url); return r.text(); })
+        .then(html => {
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = html;
+          if (typeof callback === 'function') callback();
+        })
+        .catch(err => {
+          console.error(err);
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = '<p style="color:red; text-align:center;">Component failed to load.</p>';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadComponent('header_menu.html', 'header-placeholder', function() {
+        if (typeof initMobileNav === 'function') initMobileNav();
+      });
+      loadComponent('footer_menu.html', 'footer-placeholder');
+    });
+  </script>
+
+</body>
+</html>

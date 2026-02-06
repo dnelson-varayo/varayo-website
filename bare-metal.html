@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- Canonical URL -->
+  <link rel="canonical" href="https://varayo.com/bare-metal"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Varayo"/>
+  <meta property="og:title" content="Bare Metal Servers | Varayo"/>
+  <meta property="og:description" content="Dedicated bare metal servers for high-performance workloads with predictable latency and enterprise networking options."/>
+  <meta property="og:url" content="https://varayo.com/bare-metal"/>
+  <meta property="og:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@varayoinc"/>
+  <meta name="twitter:title" content="Bare Metal Servers | Varayo"/>
+  <meta name="twitter:description" content="Dedicated bare metal servers for high-performance workloads with predictable latency and enterprise networking options."/>
+  <meta name="twitter:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+<title>Bare Metal Servers | Varayo</title>
+
+  <meta name="description" content="Dedicated bare metal servers for high-performance workloads with predictable latency and enterprise networking options." />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon-96x96.png" sizes="32x32">
+  <link rel="icon" href="/images/web-app-manifest-192x192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <meta name="msapplication-TileImage" content="/images/web-app-manifest-512x512.png">
+
+  <!-- Global Site Styles -->
+  <link rel="stylesheet" href="site-styles.css?v=round29fixed" />
+
+  <!-- Page-only layout helpers (keeps site styles consistent) -->
+  <style>
+    /* Keep the cards consistent with the site's modern card system */
+    .feature-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+      max-width: 920px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 900px){
+      .feature-grid{ grid-template-columns: 1fr; }
+    }
+    .feature-card{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+      padding: 18px;
+      display:grid;
+      grid-template-columns: 52px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+    .feature-icon{
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: rgba(59, 130, 246, 0.14);
+      border: 1px solid rgba(59, 130, 246, 0.22);
+    }
+    .feature-icon i{
+      color: rgba(34,211,238,0.92);
+      font-size: 1.18rem;
+    }
+    .feature-title{
+      font-weight: 950;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+    }
+    .feature-desc{
+      margin-top: 6px;
+      color: rgba(226,232,240,0.70);
+      font-weight: 750;
+    }
+    .feature-tags{
+      margin-top: 12px;
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .feature-tags .tag{
+      font-size: 0.88rem;
+      padding: 6px 10px;
+    }
+    .cta-band{
+      max-width: 920px;
+      margin: 28px auto 0;
+      display:flex;
+      justify-content:center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Injected Header -->
+  <div id="header-placeholder"></div>
+
+  <main>
+
+    <section class="hero hero-enterprise">
+      <div class="container hero-stack">
+        <div class="hero-copy hero-centered">
+          <div class="hero-badge">
+            <i class="fa-solid fa-diagram-project"></i>
+            Dedicated hardware for high-performance workloads
+          </div>
+          <h1>Bare Metal Servers</h1>
+          <p class="lead">Get single-tenant compute with full control—ideal for databases, analytics, security tooling, and latency-sensitive applications.</p>
+
+          <div class="btn-row btn-row-center">
+            <a class="btn btn-primary" href="contact">
+              Request Bare Metal
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a class="btn btn-secondary" href="cloud-services">
+              Back to Cloud
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="section-head">
+        <div class="kicker">Why bare metal</div>
+        <h2 class="section-title">Performance without noisy neighbors</h2>
+        <p class="lead">Single-tenant servers eliminate resource contention and deliver predictable performance for demanding workloads.</p>
+      </div>
+      <div class="container">
+        <div class="card-grid">
+          <a class="card-link" href="contact">
+            <div class="card">
+              <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
+              <div class="card-body">
+                <div class="card-title">Single-tenant compute</div>
+                <div class="card-desc">No oversubscription. Your hardware, your performance envelope.</div>
+              </div>
+              <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </a>
+
+          <a class="card-link" href="network-services">
+            <div class="card">
+              <div class="card-icon"><i class="fa-solid fa-network-wired"></i></div>
+              <div class="card-body">
+                <div class="card-title">High-throughput networking</div>
+                <div class="card-desc">Pair with wavelengths, Ethernet, or IP transit as needed.</div>
+              </div>
+              <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </a>
+
+          <a class="card-link" href="security-services">
+            <div class="card">
+              <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <div class="card-body">
+                <div class="card-title">Security-friendly</div>
+                <div class="card-desc">Strong isolation for regulated and sensitive workloads.</div>
+              </div>
+              <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-divider">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Use cases</div>
+          <h2 class="section-title">Workloads that benefit from bare metal</h2>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-database"></i></div>
+            <div>
+              <div class="feature-title">High-performance databases</div>
+              <div class="feature-desc">Eliminate hypervisor overhead for latency-sensitive OLTP and analytics databases. Direct access to NVMe storage and high-speed networking.</div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <div>
+              <div class="feature-title">Big data & analytics</div>
+              <div class="feature-desc">Processing large datasets requires consistent I/O performance and high memory bandwidth. Bare metal delivers both without contention.</div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-shield"></i></div>
+            <div>
+              <div class="feature-title">Security & compliance</div>
+              <div class="feature-desc">Meet strict isolation requirements for HIPAA, PCI-DSS, or FedRAMP workloads. Physical separation reduces attack surface.</div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-flask"></i></div>
+            <div>
+              <div class="feature-title">Compute-intensive workloads</div>
+              <div class="feature-desc">Scientific computing, rendering, and simulation benefit from dedicated CPU cycles and memory. No resource stealing from other tenants.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-divider">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Configuration</div>
+          <h2 class="section-title">Flexible hardware options</h2>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-server"></i></div>
+            <div>
+              <div class="feature-title">Compute-optimized</div>
+              <div class="feature-desc">High-frequency CPUs with balanced memory for application servers, web workloads, and batch processing.</div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-memory"></i></div>
+            <div>
+              <div class="feature-title">Memory-optimized</div>
+              <div class="feature-desc">Large RAM configurations for in-memory databases, caching layers, and data-intensive applications.</div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-hard-drive"></i></div>
+            <div>
+              <div class="feature-title">Storage-optimized</div>
+              <div class="feature-desc">Dense NVMe or spinning disk configurations for high-throughput storage applications and backup targets.</div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+            <div>
+              <div class="feature-title">GPU-accelerated</div>
+              <div class="feature-desc">NVIDIA GPUs for machine learning inference, rendering, and parallel processing workloads.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-band">
+          <a class="btn btn-primary" href="contact">Configure bare metal <i class="fa-solid fa-arrow-right"></i></a>
+          <a class="btn btn-secondary" href="cloud-hosting">Cloud Hosting</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-strip">
+      <div class="container cta-strip-inner">
+        <div class="cta-strip-copy">
+          <h3>Ready to get started?</h3>
+          <p>Talk with our team about the right design, timeline, and pricing for your needs.</p>
+        </div>
+        <div class="cta-strip-actions">
+          <a class="btn btn-primary" href="quote">Get a Quote</a>
+          <a class="btn btn-secondary" href="contact">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+
+</main>
+  <!-- Injected Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script>
+    function loadComponent(url, targetId, callback) {
+      fetch(url)
+        .then(r => { if (!r.ok) throw new Error('Not found: ' + url); return r.text(); })
+        .then(html => {
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = html;
+          if (typeof callback === 'function') callback();
+        })
+        .catch(err => {
+          console.error(err);
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = '<p style="color:red; text-align:center;">Component failed to load.</p>';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadComponent('header_menu.html', 'header-placeholder', function() {
+        if (typeof initMobileNav === 'function') initMobileNav();
+      });
+      loadComponent('footer_menu.html', 'footer-placeholder');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- Canonical URL -->
+  <link rel="canonical" href="https://varayo.com/sip-trunking"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Varayo"/>
+  <meta property="og:title" content="SIP Trunking - Enterprise VoIP Services | Varayo"/>
+  <meta property="og:description" content="Reliable SIP trunking with unlimited calling, number porting, and 99.999% uptime SLA. Integrate with existing PBX systems."/>
+  <meta property="og:url" content="https://varayo.com/sip-trunking"/>
+  <meta property="og:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@varayoinc"/>
+  <meta name="twitter:title" content="SIP Trunking - Enterprise VoIP Services | Varayo"/>
+  <meta name="twitter:description" content="Reliable SIP trunking with unlimited calling, number porting, and 99.999% uptime SLA. Integrate with existing PBX systems."/>
+  <meta name="twitter:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+<title>SIP Trunking | Varayo</title>
+
+  <meta name="description" content="Carrier-grade SIP trunking for enterprises and MSPs." />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon-96x96.png" sizes="32x32" />
+  <link rel="icon" href="/images/web-app-manifest-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <meta name="msapplication-TileImage" content="/images/web-app-manifest-512x512.png" />
+
+  <!-- Global Site Styles -->
+  <link rel="stylesheet" href="site-styles.css?v=about1" />
+
+  <!-- Page-only helpers (keeps global system consistent) -->
+  <style>
+    .about-wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .about-quote{
+      max-width: 900px;
+      margin: 24px auto 0;
+      padding: 18px 18px;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: rgba(255,255,255,0.03);
+      color: rgba(226,232,240,0.82);
+      font-weight: 800;
+      font-style: italic;
+      line-height: 1.65;
+      text-align: center;
+    }
+
+    .about-intro{
+      margin-top: 22px;
+      display: grid;
+      gap: 16px;
+      color: rgba(226,232,240,0.74);
+      font-weight: 750;
+      line-height: 1.75;
+      font-size: 1.05rem;
+    }
+
+    .stats-grid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 26px;
+    }
+    @media (max-width: 900px){
+      .stats-grid{ grid-template-columns: 1fr; }
+    }
+    .stat-card{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+      text-align: center;
+    }
+    .stat-number{
+      font-size: 2.35rem;
+      font-weight: 950;
+      letter-spacing: -0.03em;
+      color: rgba(34,211,238,0.92);
+      line-height: 1.1;
+    }
+    .stat-label{
+      margin-top: 8px;
+      color: rgba(226,232,240,0.72);
+      font-weight: 850;
+    }
+
+    .core-grid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+    @media (max-width: 980px){
+      .core-grid{ grid-template-columns: 1fr; }
+    }
+    .core-card{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .core-card:hover{
+      transform: translateY(-3px);
+      border-color: rgba(34,211,238,0.18);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    }
+    .core-icon{
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: rgba(59, 130, 246, 0.14);
+      border: 1px solid rgba(59, 130, 246, 0.22);
+      margin-bottom: 12px;
+    }
+    .core-icon i{
+      color: rgba(34,211,238,0.92);
+      font-size: 1.2rem;
+    }
+    .core-title{
+      font-weight: 950;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+      margin: 0 0 6px;
+    }
+    .core-desc{
+      color: rgba(226,232,240,0.70);
+      font-weight: 750;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .cta-card{
+      max-width: 920px;
+      margin: 26px auto 0;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: rgba(255,255,255,0.03);
+      padding: 22px;
+      text-align: center;
+    }
+    .cta-card p{
+      margin: 0 0 12px;
+      color: rgba(226,232,240,0.74);
+      font-weight: 800;
+      line-height: 1.7;
+      font-size: 1.08rem;
+    }
+    .cta-card p strong{ color: rgba(241,245,249,0.95); }
+    .cta-actions{
+      display:flex;
+      justify-content:center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Injected Header -->
+  <div id="header-placeholder"></div>
+
+  <main>
+
+ <section class="hero hero-enterprise">
+<div class="container hero-stack">
+<div class="hero-copy hero-centered">
+<div class="hero-badge">
+<i class="fa-solid fa-phone-volume"></i>
+            SIP Trunking
+          </div>
+<h1>
+            Enterprise <span>SIP Trunking</span>
+</h1>
+<p class="lead">
+            Replace outdated PRIs and POTS lines with flexible, scalable SIP trunking. Reduce costs while gaining unlimited calling capacity, advanced routing, and seamless integration with your existing PBX or UCaaS platform.
+          </p>
+<div class="btn-row btn-row-center">
+<a class="btn btn-primary" href="contact">
+              Get SIP Pricing
+              <i class="fa-solid fa-arrow-right"></i>
+</a>
+<a class="btn btn-secondary" href="tel:12132129100">
+<i class="fa-solid fa-phone"></i>
+              Call 213-212-9100
+            </a>
+</div>
+<div class="hero-proof hero-proof-centered">
+<div class="proof-item">
+<div class="proof-value">60%+</div>
+<div class="proof-label">Cost savings vs. PRIs</div>
+</div>
+<div class="proof-item">
+<div class="proof-value">Unlimited</div>
+<div class="proof-label">Concurrent calls</div>
+</div>
+<div class="proof-item">
+<div class="proof-value">99.99%</div>
+<div class="proof-label">Voice quality SLA</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+ <section class="section">
+<div class="container">
+<div class="section-head">
+<h2 class="section-title">Enterprise-Grade Features</h2>
+<p class="section-subtitle">
+            Modernize your voice infrastructure with carrier-grade SIP trunking designed for reliability and scale.
+          </p>
+</div>
+<div class="feature-grid">
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-phone-volume"></i>
+</div>
+<div>
+<div class="feature-title">Unlimited Concurrent Calls</div>
+<div class="feature-desc">
+                Scale instantly without channel limitations. Add capacity as your business grows with no hardware upgrades required.
+              </div>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-shield-halved"></i>
+</div>
+<div>
+<div class="feature-title">Carrier-Grade Reliability</div>
+<div class="feature-desc">
+                99.99% uptime SLA with geo-redundant infrastructure, automatic failover, and 24/7 network monitoring for uninterrupted service.
+              </div>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-route"></i>
+</div>
+<div>
+<div class="feature-title">Intelligent Call Routing</div>
+<div class="feature-desc">
+                Advanced call flow management with time-based routing, geographic routing, failover rules, and least-cost routing optimization.
+              </div>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-hashtag"></i>
+</div>
+<div>
+<div class="feature-title">Number Portability &amp; DID Management</div>
+<div class="feature-desc">
+                Keep your existing phone numbers. Port in numbers from any carrier, purchase new DIDs instantly, and manage everything through our portal.
+              </div>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-globe"></i>
+</div>
+<div>
+<div class="feature-title">Global Calling Included</div>
+<div class="feature-desc">
+                Competitive international rates to 200+ countries. Unlimited domestic calling included with no hidden fees or surprises.
+              </div>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-plug"></i>
+</div>
+<div>
+<div class="feature-title">Universal Compatibility</div>
+<div class="feature-desc">
+                Works with any SIP-compatible PBX, including Cisco, Avaya, 3CX, FreePBX, Asterisk, and all major UCaaS platforms.
+              </div>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-chart-line"></i>
+</div>
+<div>
+<div class="feature-title">Real-Time Analytics</div>
+<div class="feature-desc">
+                Comprehensive call detail records, quality metrics, usage analytics, and billing reports accessible 24/7 through our portal.
+              </div>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-clock"></i>
+</div>
+<div>
+<div class="feature-title">Rapid Deployment</div>
+<div class="feature-desc">
+                Get up and running in days, not months. Simple configuration, expert onboarding support, and minimal disruption to existing operations.
+              </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+ <section class="section">
+<div class="container">
+<div class="section-head">
+<h2 class="section-title">Common Use Cases</h2>
+<p class="section-subtitle">
+            SIP trunking solves a wide range of enterprise communication challenges.
+          </p>
+</div>
+<div class="feature-grid">
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-building"></i>
+</div>
+<div>
+<div class="feature-title">PRI Replacement</div>
+<div class="feature-desc">
+                Eliminate expensive T1/PRI circuits and legacy ISDN infrastructure. Cut costs by 60%+ while improving call quality and flexibility.
+              </div>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-sitemap"></i>
+</div>
+<div>
+<div class="feature-title">Multi-Location Connectivity</div>
+<div class="feature-desc">
+                Connect branch offices, remote workers, and distributed teams with centralized call management and unified numbering.
+              </div>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-shield-virus"></i>
+</div>
+<div>
+<div class="feature-title">Business Continuity</div>
+<div class="feature-desc">
+                Built-in redundancy and disaster recovery. Route calls automatically to backup locations during outages or emergencies.
+              </div>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-headset"></i>
+</div>
+<div>
+<div class="feature-title">Contact Center Integration</div>
+<div class="feature-desc">
+                Power high-volume call centers with unlimited capacity, advanced routing, and seamless integration with CCaaS platforms.
+              </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+ <section class="section">
+<div class="container">
+<div class="section-head">
+<h2 class="section-title">Technical Specifications</h2>
+<p class="section-subtitle">
+            Enterprise-grade SIP trunking with comprehensive codec support and security features.
+          </p>
+</div>
+<div class="feature-grid">
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-code"></i>
+</div>
+<div>
+<div class="feature-title">Supported Codecs</div>
+<div class="feature-desc">
+                G.711 (μ-law/a-law), G.722, G.729, Opus. DTMF support via RFC 2833 and SIP INFO.
+              </div>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-lock"></i>
+</div>
+<div>
+<div class="feature-title">Security &amp; Encryption</div>
+<div class="feature-desc">
+                TLS 1.2/1.3 signaling encryption, SRTP media encryption, SIP authentication, IP whitelisting, and fraud detection.
+              </div>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-network-wired"></i>
+</div>
+<div>
+<div class="feature-title">Network Features</div>
+<div class="feature-desc">
+                QoS/DSCP marking, dedicated voice VLANs, SIP ALG compatibility, NAT traversal, and direct peering with Tier 1 carriers.
+              </div>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-phone"></i>
+</div>
+<div>
+<div class="feature-title">E911 &amp; Regulatory</div>
+<div class="feature-desc">
+                Full E911 support with dynamic location updates, CNAM database integration, and compliance with all FCC regulations.
+              </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+    <section class="cta-strip">
+      <div class="container cta-strip-inner">
+        <div class="cta-strip-copy">
+          <h3>Ready to get started?</h3>
+          <p>Talk with our team about the right design, timeline, and pricing for your needs.</p>
+        </div>
+        <div class="cta-strip-actions">
+          <a class="btn btn-primary" href="quote">Get a Quote</a>
+          <a class="btn btn-secondary" href="contact">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+
+</main>
+  <!-- Injected Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script>
+    function loadComponent(url, targetId, callback) {
+      fetch(url)
+        .then(r => { if (!r.ok) throw new Error('Not found: ' + url); return r.text(); })
+        .then(html => {
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = html;
+          if (typeof callback === 'function') callback();
+        })
+        .catch(err => {
+          console.error(err);
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = '<p style="color:red; text-align:center;">Component failed to load.</p>';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadComponent('header_menu.html', 'header-placeholder', function() {
+        if (typeof initMobileNav === 'function') initMobileNav();
+      });
+      loadComponent('footer_menu.html', 'footer-placeholder');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- Canonical URL -->
+  <link rel="canonical" href="https://varayo.com/aup"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Varayo"/>
+  <meta property="og:title" content="Acceptable Use Policy – Varayo"/>
+  <meta property="og:description" content="Review Varayo's Acceptable Use Policy (AUP). Understand the rules governing the use of our internet, cloud, and voice services to ensure a secure and compliant environment."/>
+  <meta property="og:url" content="https://varayo.com/aup"/>
+  <meta property="og:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@varayoinc"/>
+  <meta name="twitter:title" content="Acceptable Use Policy – Varayo"/>
+  <meta name="twitter:description" content="Review Varayo's Acceptable Use Policy (AUP). Understand the rules governing the use of our internet, cloud, and voice services to ensure a secure and compliant environment."/>
+  <meta name="twitter:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+<title>Acceptable Use Policy – Varayo</title>
+
+  <meta name="description" content="Review Varayo's Acceptable Use Policy (AUP). Understand the rules governing the use of our internet, cloud, and voice services to ensure a secure and compliant environment." />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon-96x96.png" sizes="32x32" />
+  <link rel="icon" href="/images/web-app-manifest-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <meta name="msapplication-TileImage" content="/images/web-app-manifest-512x512.png" />
+
+  <!-- Global Site Styles -->
+  <link rel="stylesheet" href="site-styles.css?v=aup1" />
+
+  <!-- Page-only helpers (keeps global system consistent) -->
+  <style>
+    .policy-wrap{
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .policy-topnote{
+      margin: 16px auto 0;
+      max-width: 820px;
+      text-align: center;
+      color: rgba(226,232,240,0.72);
+      font-weight: 750;
+      font-style: italic;
+    }
+
+    /* Contact callout card */
+    .policy-contact{
+      max-width: 920px;
+      margin: 26px auto 0;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+    }
+    .policy-contact-title{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      font-weight: 950;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      margin: 0 0 10px;
+    }
+    .policy-contact-title i{ color: rgba(34,211,238,0.92); }
+    .policy-contact-sub{
+      color: rgba(226,232,240,0.70);
+      font-weight: 750;
+      margin: 0 0 12px;
+      line-height: 1.65;
+    }
+    .policy-contact-actions{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .policy-contact-details{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 14px;
+      color: rgba(226,232,240,0.74);
+      font-weight: 750;
+    }
+    .policy-contact-details a{
+      color: rgba(34,211,238,0.92);
+      text-decoration: none;
+      font-weight: 900;
+    }
+    .policy-contact-details a:hover{ text-decoration: underline; }
+
+    /* Accordions */
+    .policy-rows{
+      margin-top: 22px;
+      display: grid;
+      gap: 12px;
+    }
+    details.policy-row{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: rgba(255,255,255,0.03);
+      overflow: hidden;
+    }
+    details.policy-row[open]{
+      border-color: rgba(34,211,238,0.18);
+      background: rgba(59,130,246,0.06);
+    }
+
+    summary.policy-q{
+      list-style: none;
+      cursor: pointer;
+      padding: 16px 16px;
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 12px;
+      font-weight: 950;
+      font-size: 1.02rem;
+      color: rgba(241,245,249,0.92);
+    }
+    summary.policy-q::-webkit-details-marker{ display:none; }
+    summary.policy-q::marker{ display:none; }
+
+    .policy-toggle{
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background: rgba(59,130,246,0.12);
+      border: 1px solid rgba(59,130,246,0.18);
+      color: rgba(34,211,238,0.92);
+      font-weight: 950;
+      font-size: 1.2rem;
+      line-height: 1;
+      flex: 0 0 auto;
+    }
+    details[open] .policy-toggle{
+      background: rgba(34,211,238,0.12);
+      border-color: rgba(34,211,238,0.22);
+      color: rgba(241,245,249,0.92);
+    }
+
+    .policy-a{
+      padding: 0 16px 16px;
+      color: rgba(226,232,240,0.74);
+      font-weight: 750;
+      line-height: 1.75;
+      font-size: 0.98rem;
+      border-top: 1px dashed rgba(148,163,184,0.18);
+    }
+    .policy-a h3, .policy-a h4{
+      margin-top: 14px;
+      margin-bottom: 8px;
+      color: rgba(241,245,249,0.92);
+      font-weight: 950;
+      letter-spacing: -0.02em;
+    }
+    .policy-a h3{ font-size: 1.02rem; }
+    .policy-a h4{ font-size: 0.98rem; }
+    .policy-a ul{
+      margin: 12px 0 0 18px;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+    }
+    .policy-a li{ margin: 0; }
+
+    /* Prohibited warning treatment */
+    details.policy-row.prohibited{
+      border-color: rgba(239,68,68,0.42);
+      background: rgba(239,68,68,0.06);
+    }
+    details.policy-row.prohibited[open]{
+      border-color: rgba(239,68,68,0.55);
+      background: rgba(239,68,68,0.09);
+    }
+    details.policy-row.prohibited summary.policy-q{
+      color: rgba(248,113,113,0.95);
+    }
+    details.policy-row.prohibited summary .policy-toggle{
+      background: rgba(239,68,68,0.14);
+      border-color: rgba(239,68,68,0.25);
+      color: rgba(248,113,113,0.95);
+    }
+    details.policy-row.prohibited[open] summary .policy-toggle{
+      background: rgba(239,68,68,0.18);
+      border-color: rgba(239,68,68,0.32);
+      color: rgba(241,245,249,0.95);
+    }
+
+    .policy-address{
+      margin-top: 12px;
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: rgba(255,255,255,0.03);
+      color: rgba(226,232,240,0.72);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Injected Header -->
+  <div id="header-placeholder"></div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero hero-enterprise">
+      <div class="container hero-stack">
+        <div class="hero-copy hero-centered">
+          <div class="hero-badge">
+            <i class="fa-solid fa-shield-halved"></i>
+            Legal / Compliance / Service Terms
+          </div>
+
+          <h1>
+            Acceptable <span>Use</span> Policy
+          </h1>
+
+          <p class="lead">
+            This Acceptable Use Policy (AUP) outlines permitted and prohibited activities when using Varayo’s internet, cloud, voice,
+            and related services. By using our services, you agree to comply with these terms.
+          </p>
+
+          <div class="hero-proof hero-proof-centered">
+            <div class="proof-item">
+              <div class="proof-value">Secure</div>
+              <div class="proof-label">Abuse prevention</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-value">Compliant</div>
+              <div class="proof-label">Responsible use</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-value">Transparent</div>
+              <div class="proof-label">Clear standards</div>
+            </div>
+          </div>
+
+          <div class="policy-topnote">Effective Date: December 17, 2025</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section class="section">
+      <div class="container">
+        <div class="policy-wrap">
+
+          <div class="policy-contact">
+            <h2 class="policy-contact-title"><i class="fa-solid fa-circle-question"></i> Questions About Our Policy?</h2>
+            <p class="policy-contact-sub">
+              This document outlines the legal use of Varayo’s services. If you have questions or need to report a violation, contact us immediately.
+            </p>
+
+            <div class="policy-contact-actions">
+              <a class="btn btn-primary" href="/cdn-cgi/l/email-protection#adc1c8caccc1eddbccdfccd4c283cec2c0">
+                Contact Our Legal Team
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a class="btn btn-secondary" href="tel:12132129100">
+                <i class="fa-solid fa-phone"></i>
+                Call 213-212-9100
+              </a>
+            </div>
+
+            </div>
+          </div>
+
+          <div class="policy-rows">
+
+            <details class="policy-row" open>
+              <summary class="policy-q">
+                General Principles &amp; Responsibility
+                <span class="policy-toggle">−</span>
+              </summary>
+              <div class="policy-a">
+                <p>Varayo Inc. values and supports the privacy rights of our business customers. We do not control or monitor the content that users create, access, or transmit through our services. Varayo Inc. assumes no responsibility for the content of any materials or information available via our services.</p>
+                <p>All organizations and their authorized users bear full responsibility for any content they publish online, whether through our services or otherwise. It is the sole responsibility of customers and their users to ensure compliance with all applicable laws and regulations.</p>
+                <p>Varayo Inc. reserves the right to remove any content that appears to violate applicable laws or this Acceptable Use Policy. We also reserve the right to suspend or terminate service to any customer if we receive credible complaints indicating a potential violation of law or this policy. If you believe a Varayo Inc. customer has violated these terms, please notify us immediately.</p>
+                <p>By using Varayo Inc.’s services, you agree to be bound by this Acceptable Use Policy, to comply with all applicable laws and regulations, and to follow generally accepted standards of Internet conduct, even if not explicitly listed here.</p>
+              </div>
+            </details>
+
+            <details class="policy-row">
+              <summary class="policy-q">
+                Disclaimer &amp; Limitation of Liability
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <p>Our services are provided on an “as-is” and “as-available” basis, without any warranties or guarantees.</p>
+                <p>Varayo Inc., its affiliates, and employees shall not be liable for any damages arising from your use of our services. This includes, but is not limited to, any loss of profits, opportunities, business interruption, or data resulting from use, misuse, interruptions, delays, non-delivery, negligence, or errors related to the services.</p>
+                <p>We make no claims regarding the accuracy or quality of information accessed through our services; customers are responsible for independently verifying any such information.</p>
+                <p>Varayo Inc. may delete email messages stored on our servers for more than 60 days. Mailboxes exceeding reasonable storage limits, as determined by Varayo Inc., may be cleared or restricted at our discretion.</p>
+              </div>
+            </details>
+
+            <details class="policy-row">
+              <summary class="policy-q">
+                Service Usage Guidelines
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <p>Varayo Inc.’s Internet access and connectivity services are designed for legitimate business use, including email, web browsing, file transfers, video conferencing, cloud applications, and other standard enterprise activities. Customers agree to use the services accordingly.</p>
+                <p>Maintaining idle connections solely to keep them open (including through pinging) is not permitted. Simultaneous use of accounts must comply with the terms of the purchased plan. We may terminate any session that appears unattended, inactive, or excessively resource-intensive at our discretion.</p>
+              </div>
+            </details>
+
+            <details class="policy-row prohibited">
+              <summary class="policy-q">
+                Prohibited Activities (Violations)
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <p>The following activities constitute violations of this Acceptable Use Policy:</p>
+                <ul>
+                  <li>Engaging in or facilitating illegal activities via our services.</li>
+                  <li>Unauthorized reproduction or distribution of copyrighted content.</li>
+                  <li>Violating U.S. export control laws by exporting software or technical data.</li>
+                  <li>Attempting to gain unauthorized access to accounts or systems (hacking), whether ours or third parties’.</li>
+                  <li>Making fraudulent offers of products, services, or items.</li>
+                  <li>Threatening physical harm or property damage.</li>
+                  <li>Sending large volumes of identical or similar messages to overwhelm an email address or newsgroup (mail-bombing or news-bombing).</li>
+                  <li>Using someone’s name, image, or likeness without permission.</li>
+                  <li>Distributing chain letters or “get-rich-quick” schemes.</li>
+                  <li>Sending unsolicited bulk email (spamming) using our accounts or infrastructure.</li>
+                  <li>Using a Varayo Inc. email address as a return address for unsolicited messages.</li>
+                  <li>Sharing account credentials with unauthorized users or third parties.</li>
+                  <li>Logging into an account in a manner that exceeds the licensed number of concurrent users or devices (contact us to upgrade your plan).</li>
+                  <li>Distributing viruses, worms, or other malicious software.</li>
+                  <li>Any action that disrupts, degrades, or interferes with service to other customers, including excessive bandwidth consumption inconsistent with normal business use.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="policy-row">
+              <summary class="policy-q">
+                Spam Filtering and Anti‑Virus Services – Waiver of Liability
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <p>If Varayo Inc. provides spam filtering and/or anti-virus protection (“Services”) as part of your plan, these are offered “as is” without any express or implied warranties, including warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+
+                <h3>Spam Filtering</h3>
+                <p>You acknowledge that no filtering system can block all spam. Legitimate email from certain domains may occasionally be blocked if those domains appear on public blocklists. Varayo Inc. cannot control or remove entries from such lists.</p>
+
+                <h3>Anti‑Virus Protection</h3>
+                <p>You understand that no anti-virus solution can detect or prevent every virus. Despite our efforts, threats may still reach you. It remains your responsibility to maintain up-to-date security software and follow enterprise best practices on your devices and networks.</p>
+
+                <h3>Limitation of Liability (Specific to these Services)</h3>
+                <p>Varayo Inc. will not be liable for any indirect, special, consequential, or similar damages—including lost profits, business interruption, or data—arising from the use or inability to use these Services, even if we have been advised of the possibility.</p>
+                <p>In any event, our maximum liability shall not exceed the fees paid for the affected service in the preceding month. These limitations apply regardless of whether the Services are utilized.</p>
+              </div>
+            </details>
+
+            <details class="policy-row">
+              <summary class="policy-q">
+                Service &amp; Billing Terms
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <p>Services are provided under the terms of the applicable service agreement, typically on a monthly or annual basis. Customers are responsible for all fees until service is formally cancelled in writing (email notification is acceptable).</p>
+                <p>Varayo Inc. does not provide prorated refunds for partial billing periods unless otherwise specified in your agreement.</p>
+                <p>Varayo Inc. may update this Acceptable Use Policy at any time without prior notice. The current version will always be posted on our website and/or provided upon request.</p>
+              </div>
+            </details>
+
+            <details class="policy-row">
+              <summary class="policy-q">
+                Mailing List Policy (Double Opt‑In Required)
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <p>We require all customer-operated mailing lists (or lists referencing resources on our network) to use <strong>double opt-in</strong> (also called confirmed opt-in) subscription methods to ensure compliance with anti-spam regulations and protect deliverability.</p>
+
+                <h3>Single Opt‑In (Prohibited)</h3>
+                <p>With single opt-in, an email address is added immediately upon submission. This method is vulnerable to abuse and can result in unsolicited messages. For this reason, <strong>we prohibit single opt-in lists on our network.</strong></p>
+
+                <h3>Double Opt‑In (Required)</h3>
+                <p>The subscriber must confirm their intent via a verification email or link before being added to the list. Unconfirmed addresses receive no further messages. This practice significantly reduces complaints and blacklisting risks.</p>
+
+                <h4>Recommendations for Effective Double Opt‑In Forms</h4>
+                <ul>
+                  <li>Require users to manually enter their email address.</li>
+                  <li>Use an unchecked checkbox for explicit consent.</li>
+                  <li>Clearly state: “By opting in, you will receive a confirmation email that you must approve before receiving any future messages.”</li>
+                </ul>
+
+                <h3>Unsubscribe Requirements</h3>
+                <p>All bulk or marketing emails must include a clear, functional unsubscribe mechanism (e.g., a one-click link or reply instructions). Unsubscribe requests must be honored promptly, typically within 24 hours.</p>
+              </div>
+            </details>
+
+            <details class="policy-row">
+              <summary class="policy-q">
+                Corporate Contact Information
+                <span class="policy-toggle">+</span>
+              </summary>
+              <div class="policy-a">
+                <div class="policy-address">
+                  <strong>Varayo Inc.</strong><br/>
+                  530 W 6th St Ste 301<br/>
+                  Los Angeles, CA 90014<br/>
+                  213-212-9100
+                </div>
+              </div>
+            </details>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-strip">
+      <div class="container cta-strip-inner">
+        <div class="cta-strip-copy">
+          <h3>Ready to get started?</h3>
+          <p>Talk with our team about the right design, timeline, and pricing for your needs.</p>
+        </div>
+        <div class="cta-strip-actions">
+          <a class="btn btn-primary" href="quote">Get a Quote</a>
+          <a class="btn btn-secondary" href="contact">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+
+</main>
+  <!-- Injected Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script>
+    function loadComponent(url, targetId, callback) {
+      fetch(url)
+        .then(r => { if (!r.ok) throw new Error('Not found: ' + url); return r.text(); })
+        .then(html => {
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = html;
+          if (typeof callback === 'function') callback();
+        })
+        .catch(err => {
+          console.error(err);
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = '<p style="color:red; text-align:center;">Component failed to load.</p>';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadComponent('header_menu.html', 'header-placeholder', function() {
+        if (typeof initMobileNav === 'function') initMobileNav();
+      });
+      loadComponent('footer_menu.html', 'footer-placeholder');
+    });
+  </script>
+
+</body>
+</html>

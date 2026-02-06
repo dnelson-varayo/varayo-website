@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- Canonical URL -->
+  <link rel="canonical" href="https://varayo.com/contact-center"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Varayo"/>
+  <meta property="og:title" content="Contact Center (CCaaS) | Varayo"/>
+  <meta property="og:description" content="Contact Center as a Service with enterprise-grade connectivity and support."/>
+  <meta property="og:url" content="https://varayo.com/contact-center"/>
+  <meta property="og:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@varayoinc"/>
+  <meta name="twitter:title" content="Contact Center (CCaaS) | Varayo"/>
+  <meta name="twitter:description" content="Contact Center as a Service with enterprise-grade connectivity and support."/>
+  <meta name="twitter:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+<title>Contact Center (CCaaS) | Varayo</title>
+
+  <meta name="description" content="Contact Center as a Service with enterprise-grade connectivity and support." />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon-96x96.png" sizes="32x32" />
+  <link rel="icon" href="/images/web-app-manifest-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <meta name="msapplication-TileImage" content="/images/web-app-manifest-512x512.png" />
+
+  <!-- Global Site Styles -->
+  <link rel="stylesheet" href="site-styles.css?v=about1" />
+
+  <!-- Page-only helpers (keeps global system consistent) -->
+  <style>
+    .about-wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .about-quote{
+      max-width: 900px;
+      margin: 24px auto 0;
+      padding: 18px 18px;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: rgba(255,255,255,0.03);
+      color: rgba(226,232,240,0.82);
+      font-weight: 800;
+      font-style: italic;
+      line-height: 1.65;
+      text-align: center;
+    }
+
+    .about-intro{
+      margin-top: 22px;
+      display: grid;
+      gap: 16px;
+      color: rgba(226,232,240,0.74);
+      font-weight: 750;
+      line-height: 1.75;
+      font-size: 1.05rem;
+    }
+
+    .stats-grid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 26px;
+    }
+    @media (max-width: 900px){
+      .stats-grid{ grid-template-columns: 1fr; }
+    }
+    .stat-card{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+      text-align: center;
+    }
+    .stat-number{
+      font-size: 2.35rem;
+      font-weight: 950;
+      letter-spacing: -0.03em;
+      color: rgba(34,211,238,0.92);
+      line-height: 1.1;
+    }
+    .stat-label{
+      margin-top: 8px;
+      color: rgba(226,232,240,0.72);
+      font-weight: 850;
+    }
+
+    .core-grid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+    @media (max-width: 980px){
+      .core-grid{ grid-template-columns: 1fr; }
+    }
+    .core-card{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .core-card:hover{
+      transform: translateY(-3px);
+      border-color: rgba(34,211,238,0.18);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    }
+    .core-icon{
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: rgba(59, 130, 246, 0.14);
+      border: 1px solid rgba(59, 130, 246, 0.22);
+      margin-bottom: 12px;
+    }
+    .core-icon i{
+      color: rgba(34,211,238,0.92);
+      font-size: 1.2rem;
+    }
+    .core-title{
+      font-weight: 950;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+      margin: 0 0 6px;
+    }
+    .core-desc{
+      color: rgba(226,232,240,0.70);
+      font-weight: 750;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .cta-card{
+      max-width: 920px;
+      margin: 26px auto 0;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: rgba(255,255,255,0.03);
+      padding: 22px;
+      text-align: center;
+    }
+    .cta-card p{
+      margin: 0 0 12px;
+      color: rgba(226,232,240,0.74);
+      font-weight: 800;
+      line-height: 1.7;
+      font-size: 1.08rem;
+    }
+    .cta-card p strong{ color: rgba(241,245,249,0.95); }
+    .cta-actions{
+      display:flex;
+      justify-content:center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Injected Header -->
+  <div id="header-placeholder"></div>
+
+  <main>
+<section class="hero hero-enterprise">
+<div class="container hero-stack">
+<div class="hero-copy hero-centered">
+<h1 hero_title_placeholder="">Contact Center as a Service</h1>
+<p class="lead">
+            Transform customer experiences with our cloud-based contact center platform. Empower agents with AI-driven insights, omnichannel routing, and real-time analytics—all without the complexity of on-premises infrastructure.
+          </p>
+<div class="btn-row btn-row-center">
+<a class="btn btn-primary" href="contact">Request Demo</a>
+<a class="btn btn-secondary" href="#features">Explore Features</a>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<section class="section">
+<div class="container">
+<h2 class="section-title">Channels your customers use</h2>
+<p class="section-subtitle">
+          Meet customers on their preferred channel with seamless context across every interaction.
+        </p>
+<div class="channel-grid">
+<div class="channel-item">
+<div class="channel-icon"><i class="fa-solid fa-phone"></i></div>
+<div class="channel-label">Voice</div>
+</div>
+<div class="channel-item">
+<div class="channel-icon"><i class="fa-solid fa-envelope"></i></div>
+<div class="channel-label">Email</div>
+</div>
+<div class="channel-item">
+<div class="channel-icon"><i class="fa-solid fa-message"></i></div>
+<div class="channel-label">SMS/MMS</div>
+</div>
+<div class="channel-item">
+<div class="channel-icon"><i class="fa-solid fa-comments"></i></div>
+<div class="channel-label">Chat</div>
+</div>
+<div class="channel-item">
+<div class="channel-icon"><i class="fa-brands fa-facebook-messenger"></i></div>
+<div class="channel-label">Messenger</div>
+</div>
+<div class="channel-item">
+<div class="channel-icon"><i class="fa-brands fa-whatsapp"></i></div>
+<div class="channel-label">WhatsApp</div>
+</div>
+<div class="channel-item">
+<div class="channel-icon"><i class="fa-brands fa-twitter"></i></div>
+<div class="channel-label">Social Media</div>
+</div>
+<div class="channel-item">
+<div class="channel-icon"><i class="fa-solid fa-video"></i></div>
+<div class="channel-label">Video</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<section class="section" id="features">
+<div class="container">
+<h2 class="section-title">Intelligent Contact Center Platform</h2>
+<div class="feature-grid">
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-brain"></i>
+</div>
+<div>
+<h3 class="feature-title">AI-Powered Routing</h3>
+<p class="feature-desc">
+                Intelligent call distribution based on agent skills, customer history, sentiment analysis, and real-time availability. Reduce wait times and improve first-call resolution.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-robot"></i>
+</div>
+<div>
+<h3 class="feature-title">IVR &amp; Self-Service</h3>
+<p class="feature-desc">
+                Advanced interactive voice response with natural language processing, visual IVR, callback options, and intelligent automation to handle routine inquiries.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-chart-line"></i>
+</div>
+<div>
+<h3 class="feature-title">Real-Time Analytics</h3>
+<p class="feature-desc">
+                Live wallboards, performance dashboards, queue monitoring, and historical reporting. Track KPIs, identify trends, and make data-driven decisions.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-users"></i>
+</div>
+<div>
+<h3 class="feature-title">Workforce Management</h3>
+<p class="feature-desc">
+                Forecasting, scheduling, adherence tracking, and performance management tools to optimize staffing levels and agent productivity.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-phone-volume"></i>
+</div>
+<div>
+<h3 class="feature-title">Quality Management</h3>
+<p class="feature-desc">
+                Call recording, screen capture, speech analytics, quality scoring, and coaching tools to ensure consistent service excellence.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-diagram-project"></i>
+</div>
+<div>
+<h3 class="feature-title">Visual Workflow Builder</h3>
+<p class="feature-desc">
+                Drag-and-drop interface to design call flows, routing rules, and automation workflows without coding. Make changes in real-time.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-plug"></i>
+</div>
+<div>
+<h3 class="feature-title">CRM Integrations</h3>
+<p class="feature-desc">
+                Pre-built connectors for Salesforce, Microsoft Dynamics, Zendesk, ServiceNow, and hundreds of other platforms. Screen pops with customer context.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-globe"></i>
+</div>
+<div>
+<h3 class="feature-title">Global Presence</h3>
+<p class="feature-desc">
+                Local numbers in 100+ countries, multilingual support, geo-redundant infrastructure, and compliance with regional data privacy regulations.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<section class="section">
+<div class="container">
+<h2 class="section-title">Empower Your Agents</h2>
+<p class="section-subtitle">
+          Give your team the tools they need to deliver exceptional customer service.
+        </p>
+<div class="feature-grid">
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-desktop"></i>
+</div>
+<div>
+<h3 class="feature-title">Unified Agent Desktop</h3>
+<p class="feature-desc">
+                Single interface for all channels, customer information, and tools. Reduce context switching and improve agent efficiency.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-lightbulb"></i>
+</div>
+<div>
+<h3 class="feature-title">Real-Time Guidance</h3>
+<p class="feature-desc">
+                AI-powered suggestions, knowledge base integration, script guidance, and next-best-action recommendations during customer interactions.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-people-arrows"></i>
+</div>
+<div>
+<h3 class="feature-title">Collaboration Tools</h3>
+<p class="feature-desc">
+                Instant messaging, conference calls, warm transfers, supervisor escalation, and team collaboration features built right into the platform.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-location-arrow"></i>
+</div>
+<div>
+<h3 class="feature-title">Work From Anywhere</h3>
+<p class="feature-desc">
+                Browser-based interface, mobile apps, and cloud architecture enable seamless remote and hybrid workforce operations.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<section class="section">
+<div class="container">
+<h2 class="section-title">Controls for security and compliance</h2>
+<div class="feature-grid three-col">
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-shield-halved"></i>
+</div>
+<div>
+<h3 class="feature-title">Security &amp; Compliance</h3>
+<p class="feature-desc">
+                SOC 2 Type II, HIPAA, PCI DSS, GDPR compliant. End-to-end encryption, role-based access control, and audit logging.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-arrows-up-down"></i>
+</div>
+<div>
+<h3 class="feature-title">Unlimited Scalability</h3>
+<p class="feature-desc">
+                Scale from 5 to 5,000+ agents instantly. Auto-scaling infrastructure handles peak volumes without performance degradation.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-clock"></i>
+</div>
+<div>
+<h3 class="feature-title">99.99% Uptime SLA</h3>
+<p class="feature-desc">
+                Geo-redundant architecture, automatic failover, and 24/7 monitoring ensure your contact center is always available.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<section class="section">
+<div class="container">
+<h2 class="section-title">Built for Every Industry</h2>
+<div class="feature-grid">
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-cart-shopping"></i>
+</div>
+<div>
+<h3 class="feature-title">Retail &amp; E-Commerce</h3>
+<p class="feature-desc">
+                Order tracking, returns processing, product recommendations, and personalized customer service across all channels.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-building-columns"></i>
+</div>
+<div>
+<h3 class="feature-title">Financial Services</h3>
+<p class="feature-desc">
+                Secure authentication, fraud detection, account servicing, and regulatory compliance with PCI DSS and financial industry standards.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-hospital"></i>
+</div>
+<div>
+<h3 class="feature-title">Healthcare</h3>
+<p class="feature-desc">
+                HIPAA-compliant patient communications, appointment scheduling, prescription refills, and telehealth integration.
+              </p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fa-solid fa-headset"></i>
+</div>
+<div>
+<h3 class="feature-title">BPO &amp; Outsourcers</h3>
+<p class="feature-desc">
+                Multi-tenant architecture, client-specific branding, detailed reporting, and flexible billing for contact center service providers.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<section class="section">
+<div class="container">
+<div style="text-align: center; max-width: 720px; margin: 0 auto;">
+<h2 class="section-title">Transform Your Customer Experience</h2>
+<p class="section-subtitle">
+            See how Varayo CCaaS can improve customer satisfaction, reduce costs, and empower your agents. Schedule a personalized demo today.
+          </p>
+<div class="btn-row btn-row-center" style="justify-content: center; margin-top: 24px;">
+<a class="btn btn-primary" href="contact">Request Demo</a>
+<a class="btn btn-secondary" href="tel:12132129100">
+<i class="fa-solid fa-phone"></i> 213-212-9100
+            </a>
+</div>
+</div>
+</div>
+</section>
+
+    <section class="cta-strip">
+      <div class="container cta-strip-inner">
+        <div class="cta-strip-copy">
+          <h3>Ready to get started?</h3>
+          <p>Talk with our team about the right design, timeline, and pricing for your needs.</p>
+        </div>
+        <div class="cta-strip-actions">
+          <a class="btn btn-primary" href="quote">Get a Quote</a>
+          <a class="btn btn-secondary" href="contact">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+
+</main>
+  <!-- Injected Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script>
+    function loadComponent(url, targetId, callback) {
+      fetch(url)
+        .then(r => { if (!r.ok) throw new Error('Not found: ' + url); return r.text(); })
+        .then(html => {
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = html;
+          if (typeof callback === 'function') callback();
+        })
+        .catch(err => {
+          console.error(err);
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = '<p style="color:red; text-align:center;">Component failed to load.</p>';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadComponent('header_menu.html', 'header-placeholder', function() {
+        if (typeof initMobileNav === 'function') initMobileNav();
+      });
+      loadComponent('footer_menu.html', 'footer-placeholder');
+    });
+  </script>
+
+</body>
+</html>

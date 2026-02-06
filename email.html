@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/><!-- Canonical URL -->
+  <link rel="canonical" href="https://varayo.com/email"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Varayo"/>
+  <meta property="og:title" content="Email – Varayo"/>
+  <meta property="og:description" content=""/>
+  <meta property="og:url" content="https://varayo.com/email"/>
+  <meta property="og:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@varayoinc"/>
+  <meta name="twitter:title" content="Email – Varayo"/>
+  <meta name="twitter:description" content=""/>
+  <meta name="twitter:image" content="https://varayo.com/images/varayo-light-logo.png"/>
+<title>Email – Varayo</title>
+<meta content="Secure, professional business email with large storage, spam/virus protection, and 24/7 US-based support. Migrate your business email to Varayo today." name="description"/>
+<!-- Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<!-- Favicons -->
+<link href="/images/favicon-96x96.png" rel="icon" sizes="32x32"/>
+<link href="/images/web-app-manifest-192x192.png" rel="icon" sizes="192x192"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon"/>
+<meta content="/images/web-app-manifest-512x512.png" name="msapplication-TileImage"/>
+<!-- Global Site Styles -->
+<link href="site-styles.css?v=email1" rel="stylesheet"/>
+<!-- Page-only helpers (keeps global system consistent) -->
+<style>
+    .feature-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+      max-width: 920px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 900px){
+      .feature-grid{ grid-template-columns: 1fr; }
+    }
+    .feature-card{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+      display:grid;
+      grid-template-columns: 52px 1fr;
+      gap: 14px;
+      align-items: start;
+      min-height: 182px;
+    }
+    .feature-icon{
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: rgba(59, 130, 246, 0.14);
+      border: 1px solid rgba(59, 130, 246, 0.22);
+    }
+    .feature-icon i{
+      color: rgba(34,211,238,0.92);
+      font-size: 1.18rem;
+    }
+    .feature-title{
+      font-weight: 950;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+    }
+    .feature-desc{
+      margin-top: 6px;
+      color: rgba(226,232,240,0.70);
+      font-weight: 750;
+      line-height: 1.65;
+    }
+
+    .plan-grid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+      max-width: 920px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 980px){
+      .plan-grid{ grid-template-columns: 1fr; }
+    }
+    .plan-card{
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+    }
+    .plan-head{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .plan-head i{
+      color: rgba(34,211,238,0.92);
+      font-size: 1.22rem;
+    }
+    .plan-title{
+      font-weight: 950;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+    .plan-desc{
+      color: rgba(226,232,240,0.72);
+      font-weight: 750;
+      margin: 0 0 12px;
+      line-height: 1.65;
+    }
+    .plan-list{
+      margin: 0;
+      padding-left: 18px;
+      color: rgba(226,232,240,0.72);
+      font-weight: 750;
+      display: grid;
+      gap: 8px;
+    }
+    .plan-list li{ margin: 0; }
+
+    .compare-wrap{
+      max-width: 920px;
+      margin: 22px auto 0;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.14);
+      background: linear-gradient(180deg, rgba(11,16,38,0.92), rgba(11,16,38,0.82));
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+    table.compare{
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table.compare th, table.compare td{
+      padding: 16px 14px;
+      text-align: left;
+      border-bottom: 1px solid rgba(148,163,184,0.14);
+      vertical-align: top;
+    }
+    table.compare th{
+      background: rgba(255,255,255,0.03);
+      font-weight: 950;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      color: rgba(226,232,240,0.74);
+      white-space: nowrap;
+    }
+    table.compare td{
+      color: rgba(226,232,240,0.72);
+      font-weight: 750;
+    }
+    table.compare tr:last-child th,
+    table.compare tr:last-child td{
+      border-bottom: none;
+    }
+    @media (max-width: 820px){
+      .compare-wrap{ overflow-x: auto; }
+      table.compare{ min-width: 740px; }
+    }
+
+    .cta-band{
+      max-width: 920px;
+      margin: 28px auto 0;
+      display:flex;
+      justify-content:center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .cta-note{
+      max-width: 920px;
+      margin: 18px auto 0;
+      text-align: center;
+      color: rgba(226,232,240,0.70);
+      font-weight: 750;
+      line-height: 1.7;
+    }
+    .cta-note a{
+      color: rgba(34,211,238,0.92);
+      text-decoration: none;
+      font-weight: 900;
+    }
+    .cta-note a:hover{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+<!-- Injected Header -->
+<div id="header-placeholder"></div>
+<main>
+<!-- HERO -->
+<section class="hero hero-enterprise">
+<div class="container hero-stack">
+<div class="hero-copy hero-centered">
+<div class="hero-badge">
+<i class="fa-solid fa-envelope"></i>
+            Email / Productivity / Collaboration
+          </div>
+<h1>
+            Business <span>Email</span><br/>
+            Services
+          </h1>
+<p class="lead">
+            Secure, reliable, and scalable business email — with modern collaboration tools, spam and threat protection,
+            and guided migrations backed by real support.
+          </p>
+<div class="btn-row btn-row-center">
+<a class="btn btn-primary" href="contact">
+              Get Email Pricing
+              <i class="fa-solid fa-arrow-right"></i>
+</a>
+<a class="btn btn-secondary" href="tel:12132129100">
+<i class="fa-solid fa-phone"></i>
+              Call 213-212-9100
+            </a>
+<a class="btn btn-secondary" href="/cdn-cgi/l/email-protection#15667479706655637467746c7a3b767a78">
+<i class="fa-solid fa-envelope"></i>
+              Email <span class="__cf_email__" data-cfemail="ed9e8c81889ead9b8c9f8c9482c38e8280">[email protected]</span>
+</a>
+</div>
+<div class="hero-proof hero-proof-centered">
+<div class="proof-item">
+<div class="proof-value">Secure</div>
+<div class="proof-label">Spam + threat protection</div>
+</div>
+<div class="proof-item">
+<div class="proof-value">50GB+</div>
+<div class="proof-label">Mailbox options</div>
+</div>
+<div class="proof-item">
+<div class="proof-value">24/7</div>
+<div class="proof-label">US-based support</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<!-- WHY PROFESSIONAL EMAIL -->
+<section class="section">
+<div class="container">
+<div class="section-head">
+<h2 class="section-title">Why professional business email?</h2>
+<p class="section-subtitle">
+            Business email is more than a mailbox. It’s your identity, your collaboration hub, and your first line of defense
+            against phishing and fraud.
+          </p>
+</div>
+<div class="feature-grid">
+<div class="feature-card">
+<div class="feature-icon"><i class="fa-solid fa-id-badge"></i></div>
+<div>
+<div class="feature-title">Professional Branding</div>
+<div class="feature-desc">
+                Use a custom domain (<a class="__cf_email__" data-cfemail="ee97819b9c808f838bae97819b9c8d81839e8f8097c08d8183" href="/cdn-cgi/l/email-protection">[email protected]</a>) to build credibility and maintain a consistent brand across every message.
+              </div>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+<div>
+<div class="feature-title">Enhanced Security</div>
+<div class="feature-desc">
+                Advanced spam filtering, encryption, malware protection, and compliance tooling to keep your organization protected.
+              </div>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon"><i class="fa-solid fa-users"></i></div>
+<div>
+<div class="feature-title">Collaboration Tools</div>
+<div class="feature-desc">
+                Shared calendars, contacts, file storage, and productivity apps to streamline workflows across your team.
+              </div>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+<div>
+<div class="feature-title">Reliability &amp; Support</div>
+<div class="feature-desc">
+                SLA-backed uptime options, mobile access, and expert onboarding and migration support from Varayo.
+              </div>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+<div>
+<div class="feature-title">Scalability</div>
+<div class="feature-desc">
+                Plans that grow with your organization — from small teams to large enterprises with advanced compliance needs.
+              </div>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+<div>
+<div class="feature-title">Guided Migration</div>
+<div class="feature-desc">
+                We handle domain setup, mailbox moves, and cutover planning — minimizing downtime and user disruption.
+              </div>
+</div>
+</div>
+</div>
+<div class="cta-band">
+<a class="btn btn-primary" href="contact">
+            Request a Migration Plan
+            <i class="fa-solid fa-arrow-right"></i>
+</a>
+<a class="btn btn-secondary" href="support">
+            View Support Options
+            <i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<!-- OPTIONS -->
+<section class="section">
+<div class="container">
+<div class="section-head">
+<h2 class="section-title">Email options for every team</h2>
+<p class="section-subtitle">
+            We specialize in Microsoft 365 (our primary recommendation), while also supporting Hosted Exchange and Google Workspace
+            based on your workflows, compliance needs, and budget.
+          </p>
+</div>
+<div class="plan-grid">
+<div class="plan-card">
+<div class="plan-head">
+<i class="fa-brands fa-microsoft"></i>
+<h3 class="plan-title">Microsoft 365 (Recommended)</h3>
+</div>
+<p class="plan-desc">The leading productivity suite for modern business — email + collaboration + security.</p>
+<ul class="plan-list">
+<li>Hosted email via Outlook with 50GB+ mailboxes</li>
+<li>Word, Excel, PowerPoint, Teams, OneDrive (1TB+)</li>
+<li>Advanced security: threat protection, DLP, MFA</li>
+<li>Best-in-class collaboration with Teams</li>
+</ul>
+</div>
+<div class="plan-card">
+<div class="plan-head">
+<i class="fa-solid fa-server"></i>
+<h3 class="plan-title">Hosted Exchange</h3>
+</div>
+<p class="plan-desc">Classic Exchange functionality without the full Microsoft 365 suite.</p>
+<ul class="plan-list">
+<li>Shared calendars, contacts, tasks, and GAL</li>
+<li>Large mailboxes (50–100GB+ options)</li>
+<li>Anti-spam, anti-malware, and archiving options</li>
+<li>Flexible plans with optional add-ons</li>
+</ul>
+</div>
+<div class="plan-card">
+<div class="plan-head">
+<i class="fa-brands fa-google"></i>
+<h3 class="plan-title">Google Workspace</h3>
+</div>
+<p class="plan-desc">A cloud-first alternative with intuitive collaboration tools.</p>
+<ul class="plan-list">
+<li>Business Gmail with 30GB+ options</li>
+<li>Drive, Docs, Sheets, Slides, Meet, Calendar</li>
+<li>Strong phishing protection and admin controls</li>
+<li>Great for real-time editing workflows</li>
+</ul>
+</div>
+</div>
+<div class="cta-note">
+          Pricing varies by plan, user count, and selected features — <a href="contact">contact us</a> for a customized quote.
+        </div>
+</div>
+</section>
+<div class="section-divider"></div>
+<!-- COMPARISON -->
+<section class="section">
+<div class="container">
+<div class="section-head">
+<h2 class="section-title">Quick comparison</h2>
+<p class="section-subtitle">
+            Not sure which option fits best? Here’s a fast overview. We’ll confirm requirements and recommend the right fit during onboarding.
+          </p>
+</div>
+<div class="compare-wrap">
+<table aria-label="Email comparison table" class="compare">
+<thead>
+<tr>
+<th>Feature</th>
+<th>Microsoft 365</th>
+<th>Hosted Exchange</th>
+<th>Google Workspace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Email Client</strong></td>
+<td>Outlook</td>
+<td>Outlook / Exchange</td>
+<td>Gmail</td>
+</tr>
+<tr>
+<td><strong>Mailbox Storage</strong></td>
+<td>50GB+</td>
+<td>50–100GB+</td>
+<td>30GB+ (up to unlimited)</td>
+</tr>
+<tr>
+<td><strong>Productivity Apps</strong></td>
+<td>Full Office suite (desktop/web)</td>
+<td>Limited (email-focused)</td>
+<td>Docs, Sheets, Slides, etc.</td>
+</tr>
+<tr>
+<td><strong>Collaboration</strong></td>
+<td>Teams, OneDrive, SharePoint</td>
+<td>Shared calendars / contacts</td>
+<td>Drive, Meet, real-time editing</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>Threat protection, DLP, MFA</td>
+<td>Strong anti-spam / malware</td>
+<td>AI phishing protection</td>
+</tr>
+<tr>
+<td><strong>Best For</strong></td>
+<td>Microsoft-centric businesses</td>
+<td>Traditional Exchange users</td>
+<td>Cloud-first teams</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cta-band">
+<a class="btn btn-primary" href="contact">Contact Sales <i class="fa-solid fa-arrow-right"></i></a>
+<a class="btn btn-secondary" href="/cdn-cgi/l/email-protection#14677578716754627566756d7b3a777b79">
+<i class="fa-solid fa-envelope"></i>
+            Email Sales
+          </a>
+</div>
+<div class="cta-note">
+<strong>Varayo Inc</strong><br/>
+<a href="/cdn-cgi/l/email-protection#6e1d0f020b1d2e180f1c0f1701400d0103"><span class="__cf_email__" data-cfemail="9eedfff2fbeddee8ffecffe7f1b0fdf1f3">[email protected]</span></a> · <a href="tel:+12132129100">213-212-9100</a>
+</div>
+</div>
+</section>
+<section class="cta-strip">
+<div class="container cta-strip-inner">
+<div class="cta-strip-copy">
+<h3>Ready to get started?</h3>
+<p>Talk with our team about the right design, timeline, and pricing for your needs.</p>
+</div>
+<div class="cta-strip-actions">
+<a class="btn btn-primary" href="quote">Get a Quote</a>
+<a class="btn btn-secondary" href="contact">Contact Sales</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Injected Footer -->
+<div id="footer-placeholder"></div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script>
+    function loadComponent(url, targetId, callback) {
+      fetch(url)
+        .then(r => { if (!r.ok) throw new Error('Not found: ' + url); return r.text(); })
+        .then(html => {
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = html;
+          if (typeof callback === 'function') callback();
+        })
+        .catch(err => {
+          console.error(err);
+          const el = document.getElementById(targetId);
+          if (el) el.innerHTML = '<p style="color:red; text-align:center;">Component failed to load.</p>';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadComponent('header_menu.html', 'header-placeholder', function() {
+        if (typeof initMobileNav === 'function') initMobileNav();
+      });
+      loadComponent('footer_menu.html', 'footer-placeholder');
+    });
+  </script>
+</body>
+</html>
