@@ -755,6 +755,13 @@ nav a:hover {
   color: rgba(34,211,238,0.85);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.card-pricing i {
+  font-size: 0.9rem;
+  opacity: 0.9;
 }
 
 /* ============================================================
