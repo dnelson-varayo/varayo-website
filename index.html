@@ -423,15 +423,17 @@
       // Sticky CTA functionality
       const stickyCta = document.getElementById('stickyCta');
       const ctaStrip = document.querySelector('.cta-strip');
+      const footer = document.querySelector('.site-footer');
       let heroHeight = 800; // approximate hero height
       
       if (stickyCta && ctaStrip) {
         window.addEventListener('scroll', function() {
-          const scrollPosition = window.scrollY;
+          const scrollPosition = window.scrollY + window.innerHeight;
           const ctaStripPosition = ctaStrip.offsetTop;
+          const footerPosition = footer ? footer.offsetTop : document.body.scrollHeight;
           
-          // Show after scrolling past hero, hide when reaching bottom CTA
-          if (scrollPosition > heroHeight && scrollPosition < ctaStripPosition - 400) {
+          // Show after scrolling past hero, hide when reaching bottom CTA or footer
+          if (window.scrollY > heroHeight && scrollPosition < ctaStripPosition && scrollPosition < footerPosition - 100) {
             stickyCta.classList.add('visible');
           } else {
             stickyCta.classList.remove('visible');
