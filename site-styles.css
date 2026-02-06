@@ -1057,6 +1057,15 @@ nav a:hover {
   line-height: 1.4;
 }
 
+.process-time {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: rgba(34,211,238,0.92);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 .process-arrow {
   color: rgba(148,163,184,0.45);
   font-size: 1.2rem;
@@ -1185,6 +1194,110 @@ nav a:hover {
   .faq-compact {
     grid-template-columns: 1fr;
     gap: 14px;
+  }
+}
+
+/* ============================================================
+   COMPARISON TABLE
+============================================================ */
+.comparison-table-wrap {
+  margin-top: 32px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 14px;
+  border: 1px solid rgba(148,163,184,0.14);
+  background: rgba(11,16,38,0.75);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.comparison-table thead {
+  background: rgba(15,23,42,0.85);
+  border-bottom: 2px solid rgba(148,163,184,0.20);
+}
+
+.comparison-table th {
+  padding: 16px 20px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: rgba(241,245,249,0.92);
+}
+
+.comparison-table th.comparison-varayo {
+  background: rgba(34,211,238,0.08);
+  color: rgba(34,211,238,0.95);
+  text-align: center;
+  font-weight: 800;
+}
+
+.comparison-table th.comparison-competitor {
+  text-align: center;
+  color: rgba(226,232,240,0.75);
+}
+
+.comparison-table tbody tr {
+  border-bottom: 1px solid rgba(148,163,184,0.10);
+}
+
+.comparison-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.comparison-table tbody tr:hover {
+  background: rgba(255,255,255,0.02);
+}
+
+.comparison-table td {
+  padding: 14px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.comparison-table td.comparison-feature {
+  color: rgba(241,245,249,0.88);
+  font-weight: 700;
+}
+
+.comparison-table td.comparison-varayo {
+  text-align: center;
+  color: rgba(34,211,238,0.92);
+  background: rgba(34,211,238,0.04);
+}
+
+.comparison-table td.comparison-competitor {
+  text-align: center;
+  color: rgba(226,232,240,0.65);
+}
+
+.comparison-table .fa-check {
+  color: rgba(34,211,238,0.95);
+  margin-right: 8px;
+}
+
+.comparison-table .fa-xmark {
+  color: rgba(239,68,68,0.75);
+  margin-right: 8px;
+}
+
+.comparison-table .fa-minus {
+  color: rgba(251,191,36,0.75);
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .comparison-table {
+    min-width: 640px;
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    padding: 12px 14px;
+    font-size: 0.85rem;
   }
 }
 
